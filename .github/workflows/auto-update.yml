@@ -1,0 +1,13 @@
+name: Auto Update Steam Report
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Steam Checker
+        run: pwsh ./Check-SteamBackups.ps1 -RepoPath "${{ github.workspace }}" -GitUserName "FirebrawlX" -GitUserEmail "andree.frank@gmail.com"
+        shell: pwsh
