@@ -143,7 +143,11 @@ foreach ($game in $GamesToCheck) {
     }
 
     # Update stored latest build
-    $GamesData[$game.AppID].LatestBuild = $latestBuild
+    if ($GamesData[$game.AppID].PSObject.Properties['LatestBuild']) {
+      $GamesData[$game.AppID].LatestBuild = $latestBuild
+    } else {
+      $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
+    }
     $Results += [PSCustomObject]@{
         Name          = $game.Name
         AppID         = $game.AppID
