@@ -13,13 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install SteamCMD
+      - name: Download and Install SteamCMD
         run: |
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository multiverse
-          sudo apt-get update
-          sudo apt-get install -y steamcmd
+          mkdir -p ~/steamcmd
+          cd ~/steamcmd
+          wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+          tar -xvzf steamcmd_linux.tar.gz
 
       - name: Install PowerShell
         run: |
