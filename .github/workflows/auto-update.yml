@@ -10,6 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Print environment info
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner Arch: $RUNNER_ARCH"
+          uname -a
+          env
+
+      - name: Print network connectivity
+        run: |
+          ping -c 4 github.com || true
+          curl -I https://github.com/actions/setup-pwsh || true
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -20,6 +32,9 @@ jobs:
         uses: actions/setup-pwsh@v2
         with:
           pwsh-version: '7.3'
+
+      - name: List workflow files
+        run: ls -lR .github/workflows
 
       - name: Run Steam Backup Checker
         run: |
