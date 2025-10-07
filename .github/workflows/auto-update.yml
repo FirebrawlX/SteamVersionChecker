@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y steamcmd
 
       - name: Setup PowerShell
-        uses: PowerShell/setup-pwsh@v3
+        uses: actions/setup-pwsh@v3
         with:
           pwsh-version: '7.3'
 
