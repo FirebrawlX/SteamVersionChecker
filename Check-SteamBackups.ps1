@@ -1,96 +1,186 @@
+<#
+.SYNOPSIS
+    Checks local Steam backup .7z files (NAME_APPID_BUILDID) and compares versions on Steam.
+    Generates a clean HTML report with light color coding and auto-publishes to GitHub Pages.
+#>
+
 param(
     [string]$BackupDir,
     [string]$SteamCmdPath,
-    [string]$RepoPath,
-    [string]$GitUserName,
-    [string]$GitUserEmail
+    [string]$ReportFile = "index.html",
+    [string]$RepoPath = "",
+    [string]$GitUserName = "",
+    [string]$GitUserEmail = ""
 )
 
-Write-Host "📦 Found installed backups in $BackupDir..." -ForegroundColor Cyan
+# --- Detect environment (local vs GitHub Actions) ---
+$IsGithubActions = $env:GITHUB_ACTIONS -eq "true"
+$RunEnvironment = if ($IsGithubActions) { "GitHub Actions" } else { "Local Machine" }
 
-# Detect if running in GitHub Actions
-$IsGitHubActions = $env:GITHUB_ACTIONS -eq "true"
+# --- Setup ---
+$ErrorActionPreference = "Stop"
+$Games = Get-ChildItem -Path $BackupDir -Filter "*.7z" -File
+if ($Games.Count -eq 0) {
+    Write-Host "⚠️  No .7z files found in $BackupDir" -ForegroundColor Yellow
+    exit
+}
 
-# HTML setup
-$ReportPath = Join-Path $RepoPath "index.html"
-$Html = @"
-<html>
-<head>
-<title>Steam Backup Version Checker</title>
-<style>
-body { font-family: Segoe UI, sans-serif; background: #f4f4f4; color: #222; }
-h1 { color: #333; }
-table { border-collapse: collapse; width: 100%; background: white; }
-th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-th { background-color: #333; color: white; }
-tr:nth-child(even) { background-color: #f9f9f9; }
-.status-ok { background-color: #e5f8e5; }
-.status-update { background-color: #fdeaea; }
-.footer { margin-top: 20px; font-size: 0.9em; color: #555; text-align: right; }
-</style>
-</head>
-<body>
-<h1>Steam Backup Version Checker</h1>
-<p style="color:#777;">Generated on $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')</p>
-<table>
-<tr><th>Game</th><th>AppID</th><th>Latest BuildID</th><th>Installed BuildID</th><th>Latest Date</th><th>Status</th></tr>
-"@
+Write-Host "📦 Found $($Games.Count) game backups. Checking versions..." -ForegroundColor Cyan
 
-# --- GAME CHECK LOGIC (unchanged from your current version) ---
-$BackupFiles = Get-ChildItem -Path $BackupDir -Filter "*.acf" -Recurse
-foreach ($File in $BackupFiles) {
-    $Content = Get-Content $File | Out-String
-    if ($Content -match '"appid"\s+"(\d+)"' -and $Content -match '"buildid"\s+"(\d+)"' -and $Content -match '"name"\s+"([^"]+)"') {
-        $AppId = $matches[1]
-        $InstalledBuildId = $matches[2]
-        $GameName = $matches[3]
+# --- Helper: Run SteamCMD and parse latest build ---
+function Get-LatestBuildInfo {
+    param([string]$AppId, [string]$SteamCmdPath)
 
-        Write-Host "→ Checking $GameName (AppID=$AppId, Installed=$InstalledBuildId)..." -ForegroundColor Yellow
+    try {
+        $output = & "$SteamCmdPath" +login anonymous +app_info_update 1 +app_info_print $AppId +quit 2>&1
+        $lines = $output -split "`n"
 
-        $Json = & $SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppId +quit | Out-String
-        $LatestBuildId = ($Json -split '\n' | Select-String -Pattern '"buildid"' | Select-String -AllMatches).Matches.Value -replace '[^\d]', '' | Select-Object -Last 1
-        $DateString = ($Json -split '\n' | Select-String -Pattern '"timeupdated"' | Select-String -AllMatches).Matches.Value -replace '[^\d]', '' | Select-Object -Last 1
-        $LatestDate = if ($DateString) { 
-            try { (Get-Date -UnixTimeSeconds [int64]$DateString -ErrorAction Stop).ToString("yyyy-MM-dd") } catch { "N/A" } 
+        # Find buildid and timeupdated
+        $buildLine = $lines | Select-String -Pattern '"buildid"' | Select-Object -Last 1
+        $timeLine  = $lines | Select-String -Pattern '"timeupdated"' | Select-Object -Last 1
+
+        $buildId = if ($buildLine) { ($buildLine -split '"')[3] } else { "" }
+        $timeUpdated = if ($timeLine) { [int64]($timeLine -split '"')[3] } else { 0 }
+
+        $date = if ($timeUpdated -gt 0) {
+            [DateTimeOffset]::FromUnixTimeSeconds($timeUpdated).DateTime.ToString("yyyy-MM-dd")
         } else { "N/A" }
 
-        if ($LatestBuildId -and [int]$LatestBuildId -gt [int]$InstalledBuildId) {
-            $Status = "⚠️ Update available"
-            $RowClass = "status-update"
-        } else {
-            $Status = "✅ Up to date"
-            $RowClass = "status-ok"
+        return [PSCustomObject]@{
+            BuildId = $buildId
+            Date    = $date
         }
-
-        $Html += "<tr class='$RowClass'><td>$GameName</td><td>$AppId</td><td>$LatestBuildId</td><td>$InstalledBuildId</td><td>$LatestDate</td><td>$Status</td></tr>`n"
+    }
+    catch {
+        return [PSCustomObject]@{
+            BuildId = ""
+            Date    = "Error"
+        }
     }
 }
 
-# Footer with context
-$RunContext = if ($IsGitHubActions) { "🧩 Checked via GitHub Actions" } else { "💻 Checked locally" }
-$Html += @"
-</table>
-<div class='footer'>
-$RunContext<br>
-Last updated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-</div>
-</body></html>
+# --- Collect results ---
+$Results = @()
+$i = 0
+foreach ($file in $Games) {
+    $i++
+    if ($file.BaseName -match '(.+?)_(\d+?)_(\d+?)$') {
+        $name = $matches[1]
+        $appId = $matches[2]
+        $localBuild = $matches[3]
+
+        Write-Host "[$i/$($Games.Count)] → Checking $name (AppID=$appId, Installed=$localBuild)..." -ForegroundColor Gray
+
+        $latest = Get-LatestBuildInfo -AppId $appId -SteamCmdPath $SteamCmdPath
+
+        if (-not $latest.BuildId) {
+            $status = "⚠️ Failed to fetch"
+            $class = "warn"
+        }
+        elseif ($latest.BuildId -eq $localBuild) {
+            $status = "✅ Up to date"
+            $class = "ok"
+        }
+        else {
+            $status = "⚠️ Update available"
+            $class = "update"
+        }
+
+        $Results += [PSCustomObject]@{
+            Name = $name
+            AppId = $appId
+            Installed = $localBuild
+            Latest = $latest.BuildId
+            LatestDate = $latest.Date
+            Status = $status
+            Class = $class
+        }
+    }
+}
+
+# --- Generate HTML ---
+$reportDate = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
+
+$style = @"
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fafafa;
+    color: #333;
+    margin: 40px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background: #e6e6e6;
+}
+tr.ok { background-color: #e9f7ef; }       /* light green */
+tr.update { background-color: #fff3cd; }   /* light yellow */
+tr.warn { background-color: #f8d7da; }     /* light red */
+h1 {
+    font-weight: 600;
+}
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+}
+</style>
 "@
 
-# Write report
-Set-Content -Path $ReportPath -Value $Html -Encoding UTF8
+$rows = $Results | ForEach-Object {
+    "<tr class='$($_.Class)'><td>$($_.Name)</td><td>$($_.AppId)</td><td>$($_.Installed)</td><td>$($_.Latest)</td><td>$($_.LatestDate)</td><td>$($_.Status)</td></tr>"
+} | Out-String
 
-Write-Host "📄 Report generated at $ReportPath" -ForegroundColor Cyan
+$html = @"
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Steam Backup Report</title>
+$style
+</head>
+<body>
+<h1>Steam Backup Report</h1>
+<p>Report generated on: <b>$reportDate</b></p>
+<table>
+<tr><th>Game</th><th>AppID</th><th>Installed</th><th>Latest</th><th>Latest Date</th><th>Status</th></tr>
+$rows
+</table>
+<div class="footer">
+Generated from <b>$RunEnvironment</b>
+</div>
+</body>
+</html>
+"@
 
-# GitHub upload only for local runs
-if (-not $IsGitHubActions) {
-    Write-Host "🔄 Pulling latest changes from remote..."
-    git -C $RepoPath pull origin main --rebase
+Set-Content -Path $ReportFile -Value $html -Encoding UTF8
+Write-Host "✅ HTML report saved to: $ReportFile" -ForegroundColor Green
 
-    Write-Host "📤 Committing and pushing..."
-    git -C $RepoPath config user.name $GitUserName
-    git -C $RepoPath config user.email $GitUserEmail
-    git -C $RepoPath add index.html
-    git -C $RepoPath commit -m "Update Steam backup report $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-    git -C $RepoPath push origin main
+# --- GitHub auto push ---
+if ($RepoPath -and $GitUserName -and $GitUserEmail) {
+    Write-Host "📤 Committing and pushing report to GitHub..."
+    Set-Location $RepoPath
+
+    try {
+        git config --global --add safe.directory $RepoPath
+        git config user.name $GitUserName
+        git config user.email $GitUserEmail
+
+        git add $ReportFile
+        git commit -m "Update Steam backup report $reportDate" || Write-Host "No changes to commit."
+        git pull --rebase origin main
+        git push origin main
+        Write-Host "✅ GitHub Pages updated! Check: https://firebrawlx.github.io/SteamVersionChecker/"
+    }
+    catch {
+        Write-Host "⚠️ GitHub push failed: $_" -ForegroundColor Yellow
+    }
 }
