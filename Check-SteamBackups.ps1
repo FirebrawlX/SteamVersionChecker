@@ -78,8 +78,8 @@ if ($IsGitHubActions) {
     Write-Host "📡 Running in GitHub Actions mode. Scanning for updates..."
     # Build array from hashtable keys
     $GamesToCheck = @()
-    foreach ($key in $GamesData.Keys) {
-        $GamesToCheck += $GamesData[$key]
+    foreach ($property in $GamesData.PSObject.Properties) {
+      $GamesToCheck += $property.Value
     }
 } else {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
