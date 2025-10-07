@@ -16,9 +16,6 @@ jobs:
       - name: Install SteamCMD
         run: sudo apt-get update && sudo apt-get install -y steamcmd
 
-      - name: Setup PowerShell
-        uses: PowerShell/setup-pwsh@v2
-
       - name: Run Steam Backup Checker
         run: |
           pwsh ./Check-SteamBackups.ps1 `
