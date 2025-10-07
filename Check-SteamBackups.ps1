@@ -109,7 +109,7 @@ function Get-LatestBuild {
     Write-Host "Running: $cmd"
     & $SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit > $tempFile 2>&1
     $content = Get-Content $tempFile -Raw
-    Write-Host "SteamCMD output for AppID $AppID:`n$content"
+    Write-Host "SteamCMD output for AppID ${AppID}:`n$content"
     Remove-Item $tempFile -Force
 
     # Parse latest build ID from JSON-like structure
