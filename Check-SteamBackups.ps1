@@ -170,7 +170,8 @@ foreach ($game in $GamesToCheck) {
 
 $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 
-$DateNow = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm")
+$stockholmTZ = [System.TimeZoneInfo]::FindSystemTimeZoneById("Central European Standard Time")
+$DateNow = [System.TimeZoneInfo]::ConvertTimeFromUtc((Get-Date).ToUniversalTime(), $stockholmTZ).ToString("yyyy-MM-dd HH:mm")
 $RunMode = if ($IsGitHubActions) { "GitHub Actions" } else { "Local run" }
 
 $HTML = @"
