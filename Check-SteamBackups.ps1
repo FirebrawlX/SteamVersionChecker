@@ -132,6 +132,27 @@ foreach ($game in $GamesToCheck) {
     Write-Host "Processing game: $($game.Name) (AppID=$($game.AppID))"
     $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
 
+    # Get previous build and date
+    $prevBuild = $GamesData[$game.AppID].LatestBuild
+    $prevDate = $GamesData[$game.AppID].PSObject.Properties['LatestDate'] ? $GamesData[$game.AppID].LatestDate : $null
+    
+    # If build changed or date missing, set new date
+    if (($latestBuild -ne $prevBuild) -or (-not $prevDate)) {
+      $newDate = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-ddTHH:mm:ssZ") # Stockholm time, ISO format
+      if ($GamesData[$game.AppID].PSObject.Properties['LatestDate']) {
+        $GamesData[$game.AppID].LatestDate = $newDate
+      } else {
+        $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestDate -Value $newDate
+      }
+    }
+    
+    # Always update LatestBuild
+    if ($GamesData[$game.AppID].PSObject.Properties['LatestBuild']) {
+      $GamesData[$game.AppID].LatestBuild = $latestBuild
+    } else {
+      $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
+    }
+
     # Determine status
     $status = ""
     if ($latestBuild -eq $null) {
@@ -201,13 +222,14 @@ th { background-color: #eee; }
 
 foreach ($r in $Results) {
     $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
-    $latestDate = $null
-    if ($r.PSObject.Properties['LatestDate']) {
-      $latestDate = $r.LatestDate
-    } elseif ($GamesData[$r.AppID].PSObject.Properties['LatestDate']) {
-      $latestDate = $GamesData[$r.AppID].LatestDate
-    } else {
-      $latestDate = ""
+    $latestDate = ""
+    if ($r.PSObject.Properties['LatestDate'] -and $r.LatestDate) {
+        $latestDate = $r.LatestDate
+    } elseif ($GamesData[$r.AppID].PSObject.Properties['LatestDate'] -and $GamesData[$r.AppID].LatestDate) {
+        $latestDate = $GamesData[$r.AppID].LatestDate
+    } elseif ($r.LatestBuild) {
+        # If no date exists, use the current time in ISO format
+        $latestDate = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-ddTHH:mm:ssZ")
     }
     $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$latestDate</td><td>$($r.Status)</td></tr>`n"
 }
