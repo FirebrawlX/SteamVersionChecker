@@ -77,16 +77,20 @@ if ($IsGitHubActions) {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
     $GamesToCheck = Get-LocalBackups -BackupDir $BackupDir
 
-    # Update local data
-    $GamesData = @{}
+    # Merge new local data with previous data
     foreach ($g in $GamesToCheck) {
-        $GamesData[$g.AppID] = @{
-            Name    = $g.Name
-            AppID   = $g.AppID
-            InstalledBuild = $g.BuildID
+        if ($GamesData.ContainsKey($g.AppID)) {
+            $GamesData[$g.AppID].Name = $g.Name
+            $GamesData[$g.AppID].InstalledBuild = $g.BuildID
+        } else {
+            $GamesData[$g.AppID] = @{
+                Name    = $g.Name
+                AppID   = $g.AppID
+                InstalledBuild = $g.BuildID
+            }
         }
     }
-    # Save initial JSON
+    # Save merged JSON
     $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 }
 
@@ -107,11 +111,11 @@ function Get-LatestBuild {
     }
 }
 
-# Check each game
+# Check each game and update only changed fields
 $Results = @()
 $Counter = 1
-$Total = $GamesToCheck.Count
-foreach ($game in $GamesToCheck) {
+$Total = $GamesData.Count
+foreach ($game in $GamesData.Values) {
     Write-Host "[${Counter}/${Total}] Checking $($game.Name) (AppID=$($game.AppID), Installed=$($game.InstalledBuild))..."
     $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
 
