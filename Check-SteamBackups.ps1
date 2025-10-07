@@ -165,6 +165,10 @@ $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 $DateNow = Get-Date -Format "yyyy-MM-dd HH:mm"
 $RunMode = if ($IsGitHubActions) { "GitHub Actions" } else { "Local run" }
 
+# Set timezone to Europe/Stockholm (UTC+2)
+$DateNow = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-dd HH:mm")
+$RunMode = if ($IsGitHubActions) { "GitHub Actions" } else { "Local run" }
+
 $HTML = @"
 <!DOCTYPE html>
 <html lang="en">
@@ -176,22 +180,36 @@ body { font-family: Arial, sans-serif; padding: 20px; }
 h1 { color: #333; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-tr:nth-child(even) { background-color: #f9f9f9; }
 .status-up-to-date { background-color: #c6efce; }    /* light green */
 .status-update { background-color: #ffc7ce; }       /* light red */
 .subtle { color: #666; font-size: 0.9em; }
+th { background-color: #eee; }
 </style>
 </head>
 <body>
 <h1>Steam Backup Report</h1>
-<p class="subtle">Last run: $RunMode at $DateNow</p>
 <table>
-<tr><th>Name</th><th>AppID</th><th>Installed Build</th><th>Latest Build</th><th>Status</th></tr>
+<tr>
+  <th>Name</th>
+  <th>AppID</th>
+  <th>Installed Build</th>
+  <th>Latest Build</th>
+  <th>Latest Build Date</th>
+  <th>Status</th>
+</tr>
 "@
 
 foreach ($r in $Results) {
     $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
-    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.Status)</td></tr>`n"
+    $latestDate = $null
+    if ($r.PSObject.Properties['LatestDate']) {
+      $latestDate = $r.LatestDate
+    } elseif ($GamesData[$r.AppID].PSObject.Properties['LatestDate']) {
+      $latestDate = $GamesData[$r.AppID].LatestDate
+    } else {
+      $latestDate = ""
+    }
+    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$latestDate</td><td>$($r.Status)</td></tr>`n"
 }
 
 $HTML += "</table>"
