@@ -71,7 +71,7 @@ function Get-LocalBackups {
 
 # Get list of games to check
 if ($IsGitHubActions) {
-    Write-Host "📡 Running in GitHub Actions mode. Using previous data."
+    Write-Host "📡 Running in GitHub Actions mode. Scanning for updates..."
     $GamesToCheck = $GamesData.Values
 } else {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
@@ -92,6 +92,36 @@ if ($IsGitHubActions) {
     }
     # Save merged JSON
     $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
+}
+
+# Now, always check for updates for each game in $GamesData.Values
+$Results = @()
+$Counter = 1
+$Total = $GamesData.Count
+foreach ($game in $GamesData.Values) {
+    Write-Host "[${Counter}/${Total}] Checking $($game.Name) (AppID=$($game.AppID), Installed=$($game.InstalledBuild))..."
+    $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
+
+    # Determine status
+    $status = ""
+    if ($latestBuild -eq $null) {
+        $status = "❌ Could not fetch latest"
+    } elseif ($latestBuild -gt $game.InstalledBuild) {
+        $status = "⚠️ Update available"
+    } else {
+        $status = "✅ Up to date"
+    }
+
+    # Update stored latest build
+    $GamesData[$game.AppID].LatestBuild = $latestBuild
+    $Results += [PSCustomObject]@{
+        Name          = $game.Name
+        AppID         = $game.AppID
+        InstalledBuild= $game.InstalledBuild
+        LatestBuild   = $latestBuild
+        Status        = $status
+    }
+    $Counter++
 }
 
 # Function to fetch latest build via SteamCMD
@@ -173,8 +203,8 @@ tr:nth-child(even) { background-color: #f9f9f9; }
 "@
 
 foreach ($r in $Results) {
-    $statusClass = if ($r.Status -eq "✅ Up to date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
-    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.Installed)</td><td>$($r.Latest)</td><td>$($r.Status)</td></tr>`n"
+    $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
+    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.Status)</td></tr>`n"
 }
 
 $HTML += "</table>"
