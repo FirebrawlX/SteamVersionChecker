@@ -205,7 +205,7 @@ if ($env:GITHUB_TOKEN -or -not $IsGitHubActions) {
     git -C $RepoPath config user.email $GitUserEmail
     git -C $RepoPath add index.html, games.json
     git -C $RepoPath commit -m "Update Steam backup report $DateNow" -a
-    git -C $RepoPath pull --rebase
+    git -C $RepoPath pull --strategy=ours
     git -C $RepoPath push
     Write-Host "✅ GitHub Pages updated! Check your repo."
 }
