@@ -47,6 +47,10 @@ $DataFile   = Join-Path $RepoPath "games.json"
 $GamesData = @{}
 if (Test-Path $DataFile) {
     $GamesData = Get-Content $DataFile | ConvertFrom-Json
+    Write-Host "Loaded GamesData:"
+    $GamesData | ConvertTo-Json -Depth 5 | Write-Host
+} else {
+    Write-Host "No games.json found at $DataFile"
 }
 
 # Function to parse local backups (only if running locally)
@@ -94,12 +98,34 @@ if ($IsGitHubActions) {
     $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 }
 
+Write-Host "Number of games to process: $($GamesData.Count)"
+
+# Function to fetch latest build via SteamCMD
+function Get-LatestBuild {
+    param($AppID, $SteamCmdPath)
+
+    $tempFile = New-TemporaryFile
+    $cmd = "$SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit"
+    Write-Host "Running: $cmd"
+    & $SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit > $tempFile 2>&1
+    $content = Get-Content $tempFile -Raw
+    Write-Host "SteamCMD output for AppID $AppID:`n$content"
+    Remove-Item $tempFile -Force
+
+    # Parse latest build ID from JSON-like structure
+    if ($content -match '"buildid"\s*"(\d+)"') {
+        return [int]$matches[1]
+    } else {
+        return $null
+    }
+}
+
 # Now, always check for updates for each game in $GamesData.Values
 $Results = @()
 $Counter = 1
 $Total = $GamesData.Count
 foreach ($game in $GamesData.Values) {
-    Write-Host "[${Counter}/${Total}] Checking $($game.Name) (AppID=$($game.AppID), Installed=$($game.InstalledBuild))..."
+    Write-Host "Processing game: $($game.Name) (AppID=$($game.AppID))"
     $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
 
     # Determine status
@@ -119,53 +145,6 @@ foreach ($game in $GamesData.Values) {
         AppID         = $game.AppID
         InstalledBuild= $game.InstalledBuild
         LatestBuild   = $latestBuild
-        Status        = $status
-    }
-    $Counter++
-}
-
-# Function to fetch latest build via SteamCMD
-function Get-LatestBuild {
-    param($AppID, $SteamCmdPath)
-
-    $tempFile = New-TemporaryFile
-    & $SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit > $tempFile 2>&1
-    $content = Get-Content $tempFile -Raw
-    Remove-Item $tempFile -Force
-
-    # Parse latest build ID from JSON-like structure
-    if ($content -match '"buildid"\s*"(\d+)"') {
-        return [int]$matches[1]
-    } else {
-        return $null
-    }
-}
-
-# Check each game and update only changed fields
-$Results = @()
-$Counter = 1
-$Total = $GamesData.Count
-foreach ($game in $GamesData.Values) {
-    Write-Host "[${Counter}/${Total}] Checking $($game.Name) (AppID=$($game.AppID), Installed=$($game.InstalledBuild))..."
-    $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
-
-    # Determine status
-    $status = ""
-    if ($latestBuild -eq $null) {
-        $status = "❌ Could not fetch latest"
-    } elseif ($latestBuild -gt $game.InstalledBuild) {
-        $status = "⚠️ Update available"
-    } else {
-        $status = "✅ Up to date"
-    }
-
-    # Update stored latest build
-    $GamesData[$game.AppID].LatestBuild = $latestBuild
-    $Results += [PSCustomObject]@{
-        Name          = $game.Name
-        AppID         = $game.AppID
-        Installed     = $game.InstalledBuild
-        Latest        = $latestBuild
         Status        = $status
     }
     $Counter++
