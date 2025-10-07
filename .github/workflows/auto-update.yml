@@ -10,31 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print environment info
-        run: |
-          echo "Runner OS: $RUNNER_OS"
-          echo "Runner Arch: $RUNNER_ARCH"
-          uname -a
-          env
-
-      - name: Print network connectivity
-        run: |
-          ping -c 4 github.com || true
-          curl -I https://github.com/actions/setup-pwsh || true
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install SteamCMD
         run: sudo apt-get update && sudo apt-get install -y steamcmd
 
-      - name: Setup PowerShell
-        uses: actions/setup-pwsh@v2
-        with:
-          pwsh-version: '7.3'
-
-      - name: List workflow files
-        run: ls -lR .github/workflows
+      - name: Install PowerShell
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget apt-transport-https software-properties-common
+          wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+          sudo dpkg -i packages-microsoft-prod.deb
+          sudo apt-get update
+          sudo apt-get install -y powershell
 
       - name: Run Steam Backup Checker
         run: |
