@@ -32,8 +32,21 @@ jobs:
       - name: Run Steam Backup Checker
         run: |
           pwsh ./Check-SteamBackups.ps1 `
-            -SteamCmdPath "/usr/games/steamcmd" `
+            -SteamCmdPath "/home/runner/steamcmd/steamcmd.sh" `
             -RepoPath "." `
             -GitUserName "FirebrawlX" `
             -GitUserEmail "andree.frank@gmail.com"
         shell: pwsh
+
+      - name: Set up git for GitHub Actions
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+      - name: Commit and push index.html and games.json
+        run: |
+          git add index.html games.json
+          git commit -m "Update Steam backup report $(date '+%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git pull --rebase
+          git push
