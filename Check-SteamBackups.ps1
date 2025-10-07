@@ -76,7 +76,10 @@ function Get-LocalBackups {
 # Get list of games to check
 if ($IsGitHubActions) {
     Write-Host "📡 Running in GitHub Actions mode. Scanning for updates..."
-    $GamesToCheck = $GamesData.Values
+    $GamesToCheck = @()
+    foreach ($key in $GamesData.Keys) {
+      $GamesToCheck += $GamesData[$key]
+    }
 } else {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
     $GamesToCheck = Get-LocalBackups -BackupDir $BackupDir
