@@ -76,9 +76,10 @@ function Get-LocalBackups {
 # Get list of games to check
 if ($IsGitHubActions) {
     Write-Host "📡 Running in GitHub Actions mode. Scanning for updates..."
+    # Build array from hashtable keys
     $GamesToCheck = @()
     foreach ($key in $GamesData.Keys) {
-      $GamesToCheck += $GamesData[$key]
+        $GamesToCheck += $GamesData[$key]
     }
 } else {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
@@ -101,7 +102,7 @@ if ($IsGitHubActions) {
     $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 }
 
-Write-Host "Number of games to process: $($GamesData.Count)"
+Write-Host "Number of games to process: $($GamesToCheck.Count)"
 
 # Function to fetch latest build via SteamCMD
 function Get-LatestBuild {
@@ -123,11 +124,11 @@ function Get-LatestBuild {
     }
 }
 
-# Now, always check for updates for each game in $GamesData.Values
+# Now, always check for updates for each game in $GamesToCheck
 $Results = @()
 $Counter = 1
-$Total = $GamesData.Count
-foreach ($game in $GamesData.Values) {
+$Total = $GamesToCheck.Count
+foreach ($game in $GamesToCheck) {
     Write-Host "Processing game: $($game.Name) (AppID=$($game.AppID))"
     $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
 
