@@ -127,15 +127,27 @@ foreach ($game in $GamesToCheck) {
     # Use Steam's timeupdated if available
     if ($latestTimeUpdated) {
         $latestDate = (Get-Date -UnixTimeSeconds $latestTimeUpdated).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
-        $GamesData[$game.AppID].LatestDate = $latestDate
+        if ($GamesData[$game.AppID].PSObject.Properties['LatestDate']) {
+            $GamesData[$game.AppID].LatestDate = $latestDate
+        } else {
+            $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestDate -Value $latestDate
+        }
     } elseif (($latestBuild -ne $prevBuild) -or (-not $prevDate)) {
         $latestDate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
-        $GamesData[$game.AppID].LatestDate = $latestDate
+        if ($GamesData[$game.AppID].PSObject.Properties['LatestDate']) {
+            $GamesData[$game.AppID].LatestDate = $latestDate
+        } else {
+            $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestDate -Value $latestDate
+        }
     } else {
         $latestDate = $prevDate
     }
-
-    $GamesData[$game.AppID].LatestBuild = $latestBuild
+    
+    if ($GamesData[$game.AppID].PSObject.Properties['LatestBuild']) {
+        $GamesData[$game.AppID].LatestBuild = $latestBuild
+    } else {
+        $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
+    }
 
     $status = ""
     if ($latestBuild -eq $null) {
