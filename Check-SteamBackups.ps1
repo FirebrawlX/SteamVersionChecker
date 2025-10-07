@@ -36,14 +36,10 @@ param (
     [string]$GitUserEmail
 )
 
-# Detect if running in GitHub Actions
 $IsGitHubActions = $env:GITHUB_ACTIONS -eq "true"
-
-# File paths inside the repo
 $ReportFile = Join-Path $RepoPath "index.html"
 $DataFile   = Join-Path $RepoPath "games.json"
 
-# Load previous known games data if exists
 $GamesData = @{}
 if (Test-Path $DataFile) {
     $GamesData = Get-Content $DataFile | ConvertFrom-Json
@@ -53,13 +49,11 @@ if (Test-Path $DataFile) {
     Write-Host "No games.json found at $DataFile"
 }
 
-# Function to parse local backups (only if running locally)
 function Get-LocalBackups {
     param($BackupDir)
     $backups = @()
     if (Test-Path $BackupDir) {
         Get-ChildItem $BackupDir -Filter "*.7z" | ForEach-Object {
-            # Expecting filename: name_appid_buildid.7z
             $nameParts = $_.BaseName -split "_"
             if ($nameParts.Length -ge 3) {
                 $backups += [PSCustomObject]@{
@@ -73,10 +67,8 @@ function Get-LocalBackups {
     return $backups
 }
 
-# Get list of games to check
 if ($IsGitHubActions) {
     Write-Host "📡 Running in GitHub Actions mode. Scanning for updates..."
-    # Build array from hashtable keys
     $GamesToCheck = @()
     foreach ($property in $GamesData.PSObject.Properties) {
       $GamesToCheck += $property.Value
@@ -84,8 +76,6 @@ if ($IsGitHubActions) {
 } else {
     Write-Host "📦 Running locally. Scanning backups in $BackupDir ..."
     $GamesToCheck = Get-LocalBackups -BackupDir $BackupDir
-
-    # Merge new local data with previous data
     foreach ($g in $GamesToCheck) {
         if ($GamesData.ContainsKey($g.AppID)) {
             $GamesData[$g.AppID].Name = $g.Name
@@ -98,62 +88,55 @@ if ($IsGitHubActions) {
             }
         }
     }
-    # Save merged JSON
     $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 }
 
 Write-Host "Number of games to process: $($GamesToCheck.Count)"
 
-# Function to fetch latest build via SteamCMD
 function Get-LatestBuild {
     param($AppID, $SteamCmdPath)
-
     $tempFile = New-TemporaryFile
-    $cmd = "$SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit"
-    Write-Host "Running: $cmd"
     & $SteamCmdPath +login anonymous +app_info_update 1 +app_info_print $AppID +quit > $tempFile 2>&1
     $content = Get-Content $tempFile -Raw
-    Write-Host "SteamCMD output for AppID ${AppID}:`n$content"
     Remove-Item $tempFile -Force
 
-    # Parse latest build ID from JSON-like structure
+    $buildid = $null
+    $timeupdated = $null
     if ($content -match '"buildid"\s*"(\d+)"') {
-        return [int]$matches[1]
-    } else {
-        return $null
+        $buildid = [int]$matches[1]
+    }
+    if ($content -match '"timeupdated"\s*"(\d+)"') {
+        $timeupdated = [int]$matches[1]
+    }
+    return @{
+        BuildID = $buildid
+        TimeUpdated = $timeupdated
     }
 }
 
-# Now, always check for updates for each game in $GamesToCheck
 $Results = @()
-$Counter = 1
-$Total = $GamesToCheck.Count
 foreach ($game in $GamesToCheck) {
     Write-Host "Processing game: $($game.Name) (AppID=$($game.AppID))"
-    $latestBuild = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
+    $latestInfo = Get-LatestBuild -AppID $game.AppID -SteamCmdPath $SteamCmdPath
+    $latestBuild = $latestInfo.BuildID
+    $latestTimeUpdated = $latestInfo.TimeUpdated
 
-    # Get previous build and date
     $prevBuild = $GamesData[$game.AppID].LatestBuild
     $prevDate = $GamesData[$game.AppID].PSObject.Properties['LatestDate'] ? $GamesData[$game.AppID].LatestDate : $null
-    
-    # If build changed or date missing, set new date
-    if (($latestBuild -ne $prevBuild) -or (-not $prevDate)) {
-      $newDate = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-ddTHH:mm:ssZ") # Stockholm time, ISO format
-      if ($GamesData[$game.AppID].PSObject.Properties['LatestDate']) {
-        $GamesData[$game.AppID].LatestDate = $newDate
-      } else {
-        $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestDate -Value $newDate
-      }
-    }
-    
-    # Always update LatestBuild
-    if ($GamesData[$game.AppID].PSObject.Properties['LatestBuild']) {
-      $GamesData[$game.AppID].LatestBuild = $latestBuild
+
+    # Use Steam's timeupdated if available
+    if ($latestTimeUpdated) {
+        $latestDate = (Get-Date -UnixTimeSeconds $latestTimeUpdated).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+        $GamesData[$game.AppID].LatestDate = $latestDate
+    } elseif (($latestBuild -ne $prevBuild) -or (-not $prevDate)) {
+        $latestDate = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
+        $GamesData[$game.AppID].LatestDate = $latestDate
     } else {
-      $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
+        $latestDate = $prevDate
     }
 
-    # Determine status
+    $GamesData[$game.AppID].LatestBuild = $latestBuild
+
     $status = ""
     if ($latestBuild -eq $null) {
         $status = "❌ Could not fetch latest"
@@ -163,31 +146,19 @@ foreach ($game in $GamesToCheck) {
         $status = "✅ Up to date"
     }
 
-    # Update stored latest build
-    if ($GamesData[$game.AppID].PSObject.Properties['LatestBuild']) {
-      $GamesData[$game.AppID].LatestBuild = $latestBuild
-    } else {
-      $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
-    }
     $Results += [PSCustomObject]@{
         Name          = $game.Name
         AppID         = $game.AppID
         InstalledBuild= $game.InstalledBuild
         LatestBuild   = $latestBuild
+        LatestDate    = $latestDate
         Status        = $status
     }
-    $Counter++
 }
 
-# Save updated data
 $GamesData | ConvertTo-Json -Depth 5 | Set-Content $DataFile
 
-# Generate HTML report
-$DateNow = Get-Date -Format "yyyy-MM-dd HH:mm"
-$RunMode = if ($IsGitHubActions) { "GitHub Actions" } else { "Local run" }
-
-# Set timezone to Europe/Stockholm (UTC+2)
-$DateNow = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-dd HH:mm")
+$DateNow = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm")
 $RunMode = if ($IsGitHubActions) { "GitHub Actions" } else { "Local run" }
 
 $HTML = @"
@@ -201,8 +172,8 @@ body { font-family: Arial, sans-serif; padding: 20px; }
 h1 { color: #333; }
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-.status-up-to-date { background-color: #c6efce; }    /* light green */
-.status-update { background-color: #ffc7ce; }       /* light red */
+.status-up-to-date { background-color: #c6efce; }
+.status-update { background-color: #ffc7ce; }
 .subtle { color: #666; font-size: 0.9em; }
 th { background-color: #eee; }
 </style>
@@ -215,23 +186,14 @@ th { background-color: #eee; }
   <th>AppID</th>
   <th>Installed Build</th>
   <th>Latest Build</th>
-  <th>Latest Build Date</th>
+  <th>Latest Build Updated</th>
   <th>Status</th>
 </tr>
 "@
 
 foreach ($r in $Results) {
     $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
-    $latestDate = ""
-    if ($r.PSObject.Properties['LatestDate'] -and $r.LatestDate) {
-        $latestDate = $r.LatestDate
-    } elseif ($GamesData[$r.AppID].PSObject.Properties['LatestDate'] -and $GamesData[$r.AppID].LatestDate) {
-        $latestDate = $GamesData[$r.AppID].LatestDate
-    } elseif ($r.LatestBuild) {
-        # If no date exists, use the current time in ISO format
-        $latestDate = (Get-Date).ToUniversalTime().AddHours(2).ToString("yyyy-MM-ddTHH:mm:ssZ")
-    }
-    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$latestDate</td><td>$($r.Status)</td></tr>`n"
+    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)</td></tr>`n"
 }
 
 $HTML += "</table>"
@@ -242,7 +204,6 @@ $HTML | Set-Content $ReportFile
 
 Write-Host "✅ HTML report saved to: $ReportFile"
 
-# Commit & push if running locally or if GITHUB_TOKEN exists
 if ($env:GITHUB_TOKEN -or -not $IsGitHubActions) {
     Write-Host "📤 Committing and pushing report to GitHub..."
     git -C $RepoPath config user.name $GitUserName
