@@ -1,1 +1,98 @@
-{}
+{
+  "2379780": {
+    "Name": "Balatro",
+    "AppID": 2379780,
+    "InstalledBuild": 17459173,
+    "LatestBuild": 17459173,
+    "LatestDate": "2025-02-24",
+    "Status": "✅ Up-to-date"
+  },
+  "774361": {
+    "Name": "Blasphemous",
+    "AppID": 774361,
+    "InstalledBuild": 20206233,
+    "LatestBuild": 20206233,
+    "LatestDate": "2025-10-03",
+    "Status": "✅ Up-to-date"
+  },
+  "2114740": {
+    "Name": "Blasphemous.2",
+    "AppID": 2114740,
+    "InstalledBuild": 20202981,
+    "LatestBuild": 20202981,
+    "LatestDate": "2025-10-03",
+    "Status": "✅ Up-to-date"
+  },
+  "1868140": {
+    "Name": "Dave.the.Diver",
+    "AppID": 1868140,
+    "InstalledBuild": 20202461,
+    "LatestBuild": 20202461,
+    "LatestDate": "2025-10-01",
+    "Status": "✅ Up-to-date"
+  },
+  "588650": {
+    "Name": "Dead.Cells",
+    "AppID": 588650,
+    "InstalledBuild": 15492902,
+    "LatestBuild": 15492902,
+    "LatestDate": "2024-08-27",
+    "Status": "✅ Up-to-date"
+  },
+  "367520": {
+    "Name": "Hollow.Knight",
+    "AppID": 367520,
+    "InstalledBuild": 20231655,
+    "LatestBuild": 20231655,
+    "LatestDate": "2025-10-03",
+    "Status": "✅ Up-to-date"
+  },
+  "2756920": {
+    "Name": "Keep.Driving",
+    "AppID": 2756920,
+    "InstalledBuild": 20168519,
+    "LatestBuild": 20168519,
+    "LatestDate": "2025-09-29",
+    "Status": "✅ Up-to-date"
+  },
+  "1161590": {
+    "Name": "Punch.Club.2.Fast.Forward",
+    "AppID": 1161590,
+    "InstalledBuild": 15567847,
+    "LatestBuild": 15567847,
+    "LatestDate": "2024-09-06",
+    "Status": "✅ Up-to-date"
+  },
+  "2066020": {
+    "Name": "Soulstone.Survivors",
+    "AppID": 2066020,
+    "InstalledBuild": 20250838,
+    "LatestBuild": 20261883,
+    "LatestDate": "2025-10-05",
+    "Status": "⚠️ Update available"
+  },
+  "1593030": {
+    "Name": "Terra.Nil",
+    "AppID": 1593030,
+    "InstalledBuild": 19755773,
+    "LatestBuild": 19755773,
+    "LatestDate": "2025-08-27",
+    "Status": "✅ Up-to-date"
+  },
+  "1361510": {
+    "Name": "TMNT.Shredders.Revenge",
+    "AppID": 1361510,
+    "InstalledBuild": 15664053,
+    "LatestBuild": 15664053,
+    "LatestDate": "2024-09-24",
+    "Status": "✅ Up-to-date"
+  },
+  "553420": {
+    "Name": "Tunic",
+    "AppID": 553420,
+    "InstalledBuild": 10650562,
+    "LatestBuild": 10650562,
+    "LatestDate": "2023-03-02",
+    "Status": "✅ Up-to-date"
+  }
+}
