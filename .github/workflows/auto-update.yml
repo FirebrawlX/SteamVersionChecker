@@ -1,13 +1,38 @@
-name: Auto Update Steam Report
+name: Auto Update Steam Backup Report
+
 on:
   schedule:
-    - cron: "0 * * * *"
-  workflow_dispatch:
+    - cron: "0 * * * *"  # Every hour
+  workflow_dispatch:      # Allow manual trigger
+
 jobs:
   update:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Steam Checker
-        run: pwsh ./Check-SteamBackups.ps1 -RepoPath "${{ github.workspace }}" -GitUserName "FirebrawlX" -GitUserEmail "andree.frank@gmail.com"
-        shell: pwsh
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up SteamCMD
+        run: |
+          mkdir C:\steamcmd
+          curl -L https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip -o steamcmd.zip
+          Expand-Archive steamcmd.zip -DestinationPath C:\steamcmd
+
+      - name: Run version checker
+        run: |
+          pwsh D:\SteamVersionCheckerRepo\Check-SteamBackups.ps1 `
+            -BackupDir "D:\Games" `
+            -SteamCmdPath "C:\steamcmd\steamcmd.exe" `
+            -RepoPath "${{ github.workspace }}" `
+            -GitUserName "FirebrawlX" `
+            -GitUserEmail "andree.frank@gmail.com"
+
+      - name: Commit & Push report
+        run: |
+          cd "${{ github.workspace }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Automated report update via GitHub Actions ($(Get-Date -Format 'yyyy-MM-dd HH:mm'))" || echo "No changes to commit"
+          git push origin main
