@@ -111,10 +111,15 @@ export function readGamesData(dataFile: string): Record<number, GameData> {
   if (!fs.existsSync(dataFile)) return {};
   try {
     const raw = fs.readFileSync(dataFile, 'utf-8');
-    const arr: GameData[] = JSON.parse(raw);
-    const map: Record<number, GameData> = {};
-    for (const g of arr) map[g.AppID] = g;
-    return map;
+    const parsed = JSON.parse(raw);
+    // If it's an array, convert to object
+    if (Array.isArray(parsed)) {
+      const map: Record<number, GameData> = {};
+      for (const g of parsed) map[g.AppID] = g;
+      return map;
+    }
+    // If it's already an object, return as-is
+    return parsed;
   } catch {
     return {};
   }
