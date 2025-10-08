@@ -131,8 +131,7 @@ function Get-SkidrowLinks {
       $categories += $catText
     }
     $pubDate = Get-Date $item.pubDate
-    $guidUrl = $item.guid.'#cdata-section'
-    if (-not $guidUrl) { $guidUrl = $item.guid.InnerText }
+    $guidUrl = $item.guid.InnerText
     foreach ($catName in $categories) {
       $normalizedCat = $catName.ToLower().Replace('.', '').Replace(' ', '')
       if ($normalizedCat -eq $normalizedGameName -and $pubDate -ge $sinceDate) {
@@ -141,7 +140,6 @@ function Get-SkidrowLinks {
         }
       }
     }
-    Write-Host "DEBUG: guid=$guidUrl, link=$item.link"
   }
   return $links
 }
