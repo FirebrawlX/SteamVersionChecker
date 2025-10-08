@@ -126,10 +126,16 @@ function Get-SkidrowLinks {
   foreach ($item in $items) {
     $title = $item.title
     $link = $item.link
+    $guid = $item.guid
     $pubDate = Get-Date $item.pubDate
     $normalizedTitle = $title.ToLower().Replace('.', '').Replace(' ', '')
     if ($normalizedTitle.Contains($normalizedGameName) -and $pubDate -ge $sinceDate) {
-      $links += $link
+      # Prefer guid if it's a valid SkidrowReloaded URL
+      if ($guid -and $guid.StartsWith('https://www.skidrowreloaded.com/')) {
+        $links += $guid
+      } else {
+        $links += $link
+      }
     }
   }
   return $links
