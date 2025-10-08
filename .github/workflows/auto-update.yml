@@ -2,7 +2,7 @@ name: Auto Update Steam Backup Report
 
 on:
   schedule:
-    - cron: "0 * * * *"  # every hour
+    - cron: '0 * * * *' # every hour
   workflow_dispatch:
 
 jobs:
@@ -28,12 +28,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Compile TypeScript
-        run: npx tsc
+      - name: Build TypeScript
+        run: npm run build
 
       - name: Run Steam Backup Report
         env:
           GITHUB_ACTIONS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node steam-backup-report.js
+          node dist/index.js \
+            --SteamCmdPath "$HOME/steamcmd/steamcmd.sh" \
+            --RepoPath "$GITHUB_WORKSPACE" \
+            --GitUserName "github-actions[bot]" \
+            --GitUserEmail "github-actions[bot]@users.noreply.github.com"
