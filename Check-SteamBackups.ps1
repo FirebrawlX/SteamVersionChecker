@@ -126,10 +126,13 @@ function Get-SkidrowLinks {
   foreach ($item in $items) {
     $categories = @()
     foreach ($cat in $item.category) {
-      $categories += $cat.'#cdata-section'
+      $catText = $cat.'#cdata-section'
+      if (-not $catText) { $catText = $cat.InnerText }
+      $categories += $catText
     }
     $pubDate = Get-Date $item.pubDate
-    $guidUrl = $item.guid.InnerText
+    $guidUrl = $item.guid.'#cdata-section'
+    if (-not $guidUrl) { $guidUrl = $item.guid.InnerText }
     foreach ($catName in $categories) {
       $normalizedCat = $catName.ToLower().Replace('.', '').Replace(' ', '')
       if ($normalizedCat -eq $normalizedGameName -and $pubDate -ge $sinceDate) {
