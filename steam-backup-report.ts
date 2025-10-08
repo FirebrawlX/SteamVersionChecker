@@ -118,7 +118,7 @@ export function readGamesData(dataFile: string): Record<number, GameData> {
       for (const g of parsed) map[g.AppID] = g;
       return map;
     }
-    // If it's already an object, return as-is
+    // If it's already an object (your format), return as-is
     return parsed;
   } catch {
     return {};
