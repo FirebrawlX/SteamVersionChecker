@@ -242,12 +242,12 @@ foreach ($r in $Results) {
     $skidrowLinks = Get-SkidrowLinks -gameName $r.Name -sinceDate $sinceDate
     Write-Host "DEBUG: $($r.Name) skidrowLinks=" $skidrowLinks
     $linkUrl = $null
-    if ($skidrowLinks -is [System.Collections.IEnumerable]) {
+    if ($skidrowLinks -is [System.Collections.IEnumerable] -and $skidrowLinks -isnot [string]) {
       $linkUrl = $skidrowLinks[0]
     } elseif ($skidrowLinks -is [string]) {
       $linkUrl = $skidrowLinks
     }
-    if ($linkUrl -and $linkUrl.StartsWith('https://www.skidrowreloaded.com/')) {
+    if ($linkUrl -and ($linkUrl -is [string]) -and $linkUrl.StartsWith('https://www.skidrowreloaded.com/')) {
       $extraLink = " <a href='" + $linkUrl + "' target='_blank' title='SkidrowReloaded'><span style='font-size:1.2em;'>&#128279;</span></a>"
     }
     $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)$extraLink</td></tr>`n"
