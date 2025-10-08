@@ -131,8 +131,9 @@ function Get-SkidrowLinks {
     $normalizedTitle = $title.ToLower().Replace('.', '').Replace(' ', '')
     if ($normalizedTitle.Contains($normalizedGameName) -and $pubDate -ge $sinceDate) {
       # Prefer guid if it's a valid SkidrowReloaded URL
-      if ($guid -and $guid.StartsWith('https://www.skidrowreloaded.com/')) {
-        $links += $guid
+      $guidUrl = $guid.InnerText
+      if ($guidUrl -and $guidUrl.StartsWith('https://www.skidrowreloaded.com/')) {
+        $links += $guidUrl
       } else {
         $links += $link
       }
