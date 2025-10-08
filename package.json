@@ -1,0 +1,19 @@
+{
+  "name": "steam-backup-report",
+  "version": "1.0.0",
+  "description": "Steam Backup Report - Node.js/TypeScript",
+  "main": "steam-backup-report.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node steam-backup-report.js"
+  },
+  "author": "Sony Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "rss-parser": "^3.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
