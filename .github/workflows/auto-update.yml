@@ -19,6 +19,11 @@ jobs:
           cd ~/steamcmd
           wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
           tar -xvzf steamcmd_linux.tar.gz
+          chmod +x steamcmd.sh
+          # Test SteamCMD works
+          ~/steamcmd/steamcmd.sh +quit || true
+          echo "SteamCMD installed at: $HOME/steamcmd/steamcmd.sh"
+          ls -la ~/steamcmd/
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
