@@ -9,6 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["steam-backup-report-full.ts"],
+  "include": ["steam-backup-report.ts"],
   "exclude": ["node_modules"]
 }
