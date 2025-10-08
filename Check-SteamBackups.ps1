@@ -141,6 +141,7 @@ function Get-SkidrowLinks {
         }
       }
     }
+    Write-Host "DEBUG: guid=$guidUrl, link=$item.link"
   }
   return $links
 }
