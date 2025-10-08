@@ -1,122 +1,107 @@
 {
-  "2379780": {
-    "Name": "Balatro",
-    "AppID": 2379780,
-    "InstalledBuild": 17459173,
-    "LatestBuild": 17459173,
-    "LatestDate": "2025-02-24",
-    "Status": "✅ Up-to-date"
-  },
-  "774361": {
-    "Name": "Blasphemous",
-    "AppID": 774361,
-    "InstalledBuild": 20206233,
-    "LatestBuild": 20206233,
-    "LatestDate": "2025-10-03",
-    "Status": "✅ Up-to-date"
-  },
-  "2114740": {
-    "Name": "Blasphemous.2",
-    "AppID": 2114740,
-    "InstalledBuild": 20202981,
-    "LatestBuild": 20202981,
-    "LatestDate": "2025-10-03",
-    "Status": "✅ Up-to-date"
-  },
-  "1942280": {
-    "Name": "Brotato",
-    "AppID": 1942280,
-    "InstalledBuild": 19241587,
-    "LatestBuild": 19241587,
-    "LatestDate": "2025-07-16",
-    "Status": "✅ Up-to-date"
-  },
-  "1868140": {
-    "Name": "Dave.the.Diver",
-    "AppID": 1868140,
-    "InstalledBuild": 20202461,
-    "LatestBuild": 20202461,
-    "LatestDate": "2025-10-01",
-    "Status": "✅ Up-to-date"
-  },
-  "588650": {
-    "Name": "Dead.Cells",
-    "AppID": 588650,
-    "InstalledBuild": 15492902,
-    "LatestBuild": 15492902,
-    "LatestDate": "2024-08-27",
-    "Status": "✅ Up-to-date"
-  },
-  "2321470": {
-    "Name": "Deep.Rock.Galactic.Survivor",
-    "AppID": 2321470,
-    "InstalledBuild": 20237659,
-    "LatestBuild": 20237659,
-    "LatestDate": "2025-10-03",
-    "Status": "✅ Up-to-date"
-  },
   "367520": {
     "Name": "Hollow.Knight",
     "AppID": 367520,
     "InstalledBuild": 20231655,
-    "LatestBuild": 20231655,
-    "LatestDate": "2025-10-03",
-    "Status": "✅ Up-to-date"
-  },
-  "1030300": {
-    "Name": "Hollow.Knight.Silksong",
-    "AppID": 1030300,
-    "InstalledBuild": 20233035,
-    "LatestBuild": 20233035,
-    "LatestDate": "2025-10-03",
-    "Status": "✅ Up-to-date"
-  },
-  "2756920": {
-    "Name": "Keep.Driving",
-    "AppID": 2756920,
-    "InstalledBuild": 20168519,
-    "LatestBuild": 20168519,
-    "LatestDate": "2025-09-29",
-    "Status": "✅ Up-to-date"
-  },
-  "1161590": {
-    "Name": "Punch.Club.2.Fast.Forward",
-    "AppID": 1161590,
-    "InstalledBuild": 15567847,
-    "LatestBuild": 15567847,
-    "LatestDate": "2024-09-06",
-    "Status": "✅ Up-to-date"
-  },
-  "2066020": {
-    "Name": "Soulstone.Survivors",
-    "AppID": 2066020,
-    "InstalledBuild": 20250838,
-    "LatestBuild": 20261883,
-    "LatestDate": "2025-10-05",
-    "Status": "⚠️ Update available"
-  },
-  "1593030": {
-    "Name": "Terra.Nil",
-    "AppID": 1593030,
-    "InstalledBuild": 19755773,
-    "LatestBuild": 19755773,
-    "LatestDate": "2025-08-27",
-    "Status": "✅ Up-to-date"
-  },
-  "1361510": {
-    "Name": "TMNT.Shredders.Revenge",
-    "AppID": 1361510,
-    "InstalledBuild": 15664053,
-    "LatestBuild": 15664053,
-    "LatestDate": "2024-09-24",
+    "LatestDate": "2025-10-08T17:51:23.915Z",
     "Status": "✅ Up-to-date"
   },
   "553420": {
     "Name": "Tunic",
     "AppID": 553420,
     "InstalledBuild": 10650562,
-    "LatestBuild": 10650562,
-    "LatestDate": "2023-03-02",
+    "LatestDate": "2025-10-08T17:51:29.024Z",
+    "Status": "✅ Up-to-date"
+  },
+  "588650": {
+    "Name": "Dead.Cells",
+    "AppID": 588650,
+    "InstalledBuild": 15492902,
+    "LatestDate": "2025-10-08T17:51:33.459Z",
+    "Status": "✅ Up-to-date"
+  },
+  "774361": {
+    "Name": "Blasphemous",
+    "AppID": 774361,
+    "InstalledBuild": 20206233,
+    "LatestDate": "2025-10-08T17:51:37.806Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1030300": {
+    "Name": "Hollow.Knight.Silksong",
+    "AppID": 1030300,
+    "InstalledBuild": 20233035,
+    "LatestDate": "2025-10-08T17:51:41.967Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1161590": {
+    "Name": "Punch.Club.2.Fast.Forward",
+    "AppID": 1161590,
+    "InstalledBuild": 15567847,
+    "LatestDate": "2025-10-08T17:51:47.482Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1361510": {
+    "Name": "TMNT.Shredders.Revenge",
+    "AppID": 1361510,
+    "InstalledBuild": 15664053,
+    "LatestDate": "2025-10-08T17:51:52.672Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1593030": {
+    "Name": "Terra.Nil",
+    "AppID": 1593030,
+    "InstalledBuild": 19755773,
+    "LatestDate": "2025-10-08T17:51:57.203Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1868140": {
+    "Name": "Dave.the.Diver",
+    "AppID": 1868140,
+    "InstalledBuild": 20202461,
+    "LatestDate": "2025-10-08T17:52:01.980Z",
+    "Status": "✅ Up-to-date"
+  },
+  "1942280": {
+    "Name": "Brotato",
+    "AppID": 1942280,
+    "InstalledBuild": 19241587,
+    "LatestDate": "2025-10-08T17:52:06.092Z",
+    "Status": "✅ Up-to-date"
+  },
+  "2066020": {
+    "Name": "Soulstone.Survivors",
+    "AppID": 2066020,
+    "InstalledBuild": 20250838,
+    "LatestDate": "2025-10-08T17:52:10.052Z",
+    "Status": "⚠️ Update available"
+  },
+  "2114740": {
+    "Name": "Blasphemous.2",
+    "AppID": 2114740,
+    "InstalledBuild": 20202981,
+    "LatestDate": "2025-10-08T17:52:15.473Z",
+    "Status": "✅ Up-to-date"
+  },
+  "2321470": {
+    "Name": "Deep.Rock.Galactic.Survivor",
+    "AppID": 2321470,
+    "InstalledBuild": 20237659,
+    "LatestDate": "2025-10-08T17:52:19.383Z",
+    "Status": "✅ Up-to-date"
+  },
+  "2379780": {
+    "Name": "Balatro",
+    "AppID": 2379780,
+    "InstalledBuild": 17459173,
+    "LatestDate": "2025-10-08T17:52:23.071Z",
+    "Status": "✅ Up-to-date"
+  },
+  "2756920": {
+    "Name": "Keep.Driving",
+    "AppID": 2756920,
+    "InstalledBuild": 20168519,
+    "LatestDate": "2025-10-08T17:52:27.179Z",
     "Status": "✅ Up-to-date"
   }
 }
