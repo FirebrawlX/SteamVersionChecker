@@ -114,6 +114,26 @@ function Get-LatestBuild {
     }
 }
 
+# --- SkidrowReloaded RSS feed search ---
+function Get-SkidrowLinks {
+  param($gameName, $sinceDate)
+  $feedUrl = 'https://feeds.feedburner.com/SkidrowReloadedGames'
+  $rss = Invoke-WebRequest -Uri $feedUrl -UseBasicParsing
+  $xml = [xml]$rss.Content
+  $items = $xml.rss.channel.item
+  $links = @()
+  foreach ($item in $items) {
+    $title = $item.title
+    $link = $item.link
+    $pubDate = Get-Date $item.pubDate
+    if ($title -match $gameName -and $pubDate -ge $sinceDate) {
+      $links += $link
+    }
+  }
+  return $links
+}
+# --- End SkidrowReloaded RSS feed search ---
+
 $Results = @()
 foreach ($game in $GamesToCheck) {
     Write-Host "Processing game: $($game.Name) (AppID=$($game.AppID))"
@@ -206,7 +226,15 @@ th { background-color: #eee; }
 
 foreach ($r in $Results) {
     $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
-    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)</td></tr>`n"
+    $extraLink = ""
+    if ($r.Status -eq "⚠️ Update available" -and $r.LatestDate) {
+      $sinceDate = Get-Date $r.LatestDate
+      $skidrowLinks = Get-SkidrowLinks -gameName $r.Name -sinceDate $sinceDate
+      if ($skidrowLinks.Count -gt 0) {
+        $extraLink = "<br/><a href='" + $skidrowLinks[0] + "' target='_blank'>SkidrowReloaded: Latest Upload</a>"
+      }
+    }
+    $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)$extraLink</td></tr>`n"
 }
 
 $HTML += "</table>"
