@@ -238,7 +238,7 @@ foreach ($r in $Results) {
     $sinceDate = $r.LatestDate ? (Get-Date $r.LatestDate) : (Get-Date).AddYears(-1)
     $skidrowLinks = Get-SkidrowLinks -gameName $r.Name -sinceDate $sinceDate
     if ($skidrowLinks.Count -gt 0) {
-        $extraLink = "<br/><a href='" + $skidrowLinks[0] + "' target='_blank'>SkidrowReloaded: Latest Upload</a>"
+        $extraLink = " <a href='" + $skidrowLinks[0] + "' target='_blank' title='SkidrowReloaded'><span style='font-size:1.2em;'>&#128279;</span></a>"
     }
     $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)$extraLink</td></tr>`n"
 }
