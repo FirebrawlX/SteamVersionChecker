@@ -81,7 +81,7 @@ if ($IsGitHubActions) {
             $GamesData[$g.AppID].Name = $g.Name
             $GamesData[$g.AppID].InstalledBuild = $g.BuildID
         } else {
-            $GamesData[$g.AppID] = @{
+            $GamesData[$g.AppID] = [PSCustomObject]@{
                 Name    = $g.Name
                 AppID   = $g.AppID
                 InstalledBuild = $g.BuildID
