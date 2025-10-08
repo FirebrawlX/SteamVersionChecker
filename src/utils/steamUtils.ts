@@ -21,24 +21,28 @@ export function getLatestBuild(
       `steamcmd_output_${appId}_${Date.now()}.txt`
     );
 
-    const command = `"${steamCmdPath}" +login anonymous +app_info_update 1 +app_info_print ${appId} +quit`;
+    // Use shell to properly expand the path and redirect output
+    const command = `${steamCmdPath} +login anonymous +app_info_update 1 +app_info_print ${appId} +quit > ${tempFile} 2>&1`;
+
+    console.log(`Running SteamCMD: ${command}`);
 
     try {
       execSync(command, {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        encoding: 'utf-8',
+        shell: '/bin/bash',
         timeout: 60000, // 60 second timeout
       });
     } catch (error: any) {
-      // SteamCMD often exits with non-zero even on success, so we capture the output
-      const output = error.stdout || error.stderr || '';
-      fs.writeFileSync(tempFile, output, 'utf-8');
+      // SteamCMD often exits with non-zero even on success
+      console.log(`SteamCMD exited with code: ${error.status || 'unknown'}`);
     }
 
     let content = '';
     if (fs.existsSync(tempFile)) {
       content = fs.readFileSync(tempFile, 'utf-8');
+      console.log(`SteamCMD output length: ${content.length} bytes`);
       fs.unlinkSync(tempFile);
+    } else {
+      console.error(`Temp file not found: ${tempFile}`);
     }
 
     let buildId: number | null = null;
@@ -48,6 +52,13 @@ export function getLatestBuild(
     const buildIdMatch = content.match(/"buildid"\s+"(\d+)"/);
     if (buildIdMatch) {
       buildId = parseInt(buildIdMatch[1], 10);
+      console.log(`Found buildid: ${buildId}`);
+    } else {
+      console.log('No buildid found in output');
+      // Log first 500 chars of output for debugging
+      if (content.length > 0) {
+        console.log('Output preview:', content.substring(0, 500));
+      }
     }
 
     // Parse timeupdated
