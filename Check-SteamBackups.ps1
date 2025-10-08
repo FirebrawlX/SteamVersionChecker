@@ -180,6 +180,27 @@ foreach ($game in $GamesToCheck) {
         $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name LatestBuild -Value $latestBuild
     }
 
+    # --- Save latest SkidrowReloaded link ---
+    $sinceDate = $latestDate ? (Get-Date $latestDate) : (Get-Date).AddYears(-1)
+    $skidrowLinks = Get-SkidrowLinks -gameName $game.Name -sinceDate $sinceDate
+    $linkUrl = $null
+    if ($skidrowLinks -is [System.Collections.IEnumerable] -and $skidrowLinks -isnot [string]) {
+      $linkUrl = $skidrowLinks[0]
+    } elseif ($skidrowLinks -is [string]) {
+      $linkUrl = $skidrowLinks
+    }
+    if ($linkUrl -and ($linkUrl -is [string]) -and $linkUrl.StartsWith('https://www.skidrowreloaded.com/')) {
+      if ($GamesData[$game.AppID].PSObject.Properties['SkidrowLink']) {
+        $GamesData[$game.AppID].SkidrowLink = $linkUrl
+      } else {
+        $GamesData[$game.AppID] | Add-Member -MemberType NoteProperty -Name SkidrowLink -Value $linkUrl
+      }
+    } elseif ($GamesData[$game.AppID].PSObject.Properties['SkidrowLink']) {
+      # Use the previously saved link if no new one found
+      $linkUrl = $GamesData[$game.AppID].SkidrowLink
+    }
+    # --- End SkidrowReloaded link ---
+
     $status = ""
     if ($latestBuild -eq $null) {
         $status = "❌ Could not fetch latest"
@@ -196,6 +217,7 @@ foreach ($game in $GamesToCheck) {
         LatestBuild   = $latestBuild
         LatestDate    = $latestDate
         Status        = $status
+        SkidrowLink   = $linkUrl
     }
 }
 
@@ -238,17 +260,8 @@ th { background-color: #eee; }
 foreach ($r in $Results) {
     $statusClass = if ($r.Status -eq "✅ Up to date" -or $r.Status -eq "✅ Up-to-date") { "status-up-to-date" } elseif ($r.Status -eq "⚠️ Update available") { "status-update" } else { "" }
     $extraLink = ""
-    $sinceDate = $r.LatestDate ? (Get-Date $r.LatestDate) : (Get-Date).AddYears(-1)
-    $skidrowLinks = Get-SkidrowLinks -gameName $r.Name -sinceDate $sinceDate
-    Write-Host "DEBUG: $($r.Name) skidrowLinks=" $skidrowLinks
-    $linkUrl = $null
-    if ($skidrowLinks -is [System.Collections.IEnumerable] -and $skidrowLinks -isnot [string]) {
-      $linkUrl = $skidrowLinks[0]
-    } elseif ($skidrowLinks -is [string]) {
-      $linkUrl = $skidrowLinks
-    }
-    if ($linkUrl -and ($linkUrl -is [string]) -and $linkUrl.StartsWith('https://www.skidrowreloaded.com/')) {
-      $extraLink = " <a href='" + $linkUrl + "' target='_blank' title='SkidrowReloaded'><span style='font-size:1.2em;'>&#128279;</span></a>"
+    if ($r.SkidrowLink -and ($r.SkidrowLink -is [string]) -and $r.SkidrowLink.StartsWith('https://www.skidrowreloaded.com/')) {
+      $extraLink = " <a href='" + $r.SkidrowLink + "' target='_blank' title='SkidrowReloaded'><span style='font-size:1.2em;'>&#128279;</span></a>"
     }
     $HTML += "<tr class='$statusClass'><td>$($r.Name)</td><td>$($r.AppID)</td><td>$($r.InstalledBuild)</td><td>$($r.LatestBuild)</td><td>$($r.LatestDate)</td><td>$($r.Status)$extraLink</td></tr>`n"
 }
