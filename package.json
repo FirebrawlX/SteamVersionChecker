@@ -7,10 +7,10 @@
     "steam-backup-report": "dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "clean": "rm -rf dist",
-    "prebuild": "npm run clean"
+	"clean": "rimraf dist",
+	"prebuild": "npm run clean",
+	"build": "tsc",
+	"start": "node dist/index.js"
   },
   "author": "",
   "license": "MIT",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "rimraf": "^6.0.1",
     "typescript": "^5.0.0"
   }
 }
