@@ -102,17 +102,18 @@ async function main(params: Params) {
     const localBackups = getLocalBackups(params.BackupDir);
     console.log('Local backups found:', localBackups.length);
 
-    // Merge with existing data
-    for (const g of localBackups) {
-      if (gamesData[g.AppID]) {
-        gamesData[g.AppID].Name = g.Name;
-        gamesData[g.AppID].InstalledBuild = g.InstalledBuild;
+    // Safe merge: update existing entries, add new local games, leave missing games intact
+    for (const backup of localBackups) {
+      if (gamesData[backup.AppID]) {
+        // Only update installed info and name
+        gamesData[backup.AppID].Name = backup.Name;
+        gamesData[backup.AppID].InstalledBuild = backup.InstalledBuild;
       } else {
-        gamesData[g.AppID] = g;
+        // Add new local game
+        gamesData[backup.AppID] = backup;
       }
     }
 
-    writeGamesData(dataFile, gamesData);
     gamesToCheck = localBackups;
     console.log('Games to check after merging:', gamesToCheck.length);
   }
@@ -201,7 +202,7 @@ async function main(params: Params) {
   // Generate HTML report (Stockholm time)
   const dateNow = new Date()
     .toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm', hour12: false })
-    .replace(',', '')
+    .replace(',', ' ')
     .replace(' ', ' ');
   const runMode = isActions ? 'GitHub Actions' : 'Local run';
 
