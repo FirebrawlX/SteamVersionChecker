@@ -118,5 +118,14 @@
     "LatestDate": "2025-10-08T11:13:42.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20301720
+  },
+  "2996040": {
+    "Name": "Teenage.Mutant.Ninja.Turtles.Splintered.Fate",
+    "AppID": 2996040,
+    "InstalledBuild": 20003736,
+    "LatestDate": "2025-09-30T11:13:42.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 20003736
   }
+
 }
