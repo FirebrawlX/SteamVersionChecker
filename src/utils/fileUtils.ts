@@ -49,7 +49,12 @@ export function writeGamesData(
   dataFile: string,
   gamesData: GamesDataMap
 ): void {
-  fs.writeFileSync(dataFile, JSON.stringify(gamesData, null, 2), 'utf-8');
+  // Sort gamesData by Name before writing
+  const sortedEntries = Object.entries(gamesData).sort(([, a], [, b]) =>
+    a.Name.localeCompare(b.Name)
+  );
+  const sortedGamesData = Object.fromEntries(sortedEntries);
+  fs.writeFileSync(dataFile, JSON.stringify(sortedGamesData, null, 2), 'utf-8');
 }
 
 /**
