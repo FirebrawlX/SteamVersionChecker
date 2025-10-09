@@ -14,6 +14,10 @@ export function generateHtmlReport(
   runMode: string,
   reportFile: string
 ): void {
+  // Sort results by Name
+  const sortedResults = [...results].sort((a, b) =>
+    a.Name.localeCompare(b.Name)
+  );
   let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +47,7 @@ th { background-color: #eee; }
 </tr>
 `;
 
-  for (const r of results) {
+  for (const r of sortedResults) {
     let statusClass = '';
     if (r.Status === '✅ Up to date' || r.Status === '✅ Up-to-date') {
       statusClass = 'status-up-to-date';
