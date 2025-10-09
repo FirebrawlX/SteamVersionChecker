@@ -37,7 +37,8 @@ export function getLatestBuild(
 
     try {
       execSync(command, {
-        shell: isWindows ? "powershell.exe" : "/bin/bash",
+        // ✅ Use cmd.exe instead of PowerShell to avoid + parsing issue
+        shell: isWindows ? "cmd.exe" : "/bin/bash",
         stdio: "inherit",
         timeout: 60000, // 60 second timeout
       });
