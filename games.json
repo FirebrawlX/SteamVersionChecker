@@ -48,6 +48,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 15567847
   },
+  "1229240": {
+    "Name": "Chained.Echoes",
+    "AppID": 1229240,
+    "InstalledBuild": 20253133,
+    "LatestDate": "2025-10-04T14:51:41.000Z",
+    "LatestBuild": 20253141
+  },
   "1361510": {
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
@@ -78,6 +85,13 @@
     "LatestDate": "2025-10-01T11:07:07.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20202461
+  },
+  "1904480": {
+    "Name": "Absolum",
+    "AppID": 1904480,
+    "InstalledBuild": 20223100,
+    "LatestDate": "2025-10-09T12:52:29.000Z",
+    "LatestBuild": 20223100
   },
   "1942280": {
     "Name": "Brotato",
@@ -119,6 +133,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 17459173
   },
+  "2444750": {
+    "Name": "Shape.of.Dreams",
+    "AppID": 2444750,
+    "InstalledBuild": 20234063,
+    "LatestDate": "2025-10-03T11:01:32.000Z",
+    "LatestBuild": 20234063
+  },
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
@@ -142,5 +163,12 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20282589,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=513514"
+  },
+  "3405340": {
+    "Name": "Megabonk",
+    "AppID": 3405340,
+    "InstalledBuild": 20303469,
+    "LatestDate": "2025-10-08T14:33:45.000Z",
+    "LatestBuild": 20303469
   }
 }
