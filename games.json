@@ -35,16 +35,18 @@
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
     "InstalledBuild": 20233035,
-    "LatestDate": "2025-10-14T22:17:46.757Z",
+    "LatestDate": "2025-10-14T00:09:00.000Z",
     "Status": "✅ Up-to-date",
-    "SkidrowLink": "https://www.skidrowreloaded.com/?p=513871"
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=513871",
+    "LatestBuild": 20283943
   },
   "1161590": {
     "Name": "Punch.Club.2.Fast.Forward",
     "AppID": 1161590,
     "InstalledBuild": 15567847,
-    "LatestDate": "2025-10-14T22:18:06.596Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2024-09-06T09:15:38.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 15567847
   },
   "1229240": {
     "Name": "Chained.Echoes",
@@ -135,7 +137,8 @@
     "Name": "Shape.of.Dreams",
     "AppID": 2444750,
     "InstalledBuild": 20234063,
-    "LatestDate": "2025-10-14T22:20:00.779Z"
+    "LatestDate": "2025-10-03T11:01:32.000Z",
+    "LatestBuild": 20234063
   },
   "2742830": {
     "Name": "Monster.Train.2",
