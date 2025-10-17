@@ -102,6 +102,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20236656
   },
+  "2062430": {
+    "Name": "BALL.x.PIT",
+    "AppID": 2062430,
+    "InstalledBuild": 0,
+    "LatestDate": "2025-09-23T12:39:11.000Z",
+    "LatestBuild": 20076054
+  },
   "2066020": {
     "Name": "Soulstone.Survivors",
     "AppID": 2066020,
@@ -171,12 +178,5 @@
     "InstalledBuild": 20303469,
     "LatestDate": "2025-10-08T14:33:45.000Z",
     "LatestBuild": 20303469
-  },
-  "2062430": {
-    "Name": "BALL.x.PIT",
-    "AppID": 2062430,
-    "InstalledBuild": 0,
-    "LatestDate": "2025-09-23T14:33:45.000Z",
-    "LatestBuild": 20076054
   }
 }
