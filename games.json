@@ -3,15 +3,17 @@
     "Name": "Hollow.Knight",
     "AppID": 367520,
     "InstalledBuild": 20231655,
-    "LatestDate": "2025-10-21T22:17:00.264Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-10-03T07:43:14.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 20231655
   },
   "553420": {
     "Name": "Tunic",
     "AppID": 553420,
     "InstalledBuild": 10650562,
-    "LatestDate": "2025-10-21T22:18:00.637Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2023-03-02T20:14:47.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 10650562
   },
   "588650": {
     "Name": "Dead.Cells",
@@ -25,8 +27,9 @@
     "Name": "Blasphemous",
     "AppID": 774361,
     "InstalledBuild": 20206233,
-    "LatestDate": "2025-10-21T22:19:47.825Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-10-03T09:46:58.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 20206233
   },
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
@@ -71,8 +74,9 @@
     "Name": "Terra.Nil",
     "AppID": 1593030,
     "InstalledBuild": 19755773,
-    "LatestDate": "2025-10-21T22:21:20.336Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-08-27T14:17:14.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 19755773
   },
   "1649950": {
     "Name": "News.Tower",
