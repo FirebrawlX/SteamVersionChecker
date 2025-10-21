@@ -114,7 +114,8 @@
     "AppID": 2062430,
     "InstalledBuild": 20076054,
     "LatestDate": "2025-09-23T12:39:11.000Z",
-    "LatestBuild": 20076054
+    "LatestBuild": 20076054,
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=518906"
   },
   "2066020": {
     "Name": "Soulstone.Survivors",
@@ -192,6 +193,7 @@
     "AppID": 3405340,
     "InstalledBuild": 20303469,
     "LatestDate": "2025-10-19T22:24:39.000Z",
-    "LatestBuild": 20457192
+    "LatestBuild": 20457192,
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872"
   }
 }
