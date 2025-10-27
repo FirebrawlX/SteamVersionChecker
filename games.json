@@ -7,6 +7,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20231655
   },
+  "503560": {
+    "Name": "911.Operator",
+    "AppID": 503560,
+    "InstalledBuild": 7533741,
+    "LatestDate": "2021-10-14T15:35:34.000Z",
+    "LatestBuild": 7533741
+  },
   "553420": {
     "Name": "Tunic",
     "AppID": 553420,
@@ -78,12 +85,33 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 19755773
   },
+  "1637320": {
+    "Name": "Dome.Keeper",
+    "AppID": 1637320,
+    "InstalledBuild": 17779621,
+    "LatestDate": "2025-03-19T15:38:50.000Z",
+    "LatestBuild": 17779621
+  },
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
     "InstalledBuild": 17709412,
     "LatestDate": "2025-10-09T08:15:23.000Z",
     "LatestBuild": 20208233
+  },
+  "1718570": {
+    "Name": "ASTLIBRA.Revision",
+    "AppID": 1718570,
+    "InstalledBuild": 16656423,
+    "LatestDate": "2024-12-06T12:27:27.000Z",
+    "LatestBuild": 16656423
+  },
+  "1755830": {
+    "Name": "Astrea.Six.Sided.Oracles",
+    "AppID": 1755830,
+    "InstalledBuild": 18016665,
+    "LatestDate": "2025-04-08T00:59:56.000Z",
+    "LatestBuild": 18016665
   },
   "1868140": {
     "Name": "Dave.the.Diver",
@@ -108,6 +136,13 @@
     "LatestDate": "2025-10-03T09:54:33.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20236656
+  },
+  "1970580": {
+    "Name": "Backpack.Hero",
+    "AppID": 1970580,
+    "InstalledBuild": 15631088,
+    "LatestDate": "2024-09-08T17:06:09.000Z",
+    "LatestBuild": 15631088
   },
   "2062430": {
     "Name": "BALL.x.PIT",
@@ -191,9 +226,16 @@
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
-    "InstalledBuild": 20303469,
+    "InstalledBuild": 20456559,
     "LatestDate": "2025-10-19T22:24:39.000Z",
     "LatestBuild": 20457192,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872"
+  },
+  "3631290": {
+    "Name": "Slots.and.Daggers",
+    "AppID": 3631290,
+    "InstalledBuild": 20540229,
+    "LatestDate": "2025-10-26T13:11:05.000Z",
+    "LatestBuild": 20547866
   }
 }
