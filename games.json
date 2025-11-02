@@ -192,6 +192,13 @@
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=518401",
     "LatestBuild": 20380878
   },
+  "2592160": {
+    "Name": "Dispatch",
+    "AppID": 2592160,
+    "InstalledBuild": 20625875,
+    "LatestDate": "2025-10-31T23:14:37.000Z",
+    "LatestBuild": 20625875
+  },
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
@@ -223,6 +230,13 @@
     "LatestBuild": 20282589,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=513514"
   },
+  "3167020": {
+    "Name": "Escape.from.Duckov",
+    "AppID": 3167020,
+    "InstalledBuild": 20620918,
+    "LatestDate": "2025-10-31T11:37:20.000Z",
+    "LatestBuild": 20620918
+  },
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
@@ -234,7 +248,7 @@
   "3631290": {
     "Name": "Slots.and.Daggers",
     "AppID": 3631290,
-    "InstalledBuild": 20540229,
+    "InstalledBuild": 20635204,
     "LatestDate": "2025-11-01T19:17:02.000Z",
     "LatestBuild": 20635204
   }
