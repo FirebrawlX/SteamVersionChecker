@@ -1,4 +1,11 @@
 {
+  "330020": {
+    "Name": "Children.of.Morta",
+    "AppID": 330020,
+    "InstalledBuild": 8334433,
+    "LatestDate": "2022-03-08T16:02:23.000Z",
+    "LatestBuild": 8334433
+  },
   "367520": {
     "Name": "Hollow.Knight",
     "AppID": 367520,
@@ -58,7 +65,7 @@
   "1229240": {
     "Name": "Chained.Echoes",
     "AppID": 1229240,
-    "InstalledBuild": 20253133,
+    "InstalledBuild": 20253141,
     "LatestDate": "2025-10-04T14:51:41.000Z",
     "LatestBuild": 20253141,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=523773"
@@ -78,6 +85,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 15664053
   },
+  "1458140": {
+    "Name": "Pacific.Drive",
+    "AppID": 1458140,
+    "InstalledBuild": 20555698,
+    "LatestDate": "2025-10-29T15:57:34.000Z",
+    "LatestBuild": 20555698
+  },
   "1593030": {
     "Name": "Terra.Nil",
     "AppID": 1593030,
@@ -85,6 +99,13 @@
     "LatestDate": "2025-08-27T14:17:14.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 19755773
+  },
+  "1621690": {
+    "Name": "Core.Keeper",
+    "AppID": 1621690,
+    "InstalledBuild": 20511098,
+    "LatestDate": "2025-10-29T10:26:41.000Z",
+    "LatestBuild": 20511098
   },
   "1637320": {
     "Name": "Dome.Keeper",
@@ -125,7 +146,7 @@
   "1904480": {
     "Name": "Absolum",
     "AppID": 1904480,
-    "InstalledBuild": 20398062,
+    "InstalledBuild": 20526751,
     "LatestDate": "2025-10-24T14:36:10.000Z",
     "LatestBuild": 20526751,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=517704"
@@ -133,7 +154,7 @@
   "1942280": {
     "Name": "Brotato",
     "AppID": 1942280,
-    "InstalledBuild": 20236656,
+    "InstalledBuild": 20606726,
     "LatestDate": "2025-10-30T14:57:06.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20606726
@@ -161,6 +182,13 @@
     "Status": "⚠️ Update available",
     "LatestBuild": 20261883
   },
+  "2103140": {
+    "Name": "Magicraft",
+    "AppID": 2103140,
+    "InstalledBuild": 20604944,
+    "LatestDate": "2025-10-30T15:26:05.000Z",
+    "LatestBuild": 20604944
+  },
   "2114740": {
     "Name": "Blasphemous.2",
     "AppID": 2114740,
@@ -168,6 +196,13 @@
     "LatestDate": "2025-10-03T12:41:18.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20202981
+  },
+  "2179850": {
+    "Name": "Cobalt.Core",
+    "AppID": 2179850,
+    "InstalledBuild": 20115804,
+    "LatestDate": "2025-09-24T21:47:55.000Z",
+    "LatestBuild": 20115804
   },
   "2321470": {
     "Name": "Deep.Rock.Galactic.Survivor",
@@ -203,7 +238,7 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 20337282,
+    "InstalledBuild": 20559555,
     "LatestDate": "2025-10-27T14:26:24.000Z",
     "LatestBuild": 20559555
   },
