@@ -81,9 +81,8 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2024-09-24T22:43:58.000Z",
-    "Status": "✅ Up-to-date",
-    "LatestBuild": 15664053
+    "LatestDate": "2025-11-05T22:18:54.753Z",
+    "Status": "✅ Up-to-date"
   },
   "1458140": {
     "Name": "Pacific.Drive",
@@ -233,7 +232,8 @@
     "AppID": 2592160,
     "InstalledBuild": 20625875,
     "LatestDate": "2025-11-05T16:56:36.000Z",
-    "LatestBuild": 20672856
+    "LatestBuild": 20672856,
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=524690"
   },
   "2680550": {
     "Name": "Hollywood.Animal",
