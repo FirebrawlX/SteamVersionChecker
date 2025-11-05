@@ -25,8 +25,9 @@
     "Name": "Tunic",
     "AppID": 553420,
     "InstalledBuild": 10650562,
-    "LatestDate": "2025-11-04T23:18:03.258Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2023-03-02T20:14:47.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 10650562
   },
   "588650": {
     "Name": "Dead.Cells",
@@ -40,8 +41,9 @@
     "Name": "Blasphemous",
     "AppID": 774361,
     "InstalledBuild": 20206233,
-    "LatestDate": "2025-11-04T23:18:27.493Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-10-03T09:46:58.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 20206233
   },
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
@@ -79,14 +81,16 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-04T23:19:46.121Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2024-09-24T22:43:58.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 15664053
   },
   "1458140": {
     "Name": "Pacific.Drive",
     "AppID": 1458140,
     "InstalledBuild": 20555698,
-    "LatestDate": "2025-11-04T23:20:06.061Z"
+    "LatestDate": "2025-10-29T15:57:34.000Z",
+    "LatestBuild": 20555698
   },
   "1593030": {
     "Name": "Terra.Nil",
@@ -128,7 +132,8 @@
     "Name": "Astrea.Six.Sided.Oracles",
     "AppID": 1755830,
     "InstalledBuild": 18016665,
-    "LatestDate": "2025-11-04T23:20:49.370Z"
+    "LatestDate": "2025-04-08T00:59:56.000Z",
+    "LatestBuild": 18016665
   },
   "1868140": {
     "Name": "Dave.the.Diver",
