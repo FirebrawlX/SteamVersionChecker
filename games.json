@@ -81,7 +81,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-09T14:16:22.907Z",
+    "LatestDate": "2025-11-09T15:17:01.199Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -194,7 +194,8 @@
     "InstalledBuild": 20202981,
     "LatestDate": "2025-10-03T12:41:18.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20202981
+    "LatestBuild": 20202981,
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=525667"
   },
   "2179850": {
     "Name": "Cobalt.Core",
