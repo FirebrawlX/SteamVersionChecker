@@ -1,4 +1,11 @@
 {
+  "268910": {
+    "Name": "Cuphead",
+    "AppID": 268910,
+    "InstalledBuild": 20241530,
+    "LatestDate": "2025-10-03T22:10:37.000Z",
+    "LatestBuild": 20241530
+  },
   "330020": {
     "Name": "Children.of.Morta",
     "AppID": 330020,
@@ -14,12 +21,26 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20231655
   },
+  "368340": {
+    "Name": "CrossCode",
+    "AppID": 368340,
+    "InstalledBuild": 20004663,
+    "LatestDate": "2025-09-20T13:15:00.000Z",
+    "LatestBuild": 20004663
+  },
   "503560": {
     "Name": "911.Operator",
     "AppID": 503560,
     "InstalledBuild": 7533741,
     "LatestDate": "2021-10-14T15:35:34.000Z",
     "LatestBuild": 7533741
+  },
+  "504230": {
+    "Name": "Celeste",
+    "AppID": 504230,
+    "InstalledBuild": 17282758,
+    "LatestDate": "2025-02-07T17:00:06.000Z",
+    "LatestBuild": 17282758
   },
   "553420": {
     "Name": "Tunic",
@@ -48,7 +69,7 @@
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
-    "InstalledBuild": 20283943,
+    "InstalledBuild": 20691503,
     "LatestDate": "2025-11-07T04:48:25.000Z",
     "Status": "✅ Up-to-date",
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=513871",
@@ -81,7 +102,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-11T19:16:26.145Z",
+    "LatestDate": "2025-11-11T19:19:58.107Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -168,7 +189,7 @@
   "2062430": {
     "Name": "BALL.x.PIT",
     "AppID": 2062430,
-    "InstalledBuild": 20076054,
+    "InstalledBuild": 20687612,
     "LatestDate": "2025-11-06T18:53:02.000Z",
     "LatestBuild": 20687612,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=524696"
@@ -212,6 +233,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20321088
   },
+  "2334730": {
+    "Name": "Death.Must.Die",
+    "AppID": 2334730,
+    "InstalledBuild": 18569684,
+    "LatestDate": "2025-05-22T18:40:21.000Z",
+    "LatestBuild": 18569684
+  },
   "2379780": {
     "Name": "Balatro",
     "AppID": 2379780,
@@ -231,7 +259,7 @@
   "2592160": {
     "Name": "Dispatch",
     "AppID": 2592160,
-    "InstalledBuild": 20625875,
+    "InstalledBuild": 20716456,
     "LatestDate": "2025-11-07T23:07:33.000Z",
     "LatestBuild": 20716456,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=525583"
