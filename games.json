@@ -109,7 +109,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-12T19:27:48.290Z",
+    "LatestDate": "2025-11-12T20:22:52.310Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -282,7 +282,8 @@
     "Name": "Monster.Train.2",
     "AppID": 2742830,
     "InstalledBuild": 20112166,
-    "LatestDate": "2025-11-12T19:29:24.763Z"
+    "LatestDate": "2025-11-11T23:35:00.000Z",
+    "LatestBuild": 20760211
   },
   "2756920": {
     "Name": "Keep.Driving",
