@@ -102,7 +102,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-11T23:18:34.014Z",
+    "LatestDate": "2025-11-12T01:26:37.880Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -116,8 +116,9 @@
     "Name": "Terra.Nil",
     "AppID": 1593030,
     "InstalledBuild": 19755773,
-    "LatestDate": "2025-11-11T23:19:39.347Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-08-27T14:17:14.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 19755773
   },
   "1621690": {
     "Name": "Core.Keeper",
@@ -137,7 +138,8 @@
     "Name": "News.Tower",
     "AppID": 1649950,
     "InstalledBuild": 17709412,
-    "LatestDate": "2025-11-11T23:20:50.014Z"
+    "LatestDate": "2025-10-09T08:15:23.000Z",
+    "LatestBuild": 20208233
   },
   "1718570": {
     "Name": "ASTLIBRA.Revision",
@@ -188,8 +190,9 @@
     "Name": "BALL.x.PIT",
     "AppID": 2062430,
     "InstalledBuild": 20687612,
-    "LatestDate": "2025-11-11T23:22:19.788Z",
-    "SkidrowLink": "https://www.skidrowreloaded.com/?p=524696"
+    "LatestDate": "2025-11-06T18:53:02.000Z",
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=524696",
+    "LatestBuild": 20687612
   },
   "2066020": {
     "Name": "Soulstone.Survivors",
@@ -234,7 +237,8 @@
     "Name": "Death.Must.Die",
     "AppID": 2334730,
     "InstalledBuild": 18569684,
-    "LatestDate": "2025-11-11T23:23:14.406Z"
+    "LatestDate": "2025-05-22T18:40:21.000Z",
+    "LatestBuild": 18569684
   },
   "2379780": {
     "Name": "Balatro",
@@ -256,8 +260,8 @@
     "Name": "Dispatch",
     "AppID": 2592160,
     "InstalledBuild": 20716456,
-    "LatestDate": "2025-11-07T23:07:33.000Z",
-    "LatestBuild": 20716456,
+    "LatestDate": "2025-11-12T00:23:50.000Z",
+    "LatestBuild": 20759691,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=525583"
   },
   "2680550": {
@@ -271,8 +275,8 @@
     "Name": "Monster.Train.2",
     "AppID": 2742830,
     "InstalledBuild": 20112166,
-    "LatestDate": "2025-11-05T17:45:50.000Z",
-    "LatestBuild": 20682986
+    "LatestDate": "2025-11-11T23:35:00.000Z",
+    "LatestBuild": 20760211
   },
   "2756920": {
     "Name": "Keep.Driving",
