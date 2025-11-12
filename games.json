@@ -66,6 +66,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20206233
   },
+  "894020": {
+    "Name": "Deaths.Door",
+    "AppID": 894020,
+    "InstalledBuild": 7480208,
+    "LatestDate": "2021-10-05T10:21:41.000Z",
+    "LatestBuild": 7480208
+  },
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
@@ -102,7 +109,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-12T19:17:08.887Z",
+    "LatestDate": "2025-11-12T19:27:48.290Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -174,7 +181,7 @@
   "1942280": {
     "Name": "Brotato",
     "AppID": 1942280,
-    "InstalledBuild": 20606726,
+    "InstalledBuild": 20675512,
     "LatestDate": "2025-11-05T09:31:27.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20675512
@@ -228,7 +235,7 @@
   "2321470": {
     "Name": "Deep.Rock.Galactic.Survivor",
     "AppID": 2321470,
-    "InstalledBuild": 20237659,
+    "InstalledBuild": 20321088,
     "LatestDate": "2025-10-20T10:51:25.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20321088
@@ -275,8 +282,7 @@
     "Name": "Monster.Train.2",
     "AppID": 2742830,
     "InstalledBuild": 20112166,
-    "LatestDate": "2025-11-11T23:35:00.000Z",
-    "LatestBuild": 20760211
+    "LatestDate": "2025-11-12T19:29:24.763Z"
   },
   "2756920": {
     "Name": "Keep.Driving",
@@ -309,6 +315,13 @@
     "LatestDate": "2025-10-19T22:24:39.000Z",
     "LatestBuild": 20457192,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872"
+  },
+  "3467710": {
+    "Name": "Wall.World.2",
+    "AppID": 3467710,
+    "InstalledBuild": 20753269,
+    "LatestDate": "2025-11-11T12:35:06.000Z",
+    "LatestBuild": 20753269
   },
   "3631290": {
     "Name": "Slots.and.Daggers",
