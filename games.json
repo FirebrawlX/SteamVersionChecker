@@ -109,7 +109,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-20T21:18:45.750Z",
+    "LatestDate": "2025-11-20T22:18:43.905Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -313,8 +313,9 @@
     "Name": "Megabonk",
     "AppID": 3405340,
     "InstalledBuild": 20456559,
-    "LatestDate": "2025-11-20T21:20:55.750Z",
-    "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872"
+    "LatestDate": "2025-10-19T22:24:39.000Z",
+    "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872",
+    "LatestBuild": 20457192
   },
   "3467710": {
     "Name": "Wall.World.2",
