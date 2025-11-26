@@ -66,6 +66,13 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 20206233
   },
+  "867210": {
+    "Name": "Songs.of.Conquest",
+    "AppID": 867210,
+    "InstalledBuild": 20806088,
+    "LatestDate": "2025-11-15T14:49:33.000Z",
+    "LatestBuild": 20806088
+  },
   "894020": {
     "Name": "Deaths.Door",
     "AppID": 894020,
@@ -101,15 +108,22 @@
   "1280930": {
     "Name": "Astral.Ascent",
     "AppID": 1280930,
-    "InstalledBuild": 20421499,
+    "InstalledBuild": 20920573,
     "LatestDate": "2025-11-24T15:53:34.000Z",
     "LatestBuild": 20920573
+  },
+  "1336490": {
+    "Name": "Against.the.Storm",
+    "AppID": 1336490,
+    "InstalledBuild": 20861838,
+    "LatestDate": "2025-11-20T13:57:24.000Z",
+    "LatestBuild": 20861838
   },
   "1361510": {
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-26T13:35:07.410Z",
+    "LatestDate": "2025-11-26T13:39:33.919Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
@@ -144,7 +158,7 @@
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
-    "InstalledBuild": 17709412,
+    "InstalledBuild": 20922291,
     "LatestDate": "2025-11-25T14:03:07.000Z",
     "LatestBuild": 20922291
   },
@@ -163,9 +177,9 @@
     "LatestBuild": 18016665
   },
   "1868140": {
-    "Name": "Dave.the.Diver",
+    "Name": "DAVE.THE.DIVER",
     "AppID": 1868140,
-    "InstalledBuild": 20202461,
+    "InstalledBuild": 20796649,
     "LatestDate": "2025-11-17T01:33:39.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20796649
@@ -247,6 +261,13 @@
     "LatestDate": "2025-05-22T18:40:21.000Z",
     "LatestBuild": 18569684
   },
+  "2350790": {
+    "Name": "Moonlighter.2.The.Endless.Vault",
+    "AppID": 2350790,
+    "InstalledBuild": 20895498,
+    "LatestDate": "2025-11-21T21:50:11.000Z",
+    "LatestBuild": 20895498
+  },
   "2379780": {
     "Name": "Balatro",
     "AppID": 2379780,
@@ -288,7 +309,7 @@
   "2756920": {
     "Name": "Keep.Driving",
     "AppID": 2756920,
-    "InstalledBuild": 20301720,
+    "InstalledBuild": 20571738,
     "LatestDate": "2025-10-28T10:46:19.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20571738
@@ -320,14 +341,14 @@
   "3467710": {
     "Name": "Wall.World.2",
     "AppID": 3467710,
-    "InstalledBuild": 20753269,
+    "InstalledBuild": 20888272,
     "LatestDate": "2025-11-21T10:59:42.000Z",
     "LatestBuild": 20888272
   },
   "3631290": {
     "Name": "Slots.and.Daggers",
     "AppID": 3631290,
-    "InstalledBuild": 20635204,
+    "InstalledBuild": 20648272,
     "LatestDate": "2025-11-03T11:49:07.000Z",
     "LatestBuild": 20648272
   }
