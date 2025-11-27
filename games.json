@@ -109,8 +109,8 @@
     "Name": "Astral.Ascent",
     "AppID": 1280930,
     "InstalledBuild": 20920573,
-    "LatestDate": "2025-11-24T15:53:34.000Z",
-    "LatestBuild": 20920573
+    "LatestDate": "2025-11-27T09:13:05.000Z",
+    "LatestBuild": 20962637
   },
   "1336490": {
     "Name": "Against.the.Storm",
@@ -123,13 +123,13 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-11-27T08:28:52.799Z",
+    "LatestDate": "2025-11-27T09:23:47.923Z",
     "Status": "✅ Up-to-date"
   },
   "1458140": {
     "Name": "Pacific.Drive",
     "AppID": 1458140,
-    "InstalledBuild": 20555698,
+    "InstalledBuild": 20853811,
     "LatestDate": "2025-11-20T16:57:08.000Z",
     "LatestBuild": 20853811
   },
@@ -239,6 +239,13 @@
     "LatestBuild": 20202981,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=525667"
   },
+  "2126190": {
+    "Name": "Rue.Valley",
+    "AppID": 2126190,
+    "InstalledBuild": 20890964,
+    "LatestDate": "2025-11-21T16:47:31.000Z",
+    "LatestBuild": 20890964
+  },
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
@@ -287,7 +294,7 @@
   "2592160": {
     "Name": "Dispatch",
     "AppID": 2592160,
-    "InstalledBuild": 20716456,
+    "InstalledBuild": 20862334,
     "LatestDate": "2025-11-19T19:36:05.000Z",
     "LatestBuild": 20862334,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=525583"
@@ -326,7 +333,7 @@
   "3167020": {
     "Name": "Escape.from.Duckov",
     "AppID": 3167020,
-    "InstalledBuild": 20620918,
+    "InstalledBuild": 20870907,
     "LatestDate": "2025-11-20T07:15:09.000Z",
     "LatestBuild": 20870907
   },
