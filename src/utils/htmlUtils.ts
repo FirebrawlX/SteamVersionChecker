@@ -6,6 +6,18 @@ import * as fs from 'fs';
 import { GameData } from '../types';
 
 /**
+ * Format ISO date string to YYYY-MM-DD format
+ */
+function formatDateForDisplay(isoDateString?: string): string {
+  if (!isoDateString) return '';
+  try {
+    return isoDateString.split('T')[0]; // Extract YYYY-MM-DD from ISO string
+  } catch {
+    return isoDateString;
+  }
+}
+
+/**
  * Generate HTML report from game results
  */
 export function generateHtmlReport(
@@ -63,13 +75,13 @@ th { background-color: #eee; }
       extraLink = ` <a href="${r.SkidrowLink}" target="_blank" title="SkidrowReloaded"><span style="font-size:1.2em;">&#128279;</span></a>`;
     }
 
+    const formattedDate = formatDateForDisplay(r.LatestDate);
+
     html += `<tr class="${statusClass}"><td>${r.Name}</td><td>${
       r.AppID
     }</td><td>${r.InstalledBuild ?? ''}</td><td>${
       r.LatestBuild ?? ''
-    }</td><td>${r.LatestDate ?? ''}</td><td>${
-      r.Status
-    }${extraLink}</td></tr>\n`;
+    }</td><td>${formattedDate}</td><td>${r.Status}${extraLink}</td></tr>\n`;
   }
 
   html += '</table>';

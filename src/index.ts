@@ -94,28 +94,41 @@ async function main(params: Params) {
   let gamesToCheck: GameData[] = [];
 
   if (isActions) {
-    // In GitHub Actions, check all games from games.json
+    // In GitHub Actions, check all games to generate a complete report
     gamesToCheck = Object.values(gamesData);
-    console.log('Games to check from games.json:', gamesToCheck.length);
+    console.log(`Games to check from games.json: ${gamesToCheck.length}`);
   } else {
     // Local mode: scan backups directory
     const localBackups = getLocalBackups(params.BackupDir);
     console.log('Local backups found:', localBackups.length);
 
-    // Safe merge: update existing entries, add new local games, leave missing games intact
+    // Identify which games are new or have changed installed build
+    const changedGames: GameData[] = [];
     for (const backup of localBackups) {
-      if (gamesData[backup.AppID]) {
-        // Only update installed info and name
+      const existing = gamesData[backup.AppID];
+      if (!existing) {
+        // New game
+        changedGames.push(backup);
+        gamesData[backup.AppID] = backup;
+        console.log(`  NEW: ${backup.Name} (AppID: ${backup.AppID})`);
+      } else if (existing.InstalledBuild !== backup.InstalledBuild) {
+        // Game backup has been updated
+        changedGames.push(backup);
         gamesData[backup.AppID].Name = backup.Name;
         gamesData[backup.AppID].InstalledBuild = backup.InstalledBuild;
+        console.log(
+          `  UPDATED: ${backup.Name} (AppID: ${backup.AppID}) - Build ${existing.InstalledBuild} -> ${backup.InstalledBuild}`
+        );
       } else {
-        // Add new local game
-        gamesData[backup.AppID] = backup;
+        // No change, but update name just in case
+        gamesData[backup.AppID].Name = backup.Name;
       }
     }
 
-    gamesToCheck = localBackups;
-    console.log('Games to check after merging:', gamesToCheck.length);
+    gamesToCheck = changedGames;
+    console.log(
+      `Games to check (changed/new): ${gamesToCheck.length} of ${localBackups.length}`
+    );
   }
 
   const results: GameData[] = [];
