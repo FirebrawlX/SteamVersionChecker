@@ -83,7 +83,7 @@
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
-    "InstalledBuild": 20691503,
+    "InstalledBuild": 20764176,
     "LatestDate": "2025-11-12T08:42:46.000Z",
     "Status": "✅ Up-to-date",
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=513871",
@@ -105,10 +105,17 @@
     "LatestBuild": 20253141,
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=523773"
   },
+  "1277400": {
+    "Name": "Monster.Hunter.Stories.2.Wings.of.Ruin",
+    "AppID": 1277400,
+    "InstalledBuild": 20139678,
+    "LatestDate": "2025-11-26T00:59:37.000Z",
+    "LatestBuild": 20139678
+  },
   "1280930": {
     "Name": "Astral.Ascent",
     "AppID": 1280930,
-    "InstalledBuild": 20920573,
+    "InstalledBuild": 20962637,
     "LatestDate": "2025-11-27T09:13:05.000Z",
     "LatestBuild": 20962637
   },
@@ -125,6 +132,13 @@
     "InstalledBuild": 15664053,
     "LatestDate": "2025-11-28T13:31:14.684Z",
     "Status": "✅ Up-to-date"
+  },
+  "1369630": {
+    "Name": "ENDER.LILIES.Quietus.of.the.Knights",
+    "AppID": 1369630,
+    "InstalledBuild": 8834157,
+    "LatestDate": "2022-06-03T07:45:21.000Z",
+    "LatestBuild": 8834157
   },
   "1458140": {
     "Name": "Pacific.Drive",
@@ -144,7 +158,7 @@
   "1621690": {
     "Name": "Core.Keeper",
     "AppID": 1621690,
-    "InstalledBuild": 20511098,
+    "InstalledBuild": 20652358,
     "LatestDate": "2025-11-27T09:45:54.000Z",
     "LatestBuild": 20937397
   },
@@ -214,6 +228,13 @@
     "LatestDate": "2024-09-08T17:06:09.000Z",
     "LatestBuild": 15631088
   },
+  "1971650": {
+    "Name": "OCTOPATH.TRAVELER.II",
+    "AppID": 1971650,
+    "InstalledBuild": 13399590,
+    "LatestDate": "2024-06-05T15:54:48.000Z",
+    "LatestBuild": 13399590
+  },
   "2062430": {
     "Name": "BALL.x.PIT",
     "AppID": 2062430,
@@ -233,7 +254,7 @@
   "2103140": {
     "Name": "Magicraft",
     "AppID": 2103140,
-    "InstalledBuild": 20604944,
+    "InstalledBuild": 20857266,
     "LatestDate": "2025-11-19T12:10:34.000Z",
     "LatestBuild": 20857266
   },
@@ -309,7 +330,7 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 20559555,
+    "InstalledBuild": 20876485,
     "LatestDate": "2025-11-28T10:04:22.000Z",
     "LatestBuild": 20969143
   },
