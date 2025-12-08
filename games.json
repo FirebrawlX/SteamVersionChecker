@@ -69,7 +69,7 @@
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
-    "InstalledBuild": 20806088,
+    "InstalledBuild": 21073541,
     "LatestDate": "2025-12-07T12:42:32.000Z",
     "LatestBuild": 21073541
   },
@@ -158,7 +158,7 @@
   "1621690": {
     "Name": "Core.Keeper",
     "AppID": 1621690,
-    "InstalledBuild": 20652358,
+    "InstalledBuild": 21036902,
     "LatestDate": "2025-12-05T10:05:20.000Z",
     "LatestBuild": 21036902
   },
@@ -172,7 +172,7 @@
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
-    "InstalledBuild": 20979643,
+    "InstalledBuild": 21058973,
     "LatestDate": "2025-12-05T08:55:14.000Z",
     "LatestBuild": 21058973
   },
@@ -246,7 +246,7 @@
   "2066020": {
     "Name": "Soulstone.Survivors",
     "AppID": 2066020,
-    "InstalledBuild": 20952788,
+    "InstalledBuild": 21021883,
     "LatestDate": "2025-12-05T10:26:46.000Z",
     "Status": "⚠️ Update available",
     "LatestBuild": 21021883
@@ -299,7 +299,7 @@
   "2350790": {
     "Name": "Moonlighter.2.The.Endless.Vault",
     "AppID": 2350790,
-    "InstalledBuild": 20964933,
+    "InstalledBuild": 20983817,
     "LatestDate": "2025-12-01T15:50:04.000Z",
     "LatestBuild": 20983817
   },
@@ -344,7 +344,7 @@
   "2756920": {
     "Name": "Keep.Driving",
     "AppID": 2756920,
-    "InstalledBuild": 20571738,
+    "InstalledBuild": 21074565,
     "LatestDate": "2025-12-05T21:38:57.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 21074565
@@ -352,7 +352,7 @@
   "2996040": {
     "Name": "Teenage.Mutant.Ninja.Turtles.Splintered.Fate",
     "AppID": 2996040,
-    "InstalledBuild": 20282589,
+    "InstalledBuild": 20533146,
     "LatestDate": "2025-11-18T16:11:45.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 20533146,
@@ -379,6 +379,13 @@
     "InstalledBuild": 20888272,
     "LatestDate": "2025-11-21T10:59:42.000Z",
     "LatestBuild": 20888272
+  },
+  "3483740": {
+    "Name": "Cast.n.Chill",
+    "AppID": 3483740,
+    "InstalledBuild": 21017922,
+    "LatestDate": "2025-12-02T21:33:58.000Z",
+    "LatestBuild": 21017922
   },
   "3631290": {
     "Name": "Slots.and.Daggers",
