@@ -79,6 +79,13 @@
     "LatestDate": "2022-09-20T07:24:13.000Z",
     "LatestBuild": 9550393
   },
+  "690830": {
+    "Name": "Foundation",
+    "AppID": 690830,
+    "InstalledBuild": 21137162,
+    "LatestDate": "2025-12-11T18:10:07.000Z",
+    "LatestBuild": 21137162
+  },
   "692850": {
     "Name": "Bloodstained.Ritual.of.the.Night",
     "AppID": 692850,
@@ -417,7 +424,7 @@
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
-    "InstalledBuild": 20457192,
+    "InstalledBuild": 21182771,
     "LatestDate": "2025-12-15T14:29:04.000Z",
     "SkidrowLink": "https://www.skidrowreloaded.com/?p=518872",
     "LatestBuild": 21191284
