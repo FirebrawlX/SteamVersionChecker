@@ -1,4 +1,11 @@
 {
+  "257850": {
+    "Name": "Hyper.Light.Drifter",
+    "AppID": 257850,
+    "InstalledBuild": 10930509,
+    "LatestDate": "2023-04-04T19:48:08.000Z",
+    "LatestBuild": 10930509
+  },
   "268910": {
     "Name": "Cuphead",
     "AppID": 268910,
@@ -65,6 +72,20 @@
     "LatestDate": "2024-11-27T11:40:49.000Z",
     "LatestBuild": 15656947
   },
+  "653530": {
+    "Name": "Return.of.the.Obra.Dinn",
+    "AppID": 653530,
+    "InstalledBuild": 9550393,
+    "LatestDate": "2022-09-20T07:24:13.000Z",
+    "LatestBuild": 9550393
+  },
+  "692850": {
+    "Name": "Bloodstained.Ritual.of.the.Night",
+    "AppID": 692850,
+    "InstalledBuild": 15307560,
+    "LatestDate": "2024-10-22T14:49:59.000Z",
+    "LatestBuild": 15307560
+  },
   "774181": {
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
@@ -125,6 +146,13 @@
     "InstalledBuild": 20404391,
     "LatestDate": "2025-10-15T14:56:31.000Z",
     "LatestBuild": 20404391
+  },
+  "1262350": {
+    "Name": "Signalis",
+    "AppID": 1262350,
+    "InstalledBuild": 15862770,
+    "LatestDate": "2025-10-05T20:23:08.000Z",
+    "LatestBuild": 20243420
   },
   "1277400": {
     "Name": "Monster.Hunter.Stories.2.Wings.of.Ruin",
