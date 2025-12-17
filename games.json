@@ -24,8 +24,9 @@
     "Name": "Hollow.Knight",
     "AppID": 367520,
     "InstalledBuild": 20231655,
-    "LatestDate": "2025-12-16T23:19:56.693Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2025-10-03T07:43:14.000Z",
+    "Status": "✅ Up-to-date",
+    "LatestBuild": 20231655
   },
   "368340": {
     "Name": "CrossCode",
@@ -96,8 +97,8 @@
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
     "InstalledBuild": 21161988,
-    "LatestDate": "2025-12-16T21:43:04.000Z",
-    "LatestBuild": 21214596
+    "LatestDate": "2025-12-17T00:52:48.000Z",
+    "LatestBuild": 21216521
   },
   "774361": {
     "Name": "Blasphemous",
@@ -185,7 +186,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2025-12-16T23:21:49.388Z",
+    "LatestDate": "2025-12-17T01:27:44.219Z",
     "Status": "✅ Up-to-date"
   },
   "1369630": {
