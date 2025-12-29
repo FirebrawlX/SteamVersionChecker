@@ -96,7 +96,7 @@
   "774181": {
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
-    "InstalledBuild": 21161988,
+    "InstalledBuild": 21254178,
     "LatestDate": "2025-12-19T08:40:52.000Z",
     "LatestBuild": 21254178
   },
@@ -141,7 +141,7 @@
   "1229240": {
     "Name": "Chained.Echoes",
     "AppID": 1229240,
-    "InstalledBuild": 21147338,
+    "InstalledBuild": 21147362,
     "LatestDate": "2025-12-11T13:05:54.000Z",
     "LatestBuild": 21147362
   },
@@ -158,6 +158,13 @@
     "InstalledBuild": 15862770,
     "LatestDate": "2025-10-05T20:23:08.000Z",
     "LatestBuild": 20243420
+  },
+  "1264280": {
+    "Name": "Slipways",
+    "AppID": 1264280,
+    "InstalledBuild": 15946357,
+    "LatestDate": "2024-10-07T12:28:20.000Z",
+    "LatestBuild": 15946357
   },
   "1277400": {
     "Name": "Monster.Hunter.Stories.2.Wings.of.Ruin",
@@ -186,6 +193,13 @@
     "InstalledBuild": 15664053,
     "LatestDate": "2025-12-29T11:20:31.903Z",
     "Status": "✅ Up-to-date"
+  },
+  "1363080": {
+    "Name": "Manor.Lords",
+    "AppID": 1363080,
+    "InstalledBuild": 21209292,
+    "LatestDate": "2025-12-19T13:59:22.000Z",
+    "LatestBuild": 21209292
   },
   "1369630": {
     "Name": "ENDER.LILIES.Quietus.of.the.Knights",
@@ -321,7 +335,7 @@
   "2126190": {
     "Name": "Rue.Valley",
     "AppID": 2126190,
-    "InstalledBuild": 20890964,
+    "InstalledBuild": 21242075,
     "LatestDate": "2025-12-18T16:17:11.000Z",
     "LatestBuild": 21242075
   },
@@ -379,7 +393,7 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 21113142,
+    "InstalledBuild": 21239233,
     "LatestDate": "2025-12-18T13:00:51.000Z",
     "LatestBuild": 21239233
   },
@@ -409,14 +423,14 @@
   "3167020": {
     "Name": "Escape.from.Duckov",
     "AppID": 3167020,
-    "InstalledBuild": 20870907,
+    "InstalledBuild": 21315576,
     "LatestDate": "2025-12-26T05:59:38.000Z",
     "LatestBuild": 21315576
   },
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
-    "InstalledBuild": 21191284,
+    "InstalledBuild": 21305013,
     "LatestDate": "2025-12-25T11:20:26.000Z",
     "LatestBuild": 21305013
   },
