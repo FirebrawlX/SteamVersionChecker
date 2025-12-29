@@ -17,7 +17,6 @@ import {
   getLocalBackups,
 } from './utils/fileUtils';
 import { getLatestBuild } from './utils/steamUtils';
-import { getSkidrowLinks } from './utils/rssUtils';
 import { generateHtmlReport } from './utils/htmlUtils';
 
 /**
@@ -162,29 +161,6 @@ async function main(params: Params) {
     gamesData[game.AppID].LatestBuild =
       latestBuild === null ? undefined : latestBuild;
 
-    // Fetch SkidrowReloaded link
-    const sinceDate = latestDate
-      ? new Date(latestDate)
-      : new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
-
-    let skidrowLink = '';
-    try {
-      const links = await getSkidrowLinks(game.Name, sinceDate);
-      console.log(`Skidrow links for ${game.Name}:`, links);
-
-      if (links.length > 0) {
-        skidrowLink = links[0];
-        gamesData[game.AppID].SkidrowLink = skidrowLink;
-      } else if (gamesData[game.AppID].SkidrowLink) {
-        skidrowLink = gamesData[game.AppID].SkidrowLink ?? '';
-      }
-    } catch (err) {
-      console.log(`Error fetching Skidrow links for ${game.Name}:`, err);
-      if (gamesData[game.AppID].SkidrowLink) {
-        skidrowLink = gamesData[game.AppID].SkidrowLink ?? '';
-      }
-    }
-
     // Determine status
     let status = '';
     if (latestBuild == null) {
@@ -202,7 +178,6 @@ async function main(params: Params) {
       LatestBuild: latestBuild === null ? undefined : latestBuild,
       LatestDate: latestDate,
       Status: status,
-      SkidrowLink: skidrowLink,
     });
   }
 

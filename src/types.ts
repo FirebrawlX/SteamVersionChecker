@@ -17,7 +17,6 @@ export interface GameData {
   LatestBuild?: number;
   LatestDate?: string;
   Status?: string;
-  SkidrowLink?: string;
 }
 
 export interface GamesDataMap {
