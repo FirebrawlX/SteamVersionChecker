@@ -17,6 +17,15 @@ function formatDateForDisplay(isoDateString?: string): string {
   }
 }
 
+function getSkidrowSearchUrl(gameName: string): string {
+  const query = gameName
+    .split('.')
+    .filter(Boolean)
+    .map((part) => encodeURIComponent(part.toLowerCase()))
+    .join('+');
+  return `https://www.skidrowreloaded.com/?s=${query}`;
+}
+
 /**
  * Generate HTML report from game results
  */
@@ -44,6 +53,7 @@ th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
 .status-update { background-color: #ffc7ce; }
 .subtle { color: #666; font-size: 0.9em; }
 th { background-color: #eee; }
+.name-link { color: inherit; text-decoration: none; display: block; width: 100%; height: 100%; }
 </style>
 </head>
 <body>
@@ -67,21 +77,15 @@ th { background-color: #eee; }
       statusClass = 'status-update';
     }
 
-    let extraLink = '';
-    if (
-      r.SkidrowLink &&
-      r.SkidrowLink.startsWith('https://www.skidrowreloaded.com/')
-    ) {
-      extraLink = ` <a href="${r.SkidrowLink}" target="_blank" title="SkidrowReloaded"><span style="font-size:1.2em;">&#128279;</span></a>`;
-    }
+    const nameLink = getSkidrowSearchUrl(r.Name);
 
     const formattedDate = formatDateForDisplay(r.LatestDate);
 
-    html += `<tr class="${statusClass}"><td>${r.Name}</td><td>${
-      r.AppID
-    }</td><td>${r.InstalledBuild ?? ''}</td><td>${
+    html += `<tr class="${statusClass}"><td><a class="name-link" href="${nameLink}">${
+      r.Name
+    }</a></td><td>${r.AppID}</td><td>${r.InstalledBuild ?? ''}</td><td>${
       r.LatestBuild ?? ''
-    }</td><td>${formattedDate}</td><td>${r.Status}${extraLink}</td></tr>\n`;
+    }</td><td>${formattedDate}</td><td>${r.Status ?? ''}</td></tr>\n`;
   }
 
   html += '</table>';
