@@ -32,18 +32,6 @@ function formatCountShort(count?: number): string {
   return String(count);
 }
 
-function emojiForReviewSummary(summary?: string): string {
-  if (!summary) return '';
-  const s = summary.toLowerCase();
-  if (s.includes('overwhelmingly positive')) return '🤩';
-  if (s.includes('very positive')) return '😍';
-  if (s.includes('mostly positive') || s.includes('positive')) return '🙂';
-  if (s.includes('mixed')) return '😐';
-  if (s.includes('mostly negative')) return '🙁';
-  if (s.includes('very negative') || s.includes('negative')) return '😟';
-  return '';
-}
-
 /**
  * Generate HTML report from game results
  */
@@ -76,11 +64,9 @@ th { background-color: #eee; }
 th.sortable { cursor: pointer; user-select: none; }
 th.sortable[data-dir="asc"]::after { content: " ▲"; }
 th.sortable[data-dir="desc"]::after { content: " ▼"; }
-td.num { text-align: right; font-variant-numeric: tabular-nums; }
-td.center { text-align: center; }
+td.num { text-align: left; font-variant-numeric: tabular-nums; }
 td.status-cell { width: 1%; white-space: nowrap; }
 td.rating-cell { white-space: nowrap; }
-td.rating-cell .rating-sub { color: #666; font-size: 0.85em; }
 @media (max-width: 600px) {
   body { padding: 12px; }
   th, td { padding: 6px; }
@@ -210,7 +196,6 @@ document.addEventListener('DOMContentLoaded', svcsInitSorting);
         : undefined;
     const pctText = pct == null ? '' : `${pct.toFixed(2)}%`;
     const summary = r.ReviewSummary ?? '';
-    const emoji = emojiForReviewSummary(summary);
     const reviewsShort = formatCountShort(r.ReviewsTotal);
     const reviewsText = reviewsShort ? `${reviewsShort} reviews` : '';
 
@@ -229,11 +214,10 @@ document.addEventListener('DOMContentLoaded', svcsInitSorting);
       pct ?? ''
     }" title="${ratingTooltip}">`;
     if (pctText) {
-      html += `<div>${emoji ? emoji + ' ' : ''}${pctText}</div>`;
-      html += reviewsText ? `<div class="rating-sub">${reviewsText}</div>` : '';
+      html += `${pctText}${reviewsText ? ' (' + reviewsText : ')'}`;
     }
     html += `</td>`;
-    html += `<td class="center status-cell" data-key="status" data-sort="${statusText}" title="${statusText}">${statusIcon}</td>`;
+    html += `<td class="status-cell" data-key="status" data-sort="${statusText}" title="${statusText}">${statusIcon}</td>`;
     html += `</tr>\n`;
   }
 

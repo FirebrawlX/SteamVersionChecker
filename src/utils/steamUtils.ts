@@ -2,12 +2,73 @@
  * Steam API utilities for fetching build information
  */
 
-import { execSync } from 'child_process';
-import * as fs from 'fs';
-import * as os from 'os';
+import { execFile } from 'child_process';
 import * as https from 'https';
-import * as path from 'path';
+import { promisify } from 'util';
 import { LatestBuildInfo } from '../types';
+
+const execFileAsync = promisify(execFile);
+
+function extractLines(content: string, maxLines: number, fromEnd = false): string[] {
+  const lines = content.split(/\r?\n/);
+  if (!fromEnd) return lines.slice(0, maxLines);
+  return lines.slice(Math.max(0, lines.length - maxLines));
+}
+
+function extractMatchingLines(content: string, pattern: RegExp, maxLines: number): string[] {
+  const lines = content.split(/\r?\n/);
+  const matches: string[] = [];
+  for (const line of lines) {
+    if (pattern.test(line)) {
+      matches.push(line);
+      if (matches.length >= maxLines) break;
+    }
+  }
+  return matches;
+}
+
+function logMissingBuildIdDebug(appId: number, first: string, retry?: string) {
+  const combined = retry != null ? retry : first;
+  const firstLen = first.length;
+  const retryLen = retry?.length;
+  const hasQuotedRoot = combined.includes(`"${appId}"`);
+  const hasBuildIdLiteral = /"buildid"\s+"\d+"/.test(combined);
+
+  const changeLine = extractMatchingLines(
+    combined,
+    /AppID\s*:\s*\d+\s*,\s*change number\s*:/i,
+    3
+  );
+
+  const interesting = extractMatchingLines(
+    combined,
+    /(app_info_print|app_info_update|AppID\s*:|change number|"common"|"depots"|"branches"|"public"|buildid|timeupdated|ERROR|FAILED|Redirecting stderr)/i,
+    80
+  );
+
+  console.log('--- SteamCMD buildid missing debug ---');
+  console.log(`AppID: ${appId}`);
+  console.log(`Output length: ${firstLen}${retry != null ? ` (retry: ${retryLen})` : ''}`);
+  console.log(`Contains quoted root "${appId}": ${hasQuotedRoot}`);
+  console.log(`Contains any "buildid" key: ${hasBuildIdLiteral}`);
+  if (changeLine.length) {
+    console.log('Change number line(s):');
+    for (const l of changeLine) console.log(l);
+  }
+  if (interesting.length) {
+    console.log('Interesting lines (up to 80):');
+    for (const l of interesting) console.log(l);
+  }
+  console.log('First lines (up to 40):');
+  for (const l of extractLines(combined, 40)) console.log(l);
+  console.log('Last lines (up to 40):');
+  for (const l of extractLines(combined, 40, true)) console.log(l);
+
+  console.log(
+    'Tip: rerun with STEAMCMD_RATING_DEBUG=1 for extra HTTP/appreviews diagnostics.'
+  );
+  console.log('--- end debug ---');
+}
 
 type SteamReviewSummary = {
   ratingPercent: number | null;
@@ -104,6 +165,35 @@ function fetchSteamReviewSummary(appId: number): Promise<SteamReviewSummary> {
   });
 }
 
+async function runSteamCmdAppInfo(
+  appId: number,
+  steamCmdPath: string
+): Promise<string> {
+  const args = [
+    '+login',
+    'anonymous',
+    '+app_info_update',
+    '1',
+    '+app_info_print',
+    String(appId),
+    '+quit',
+  ];
+
+  try {
+    const { stdout, stderr } = await execFileAsync(steamCmdPath, args, {
+      timeout: 60000,
+      maxBuffer: 20 * 1024 * 1024,
+      windowsHide: true,
+    });
+    return `${stdout ?? ''}\n${stderr ?? ''}`;
+  } catch (error: any) {
+    // SteamCMD often exits non-zero even when output is usable.
+    const stdout = error?.stdout ?? '';
+    const stderr = error?.stderr ?? '';
+    return `${stdout}\n${stderr}`;
+  }
+}
+
 /**
  * Get latest build information from Steam using steamcmd
  */
@@ -112,49 +202,13 @@ export async function getLatestBuild(
   steamCmdPath: string
 ): Promise<LatestBuildInfo> {
   try {
-    const tempFile = path.join(
-      os.tmpdir(),
-      `steamcmd_output_${appId}_${Date.now()}.txt`
+    console.log(
+      `Running SteamCMD: ${steamCmdPath} +login anonymous +app_info_update 1 +app_info_print ${appId} +quit`
     );
 
-    // Detect platform
-    const isWindows = process.platform === 'win32';
-
-    // Properly quote paths and redirect output
-    const quotedSteamCmdPath = isWindows
-      ? `"${steamCmdPath.replace(/\\/g, '\\\\')}"`
-      : `"${steamCmdPath}"`;
-
-    const redirect = isWindows ? `> "${tempFile}" 2>&1` : `> ${tempFile} 2>&1`;
-
-    const command = `${quotedSteamCmdPath} +login anonymous +app_info_update 1 +app_info_print ${appId} +quit ${redirect}`;
-
-    console.log(`Running SteamCMD: ${command}`);
-
-    try {
-      execSync(command, {
-        // ✅ Use cmd.exe instead of PowerShell to avoid + parsing issue
-        shell: isWindows ? 'cmd.exe' : '/bin/bash',
-        stdio: 'inherit',
-        timeout: 60000, // 60 second timeout
-      });
-    } catch (error: any) {
-      // SteamCMD often exits with non-zero even on success
-      console.log(`SteamCMD exited with code: ${error.status ?? 'unknown'}`);
-    }
-
-    let content = '';
-    if (fs.existsSync(tempFile)) {
-      content = fs.readFileSync(tempFile, 'utf-8');
-      console.log(`SteamCMD output length: ${content.length} bytes`);
-      try {
-        fs.unlinkSync(tempFile);
-      } catch {
-        // ignore delete errors
-      }
-    } else {
-      console.error(`Temp file not found: ${tempFile}`);
-    }
+    const firstContent = await runSteamCmdAppInfo(appId, steamCmdPath);
+    let content = firstContent;
+    console.log(`SteamCMD output length: ${content.length} bytes`);
 
     let buildId: number | null = null;
     let timeUpdated: number | null = null;
@@ -168,6 +222,20 @@ export async function getLatestBuild(
       console.log('No buildid found in output');
       if (content.length > 0) {
         console.log('Output preview:', content.substring(0, 500));
+      }
+
+      // Retry once: SteamCMD/appinfo can be flaky for some apps.
+      console.log(`Retrying SteamCMD app_info_print for AppID ${appId}...`);
+      const retryContent = await runSteamCmdAppInfo(appId, steamCmdPath);
+      content = retryContent;
+      console.log(`SteamCMD output length (retry): ${content.length} bytes`);
+      const retryMatch = content.match(/"buildid"\s+"(\d+)"/);
+      if (retryMatch) {
+        buildId = parseInt(retryMatch[1], 10);
+        console.log(`Found buildid (retry): ${buildId}`);
+      } else {
+        // Persistent missing buildid: log detailed diagnostics and dump output.
+        logMissingBuildIdDebug(appId, firstContent, retryContent);
       }
     }
 

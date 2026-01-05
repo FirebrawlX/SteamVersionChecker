@@ -19,6 +19,30 @@ import {
 import { getLatestBuild } from './utils/steamUtils';
 import { generateHtmlReport } from './utils/htmlUtils';
 
+async function mapWithConcurrency<T, R>(
+  items: T[],
+  limit: number,
+  mapper: (item: T) => Promise<R>
+): Promise<R[]> {
+  const concurrency = Math.max(1, Math.floor(limit));
+  const results: R[] = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (true) {
+      const currentIndex = nextIndex++;
+      if (currentIndex >= items.length) return;
+      results[currentIndex] = await mapper(items[currentIndex]);
+    }
+  }
+
+  const workers = new Array(Math.min(concurrency, items.length))
+    .fill(null)
+    .map(() => worker());
+  await Promise.all(workers);
+  return results;
+}
+
 /**
  * Parse command line arguments
  */
@@ -132,80 +156,89 @@ async function main(params: Params) {
 
   const results: GameData[] = [];
 
-  // Process each game
-  for (const game of gamesToCheck) {
-    console.log(`Processing game: ${game.Name} (AppID: ${game.AppID})`);
+  const maxConcurrent = parseInt(process.env.MAX_CONCURRENT ?? '4', 10);
+  console.log(
+    `Processing with concurrency: ${
+      isFinite(maxConcurrent) ? maxConcurrent : 4
+    }`
+  );
 
-    // Get latest build from Steam
-    const latestInfo = await getLatestBuild(game.AppID, params.SteamCmdPath);
-    console.log(`SteamCMD result for ${game.Name}:`, latestInfo);
+  const processed = await mapWithConcurrency(
+    gamesToCheck,
+    isFinite(maxConcurrent) ? maxConcurrent : 4,
+    async (game) => {
+      console.log(`Processing game: ${game.Name} (AppID: ${game.AppID})`);
 
-    const latestBuild = latestInfo.BuildID;
-    const latestTimeUpdated = latestInfo.TimeUpdated;
-    const latestRatingPercent = latestInfo.RatingPercent;
-    const latestReviewsTotal = latestInfo.ReviewsTotal;
-    const latestReviewsPositive = latestInfo.ReviewsPositive;
-    const latestReviewsNegative = latestInfo.ReviewsNegative;
-    const latestReviewSummary = latestInfo.ReviewSummary;
-    let latestDate = '';
+      const latestInfo = await getLatestBuild(game.AppID, params.SteamCmdPath);
+      console.log(`SteamCMD result for ${game.Name}:`, latestInfo);
 
-    const prevBuild = gamesData[game.AppID]?.LatestBuild;
-    const prevDate = gamesData[game.AppID]?.LatestDate;
+      const latestBuild = latestInfo.BuildID;
+      const latestTimeUpdated = latestInfo.TimeUpdated;
+      const latestRatingPercent = latestInfo.RatingPercent;
+      const latestReviewsTotal = latestInfo.ReviewsTotal;
+      const latestReviewsPositive = latestInfo.ReviewsPositive;
+      const latestReviewsNegative = latestInfo.ReviewsNegative;
+      const latestReviewSummary = latestInfo.ReviewSummary;
 
-    // Determine latest date
-    if (latestTimeUpdated) {
-      latestDate = new Date(latestTimeUpdated * 1000).toISOString();
-      gamesData[game.AppID].LatestDate = latestDate;
-    } else if (latestBuild !== prevBuild || !prevDate) {
-      latestDate = new Date().toISOString();
-      gamesData[game.AppID].LatestDate = latestDate;
-    } else {
-      latestDate = prevDate ?? '';
+      let latestDate = '';
+      const prevBuild = gamesData[game.AppID]?.LatestBuild;
+      const prevDate = gamesData[game.AppID]?.LatestDate;
+
+      if (latestTimeUpdated) {
+        latestDate = new Date(latestTimeUpdated * 1000).toISOString();
+        gamesData[game.AppID].LatestDate = latestDate;
+      } else if (latestBuild !== prevBuild || !prevDate) {
+        latestDate = new Date().toISOString();
+        gamesData[game.AppID].LatestDate = latestDate;
+      } else {
+        latestDate = prevDate ?? '';
+      }
+
+      gamesData[game.AppID].LatestBuild =
+        latestBuild === null ? undefined : latestBuild;
+
+      gamesData[game.AppID].RatingPercent =
+        latestRatingPercent === null ? undefined : latestRatingPercent;
+      gamesData[game.AppID].ReviewsTotal =
+        latestReviewsTotal === null ? undefined : latestReviewsTotal;
+      gamesData[game.AppID].ReviewsPositive =
+        latestReviewsPositive === null ? undefined : latestReviewsPositive;
+      gamesData[game.AppID].ReviewsNegative =
+        latestReviewsNegative === null ? undefined : latestReviewsNegative;
+      gamesData[game.AppID].ReviewSummary =
+        latestReviewSummary === null ? undefined : latestReviewSummary;
+
+      let status = '';
+      if (latestBuild == null) {
+        status = '❌ Could not fetch latest';
+      } else if (latestBuild > (game.InstalledBuild ?? 0)) {
+        status = '⚠️ Update available';
+      } else {
+        status = '✅ Up to date';
+      }
+
+      return {
+        Name: game.Name,
+        AppID: game.AppID,
+        InstalledBuild: game.InstalledBuild,
+        LatestBuild: latestBuild === null ? undefined : latestBuild,
+        LatestDate: latestDate,
+        RatingPercent:
+          latestRatingPercent === null ? undefined : latestRatingPercent,
+        ReviewsTotal:
+          latestReviewsTotal === null ? undefined : latestReviewsTotal,
+        ReviewsPositive:
+          latestReviewsPositive === null ? undefined : latestReviewsPositive,
+        ReviewsNegative:
+          latestReviewsNegative === null ? undefined : latestReviewsNegative,
+        ReviewSummary:
+          latestReviewSummary === null ? undefined : latestReviewSummary,
+        Status: status,
+      } satisfies GameData;
     }
+  );
 
-    gamesData[game.AppID].LatestBuild =
-      latestBuild === null ? undefined : latestBuild;
-
-    gamesData[game.AppID].RatingPercent =
-      latestRatingPercent === null ? undefined : latestRatingPercent;
-    gamesData[game.AppID].ReviewsTotal =
-      latestReviewsTotal === null ? undefined : latestReviewsTotal;
-    gamesData[game.AppID].ReviewsPositive =
-      latestReviewsPositive === null ? undefined : latestReviewsPositive;
-    gamesData[game.AppID].ReviewsNegative =
-      latestReviewsNegative === null ? undefined : latestReviewsNegative;
-    gamesData[game.AppID].ReviewSummary =
-      latestReviewSummary === null ? undefined : latestReviewSummary;
-
-    // Determine status
-    let status = '';
-    if (latestBuild == null) {
-      status = '❌ Could not fetch latest';
-    } else if (latestBuild > (game.InstalledBuild ?? 0)) {
-      status = '⚠️ Update available';
-    } else {
-      status = '✅ Up to date';
-    }
-
-    results.push({
-      Name: game.Name,
-      AppID: game.AppID,
-      InstalledBuild: game.InstalledBuild,
-      LatestBuild: latestBuild === null ? undefined : latestBuild,
-      LatestDate: latestDate,
-      RatingPercent:
-        latestRatingPercent === null ? undefined : latestRatingPercent,
-      ReviewsTotal:
-        latestReviewsTotal === null ? undefined : latestReviewsTotal,
-      ReviewsPositive:
-        latestReviewsPositive === null ? undefined : latestReviewsPositive,
-      ReviewsNegative:
-        latestReviewsNegative === null ? undefined : latestReviewsNegative,
-      ReviewSummary:
-        latestReviewSummary === null ? undefined : latestReviewSummary,
-      Status: status,
-    });
-  }
+  results.push(...processed);
 
   console.log('Results:', results);
 
