@@ -26,6 +26,24 @@ function getSkidrowSearchUrl(gameName: string): string {
   return `https://www.skidrowreloaded.com/?s=${query}`;
 }
 
+function formatCountShort(count?: number): string {
+  if (count == null) return '';
+  if (count >= 1000) return `${Math.round(count / 1000)}k`;
+  return String(count);
+}
+
+function emojiForReviewSummary(summary?: string): string {
+  if (!summary) return '';
+  const s = summary.toLowerCase();
+  if (s.includes('overwhelmingly positive')) return '🤩';
+  if (s.includes('very positive')) return '😍';
+  if (s.includes('mostly positive') || s.includes('positive')) return '🙂';
+  if (s.includes('mixed')) return '😐';
+  if (s.includes('mostly negative')) return '🙁';
+  if (s.includes('very negative') || s.includes('negative')) return '😟';
+  return '';
+}
+
 /**
  * Generate HTML report from game results
  */
@@ -61,6 +79,8 @@ th.sortable[data-dir="desc"]::after { content: " ▼"; }
 td.num { text-align: right; font-variant-numeric: tabular-nums; }
 td.center { text-align: center; }
 td.status-cell { width: 1%; white-space: nowrap; }
+td.rating-cell { white-space: nowrap; }
+td.rating-cell .rating-sub { color: #666; font-size: 0.85em; }
 @media (max-width: 600px) {
   body { padding: 12px; }
   th, td { padding: 6px; }
@@ -184,9 +204,35 @@ document.addEventListener('DOMContentLoaded', svcsInitSorting);
       r.LatestBuild ?? ''
     }">${r.LatestBuild ?? ''}</td>`;
     html += `<td data-key="updated" data-sort="${formattedDate}">${formattedDate}</td>`;
-    html += `<td class="num" data-key="rating" data-sort="${r.Rating ?? ''}">${
-      r.Rating ?? ''
-    }</td>`;
+    const pct =
+      typeof r.RatingPercent === 'number' && Number.isFinite(r.RatingPercent)
+        ? r.RatingPercent
+        : undefined;
+    const pctText = pct == null ? '' : `${pct.toFixed(2)}%`;
+    const summary = r.ReviewSummary ?? '';
+    const emoji = emojiForReviewSummary(summary);
+    const reviewsShort = formatCountShort(r.ReviewsTotal);
+    const reviewsText = reviewsShort ? `${reviewsShort} reviews` : '';
+
+    const tooltipParts: string[] = [];
+    if (summary) tooltipParts.push(summary);
+    if (pctText) tooltipParts.push(pctText);
+    if (typeof r.ReviewsTotal === 'number')
+      tooltipParts.push(`${r.ReviewsTotal} total reviews`);
+    if (typeof r.ReviewsPositive === 'number')
+      tooltipParts.push(`${r.ReviewsPositive} positive`);
+    if (typeof r.ReviewsNegative === 'number')
+      tooltipParts.push(`${r.ReviewsNegative} negative`);
+    const ratingTooltip = tooltipParts.join('\n');
+
+    html += `<td class="num rating-cell" data-key="rating" data-sort="${
+      pct ?? ''
+    }" title="${ratingTooltip}">`;
+    if (pctText) {
+      html += `<div>${emoji ? emoji + ' ' : ''}${pctText}</div>`;
+      html += reviewsText ? `<div class="rating-sub">${reviewsText}</div>` : '';
+    }
+    html += `</td>`;
     html += `<td class="center status-cell" data-key="status" data-sort="${statusText}" title="${statusText}">${statusIcon}</td>`;
     html += `</tr>\n`;
   }

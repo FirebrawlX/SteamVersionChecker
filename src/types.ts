@@ -16,7 +16,11 @@ export interface GameData {
   InstalledBuild?: number;
   LatestBuild?: number;
   LatestDate?: string;
-  Rating?: number;
+  RatingPercent?: number;
+  ReviewsTotal?: number;
+  ReviewsPositive?: number;
+  ReviewsNegative?: number;
+  ReviewSummary?: string;
   Status?: string;
 }
 
@@ -27,5 +31,9 @@ export interface GamesDataMap {
 export interface LatestBuildInfo {
   BuildID: number | null;
   TimeUpdated: number | null;
-  Rating: number | null;
+  RatingPercent: number | null;
+  ReviewsTotal: number | null;
+  ReviewsPositive: number | null;
+  ReviewsNegative: number | null;
+  ReviewSummary: string | null;
 }

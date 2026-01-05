@@ -5,44 +5,112 @@
 import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as os from 'os';
+import * as https from 'https';
 import * as path from 'path';
 import { LatestBuildInfo } from '../types';
 
-function parseFirstInt(content: string, key: string): number | null {
-  const match = content.match(new RegExp(`"${key}"\\s+"(\\d+)"`, 'i'));
-  if (!match) return null;
-  const num = parseInt(match[1], 10);
-  return Number.isFinite(num) ? num : null;
-}
+type SteamReviewSummary = {
+  ratingPercent: number | null;
+  total: number | null;
+  positive: number | null;
+  negative: number | null;
+  summary: string | null;
+};
 
-function parseRating(content: string): number | null {
-  // SteamCMD app_info_print often exposes Metacritic score for many games.
-  // Fallbacks are best-effort since Valve doesn't document a single "rating" field.
-  const metacritic = parseFirstInt(content, 'metacritic_score');
-  if (metacritic != null) return metacritic;
+function fetchSteamReviewSummary(appId: number): Promise<SteamReviewSummary> {
+  // SteamDB “Rating” is derived from Steam user review stats.
+  // This endpoint is public and returns totals + a text summary like “Very Positive”.
+  const url = `https://store.steampowered.com/appreviews/${appId}?json=1&filter=summary&language=all&purchase_type=all`;
 
-  // Some apps include review-related numeric keys; keep these as fallbacks.
-  const reviewPercentage =
-    parseFirstInt(content, 'review_percentage') ??
-    parseFirstInt(content, 'reviews_percent') ??
-    parseFirstInt(content, 'review_percent');
-  if (reviewPercentage != null) return reviewPercentage;
+  return new Promise((resolve) => {
+    const req = https.get(
+      url,
+      { headers: { 'User-Agent': 'SteamVersionChecker' } },
+      (res) => {
+        const status = res.statusCode ?? 0;
+        let body = '';
+        res.setEncoding('utf8');
+        res.on('data', (chunk) => (body += chunk));
+        res.on('end', () => {
+          if (status < 200 || status >= 300) {
+            if (process.env.STEAMCMD_RATING_DEBUG === '1') {
+              console.log(`appreviews HTTP ${status} for AppID ${appId}`);
+              console.log(body.substring(0, 500));
+            }
+            resolve({
+              ratingPercent: null,
+              total: null,
+              positive: null,
+              negative: null,
+              summary: null,
+            });
+            return;
+          }
 
-  const reviewScore =
-    parseFirstInt(content, 'review_score') ??
-    parseFirstInt(content, 'reviewscore');
-  if (reviewScore != null) return reviewScore;
+          try {
+            const json = JSON.parse(body);
+            const qs = json?.query_summary;
+            const total =
+              typeof qs?.total_reviews === 'number' ? qs.total_reviews : null;
+            const positive =
+              typeof qs?.total_positive === 'number' ? qs.total_positive : null;
+            const negative =
+              typeof qs?.total_negative === 'number' ? qs.total_negative : null;
+            const summary =
+              typeof qs?.review_score_desc === 'string'
+                ? qs.review_score_desc
+                : null;
 
-  return null;
+            const ratingPercent =
+              total && positive != null ? (positive / total) * 100 : null;
+
+            resolve({ ratingPercent, total, positive, negative, summary });
+          } catch (e) {
+            if (process.env.STEAMCMD_RATING_DEBUG === '1') {
+              console.log(
+                `Failed to parse appreviews JSON for AppID ${appId}:`,
+                e
+              );
+              console.log(body.substring(0, 500));
+            }
+            resolve({
+              ratingPercent: null,
+              total: null,
+              positive: null,
+              negative: null,
+              summary: null,
+            });
+          }
+        });
+      }
+    );
+
+    req.on('error', (err) => {
+      if (process.env.STEAMCMD_RATING_DEBUG === '1') {
+        console.log(`appreviews request error for AppID ${appId}:`, err);
+      }
+      resolve({
+        ratingPercent: null,
+        total: null,
+        positive: null,
+        negative: null,
+        summary: null,
+      });
+    });
+
+    req.setTimeout(15000, () => {
+      req.destroy(new Error('Timeout'));
+    });
+  });
 }
 
 /**
  * Get latest build information from Steam using steamcmd
  */
-export function getLatestBuild(
+export async function getLatestBuild(
   appId: number,
   steamCmdPath: string
-): LatestBuildInfo {
+): Promise<LatestBuildInfo> {
   try {
     const tempFile = path.join(
       os.tmpdir(),
@@ -90,7 +158,6 @@ export function getLatestBuild(
 
     let buildId: number | null = null;
     let timeUpdated: number | null = null;
-    let rating: number | null = null;
 
     // Parse buildid
     const buildIdMatch = content.match(/"buildid"\s+"(\d+)"/);
@@ -110,30 +177,28 @@ export function getLatestBuild(
       timeUpdated = parseInt(timeUpdatedMatch[1], 10);
     }
 
-    // Parse rating (best-effort)
-    rating = parseRating(content);
-    if (rating == null && process.env.STEAMCMD_RATING_DEBUG === '1') {
-      const interesting = content
-        .split(/\r?\n/)
-        .filter((l) => /(metacritic|review|rating|required_age)/i.test(l))
-        .slice(0, 50);
-      console.log(
-        `Rating not found for AppID ${appId}. Debug lines (first ${interesting.length}):`
-      );
-      for (const line of interesting) console.log(line);
-    }
+    // SteamDB-style rating (user review percent + counts)
+    const review = await fetchSteamReviewSummary(appId);
 
     return {
       BuildID: buildId,
       TimeUpdated: timeUpdated,
-      Rating: rating,
+      RatingPercent: review.ratingPercent,
+      ReviewsTotal: review.total,
+      ReviewsPositive: review.positive,
+      ReviewsNegative: review.negative,
+      ReviewSummary: review.summary,
     };
   } catch (error) {
     console.error(`Error fetching build info for AppID ${appId}:`, error);
     return {
       BuildID: null,
       TimeUpdated: null,
-      Rating: null,
+      RatingPercent: null,
+      ReviewsTotal: null,
+      ReviewsPositive: null,
+      ReviewsNegative: null,
+      ReviewSummary: null,
     };
   }
 }

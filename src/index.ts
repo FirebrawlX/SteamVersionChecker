@@ -137,12 +137,16 @@ async function main(params: Params) {
     console.log(`Processing game: ${game.Name} (AppID: ${game.AppID})`);
 
     // Get latest build from Steam
-    const latestInfo = getLatestBuild(game.AppID, params.SteamCmdPath);
+    const latestInfo = await getLatestBuild(game.AppID, params.SteamCmdPath);
     console.log(`SteamCMD result for ${game.Name}:`, latestInfo);
 
     const latestBuild = latestInfo.BuildID;
     const latestTimeUpdated = latestInfo.TimeUpdated;
-    const latestRating = latestInfo.Rating;
+    const latestRatingPercent = latestInfo.RatingPercent;
+    const latestReviewsTotal = latestInfo.ReviewsTotal;
+    const latestReviewsPositive = latestInfo.ReviewsPositive;
+    const latestReviewsNegative = latestInfo.ReviewsNegative;
+    const latestReviewSummary = latestInfo.ReviewSummary;
     let latestDate = '';
 
     const prevBuild = gamesData[game.AppID]?.LatestBuild;
@@ -162,8 +166,16 @@ async function main(params: Params) {
     gamesData[game.AppID].LatestBuild =
       latestBuild === null ? undefined : latestBuild;
 
-    gamesData[game.AppID].Rating =
-      latestRating === null ? undefined : latestRating;
+    gamesData[game.AppID].RatingPercent =
+      latestRatingPercent === null ? undefined : latestRatingPercent;
+    gamesData[game.AppID].ReviewsTotal =
+      latestReviewsTotal === null ? undefined : latestReviewsTotal;
+    gamesData[game.AppID].ReviewsPositive =
+      latestReviewsPositive === null ? undefined : latestReviewsPositive;
+    gamesData[game.AppID].ReviewsNegative =
+      latestReviewsNegative === null ? undefined : latestReviewsNegative;
+    gamesData[game.AppID].ReviewSummary =
+      latestReviewSummary === null ? undefined : latestReviewSummary;
 
     // Determine status
     let status = '';
@@ -181,7 +193,16 @@ async function main(params: Params) {
       InstalledBuild: game.InstalledBuild,
       LatestBuild: latestBuild === null ? undefined : latestBuild,
       LatestDate: latestDate,
-      Rating: latestRating === null ? undefined : latestRating,
+      RatingPercent:
+        latestRatingPercent === null ? undefined : latestRatingPercent,
+      ReviewsTotal:
+        latestReviewsTotal === null ? undefined : latestReviewsTotal,
+      ReviewsPositive:
+        latestReviewsPositive === null ? undefined : latestReviewsPositive,
+      ReviewsNegative:
+        latestReviewsNegative === null ? undefined : latestReviewsNegative,
+      ReviewSummary:
+        latestReviewSummary === null ? undefined : latestReviewSummary,
       Status: status,
     });
   }
