@@ -4,21 +4,24 @@
     "AppID": 257850,
     "InstalledBuild": 10930509,
     "LatestDate": "2023-04-04T19:48:08.000Z",
-    "LatestBuild": 10930509
+    "LatestBuild": 10930509,
+    "Rating": 84
   },
   "268910": {
     "Name": "Cuphead",
     "AppID": 268910,
     "InstalledBuild": 20241530,
     "LatestDate": "2025-10-03T22:10:37.000Z",
-    "LatestBuild": 20241530
+    "LatestBuild": 20241530,
+    "Rating": 88
   },
   "330020": {
     "Name": "Children.of.Morta",
     "AppID": 330020,
     "InstalledBuild": 8334433,
     "LatestDate": "2022-03-08T16:02:23.000Z",
-    "LatestBuild": 8334433
+    "LatestBuild": 8334433,
+    "Rating": 82
   },
   "367520": {
     "Name": "Hollow.Knight",
@@ -26,35 +29,40 @@
     "InstalledBuild": 20231655,
     "LatestDate": "2025-10-03T07:43:14.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20231655
+    "LatestBuild": 20231655,
+    "Rating": 87
   },
   "368340": {
     "Name": "CrossCode",
     "AppID": 368340,
     "InstalledBuild": 20004663,
     "LatestDate": "2025-09-20T13:15:00.000Z",
-    "LatestBuild": 20004663
+    "LatestBuild": 20004663,
+    "Rating": 86
   },
   "394310": {
     "Name": "Punch.Club",
     "AppID": 394310,
     "InstalledBuild": 11412837,
     "LatestDate": "2024-01-26T08:51:08.000Z",
-    "LatestBuild": 1734185
+    "LatestBuild": 1734185,
+    "Rating": 73
   },
   "503560": {
     "Name": "911.Operator",
     "AppID": 503560,
     "InstalledBuild": 7533741,
     "LatestDate": "2021-10-14T15:35:34.000Z",
-    "LatestBuild": 7533741
+    "LatestBuild": 7533741,
+    "Rating": 68
   },
   "504230": {
     "Name": "Celeste",
     "AppID": 504230,
     "InstalledBuild": 17282758,
     "LatestDate": "2025-02-07T17:00:06.000Z",
-    "LatestBuild": 17282758
+    "LatestBuild": 17282758,
+    "Rating": 88
   },
   "553420": {
     "Name": "Tunic",
@@ -62,7 +70,8 @@
     "InstalledBuild": 10650562,
     "LatestDate": "2023-03-02T20:14:47.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 10650562
+    "LatestBuild": 10650562,
+    "Rating": 85
   },
   "588650": {
     "Name": "Dead.Cells",
@@ -70,42 +79,48 @@
     "InstalledBuild": 15492902,
     "LatestDate": "2024-08-27T08:14:59.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 15492902
+    "LatestBuild": 15492902,
+    "Rating": 89
   },
   "632470": {
     "Name": "Disco.Elysium",
     "AppID": 632470,
     "InstalledBuild": 21044846,
     "LatestDate": "2025-12-17T12:07:57.000Z",
-    "LatestBuild": 21044846
+    "LatestBuild": 21044846,
+    "Rating": 97
   },
   "653530": {
     "Name": "Return.of.the.Obra.Dinn",
     "AppID": 653530,
     "InstalledBuild": 9550393,
     "LatestDate": "2022-09-20T07:24:13.000Z",
-    "LatestBuild": 9550393
+    "LatestBuild": 9550393,
+    "Rating": 89
   },
   "690830": {
     "Name": "Foundation",
     "AppID": 690830,
     "InstalledBuild": 21137162,
     "LatestDate": "2025-12-11T18:10:07.000Z",
-    "LatestBuild": 21137162
+    "LatestBuild": 21137162,
+    "Rating": 84
   },
   "692850": {
     "Name": "Bloodstained.Ritual.of.the.Night",
     "AppID": 692850,
     "InstalledBuild": 20844919,
     "LatestDate": "2025-12-23T15:37:31.000Z",
-    "LatestBuild": 20844919
+    "LatestBuild": 20844919,
+    "Rating": 93
   },
   "774181": {
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
     "InstalledBuild": 21254178,
     "LatestDate": "2025-12-19T08:40:52.000Z",
-    "LatestBuild": 21254178
+    "LatestBuild": 21254178,
+    "Rating": 87
   },
   "774361": {
     "Name": "Blasphemous",
@@ -113,28 +128,32 @@
     "InstalledBuild": 20206233,
     "LatestDate": "2025-10-03T09:46:58.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20206233
+    "LatestBuild": 20206233,
+    "Rating": 77
   },
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
     "InstalledBuild": 21104187,
     "LatestDate": "2025-12-08T21:16:33.000Z",
-    "LatestBuild": 21104187
+    "LatestBuild": 21104187,
+    "Rating": 85
   },
   "894020": {
     "Name": "Deaths.Door",
     "AppID": 894020,
     "InstalledBuild": 7480208,
     "LatestDate": "2021-10-05T10:21:41.000Z",
-    "LatestBuild": 7480208
+    "LatestBuild": 7480208,
+    "Rating": 85
   },
   "921570": {
     "Name": "Octopath.Traveler",
     "AppID": 921570,
     "InstalledBuild": 5272616,
     "LatestDate": "2020-07-22T16:55:34.000Z",
-    "LatestBuild": 5272616
+    "LatestBuild": 5272616,
+    "Rating": 80
   },
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
@@ -142,7 +161,8 @@
     "InstalledBuild": 20764176,
     "LatestDate": "2025-11-12T08:42:46.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20764176
+    "LatestBuild": 20764176,
+    "Rating": 90
   },
   "1161590": {
     "Name": "Punch.Club.2.Fast.Forward",
@@ -150,84 +170,96 @@
     "InstalledBuild": 20464979,
     "LatestDate": "2025-10-20T14:12:49.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20464979
+    "LatestBuild": 20464979,
+    "Rating": 82
   },
   "1229240": {
     "Name": "Chained.Echoes",
     "AppID": 1229240,
     "InstalledBuild": 21147362,
     "LatestDate": "2025-12-11T13:05:54.000Z",
-    "LatestBuild": 21147362
+    "LatestBuild": 21147362,
+    "Rating": 91
   },
   "1244090": {
     "Name": "Sea.of.Stars",
     "AppID": 1244090,
     "InstalledBuild": 20404391,
     "LatestDate": "2025-10-15T14:56:31.000Z",
-    "LatestBuild": 20404391
+    "LatestBuild": 20404391,
+    "Rating": 87
   },
   "1262350": {
     "Name": "Signalis",
     "AppID": 1262350,
     "InstalledBuild": 15862770,
     "LatestDate": "2025-10-05T20:23:08.000Z",
-    "LatestBuild": 20243420
+    "LatestBuild": 20243420,
+    "Rating": 96
   },
   "1264280": {
     "Name": "Slipways",
     "AppID": 1264280,
     "InstalledBuild": 15946357,
     "LatestDate": "2024-10-07T12:28:20.000Z",
-    "LatestBuild": 15946357
+    "LatestBuild": 15946357,
+    "Rating": 92
   },
   "1277400": {
     "Name": "Monster.Hunter.Stories.2.Wings.of.Ruin",
     "AppID": 1277400,
     "InstalledBuild": 20139678,
     "LatestDate": "2025-11-26T00:59:37.000Z",
-    "LatestBuild": 20139678
+    "LatestBuild": 20139678,
+    "Rating": 82
   },
   "1280930": {
     "Name": "Astral.Ascent",
     "AppID": 1280930,
     "InstalledBuild": 20962637,
     "LatestDate": "2025-11-27T09:13:05.000Z",
-    "LatestBuild": 20962637
+    "LatestBuild": 20962637,
+    "Rating": 86
   },
   "1336490": {
     "Name": "Against.the.Storm",
     "AppID": 1336490,
     "InstalledBuild": 21206605,
     "LatestDate": "2025-12-16T13:19:32.000Z",
-    "LatestBuild": 21206605
+    "LatestBuild": 21206605,
+    "Rating": 91
   },
   "1361510": {
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-01-05T06:39:57.862Z",
-    "Status": "✅ Up-to-date"
+    "LatestDate": "2026-01-05T07:21:26.441Z",
+    "Status": "✅ Up-to-date",
+    "Rating": 84
   },
   "1363080": {
     "Name": "Manor.Lords",
     "AppID": 1363080,
     "InstalledBuild": 21209292,
     "LatestDate": "2025-12-19T13:59:22.000Z",
-    "LatestBuild": 21209292
+    "LatestBuild": 21209292,
+    "Rating": 84
   },
   "1369630": {
     "Name": "ENDER.LILIES.Quietus.of.the.Knights",
     "AppID": 1369630,
     "InstalledBuild": 8834157,
     "LatestDate": "2022-06-03T07:45:21.000Z",
-    "LatestBuild": 8834157
+    "LatestBuild": 8834157,
+    "Rating": 86
   },
   "1458140": {
     "Name": "Pacific.Drive",
     "AppID": 1458140,
     "InstalledBuild": 21140881,
     "LatestDate": "2025-12-16T16:58:15.000Z",
-    "LatestBuild": 21140881
+    "LatestBuild": 21140881,
+    "Rating": 83
   },
   "1593030": {
     "Name": "Terra.Nil",
@@ -235,49 +267,56 @@
     "InstalledBuild": 19755773,
     "LatestDate": "2025-08-27T14:17:14.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 19755773
+    "LatestBuild": 19755773,
+    "Rating": 79
   },
   "1621690": {
     "Name": "Core.Keeper",
     "AppID": 1621690,
     "InstalledBuild": 21036902,
     "LatestDate": "2025-12-05T10:05:20.000Z",
-    "LatestBuild": 21036902
+    "LatestBuild": 21036902,
+    "Rating": 85
   },
   "1637320": {
     "Name": "Dome.Keeper",
     "AppID": 1637320,
     "InstalledBuild": 17779621,
     "LatestDate": "2025-03-19T15:38:50.000Z",
-    "LatestBuild": 17779621
+    "LatestBuild": 17779621,
+    "Rating": 92
   },
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
     "InstalledBuild": 21254454,
     "LatestDate": "2025-12-19T10:53:42.000Z",
-    "LatestBuild": 21254454
+    "LatestBuild": 21254454,
+    "Rating": 94
   },
   "1718570": {
     "Name": "ASTLIBRA.Revision",
     "AppID": 1718570,
     "InstalledBuild": 16656423,
     "LatestDate": "2024-12-06T12:27:27.000Z",
-    "LatestBuild": 16656423
+    "LatestBuild": 16656423,
+    "Rating": 95
   },
   "1755830": {
     "Name": "Astrea.Six.Sided.Oracles",
     "AppID": 1755830,
     "InstalledBuild": 18016665,
     "LatestDate": "2025-04-08T00:59:56.000Z",
-    "LatestBuild": 18016665
+    "LatestBuild": 18016665,
+    "Rating": 85
   },
   "1782460": {
     "Name": "Hell.Clock",
     "AppID": 1782460,
     "InstalledBuild": 20968706,
     "LatestDate": "2025-11-27T16:57:03.000Z",
-    "LatestBuild": 20968706
+    "LatestBuild": 20968706,
+    "Rating": 84
   },
   "1868140": {
     "Name": "DAVE.THE.DIVER",
@@ -285,21 +324,24 @@
     "InstalledBuild": 20796649,
     "LatestDate": "2025-11-17T01:33:39.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20796649
+    "LatestBuild": 20796649,
+    "Rating": 90
   },
   "1904480": {
     "Name": "Absolum",
     "AppID": 1904480,
     "InstalledBuild": 20526751,
     "LatestDate": "2025-10-24T14:36:10.000Z",
-    "LatestBuild": 20526751
+    "LatestBuild": 20526751,
+    "Rating": 87
   },
   "1940340": {
     "Name": "Darkest.Dungeon.II",
     "AppID": 1940340,
     "InstalledBuild": 20612299,
     "LatestDate": "2025-10-30T21:27:33.000Z",
-    "LatestBuild": 20612299
+    "LatestBuild": 20612299,
+    "Rating": 81
   },
   "1942280": {
     "Name": "Brotato",
@@ -307,28 +349,32 @@
     "InstalledBuild": 20675512,
     "LatestDate": "2025-11-05T09:31:27.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20675512
+    "LatestBuild": 20675512,
+    "Rating": 96
   },
   "1970580": {
     "Name": "Backpack.Hero",
     "AppID": 1970580,
     "InstalledBuild": 15631088,
     "LatestDate": "2024-09-08T17:06:09.000Z",
-    "LatestBuild": 15631088
+    "LatestBuild": 15631088,
+    "Rating": 76
   },
   "1971650": {
     "Name": "OCTOPATH.TRAVELER.II",
     "AppID": 1971650,
     "InstalledBuild": 13399590,
     "LatestDate": "2024-06-05T15:54:48.000Z",
-    "LatestBuild": 13399590
+    "LatestBuild": 13399590,
+    "Rating": 94
   },
   "2062430": {
     "Name": "BALL.x.PIT",
     "AppID": 2062430,
     "InstalledBuild": 20687612,
     "LatestDate": "2025-11-06T18:53:02.000Z",
-    "LatestBuild": 20687612
+    "LatestBuild": 20687612,
+    "Rating": 95
   },
   "2066020": {
     "Name": "Soulstone.Survivors",
@@ -336,14 +382,16 @@
     "InstalledBuild": 21223726,
     "LatestDate": "2025-12-18T21:05:25.000Z",
     "Status": "⚠️ Update available",
-    "LatestBuild": 21223726
+    "LatestBuild": 21223726,
+    "Rating": 91
   },
   "2103140": {
     "Name": "Magicraft",
     "AppID": 2103140,
     "InstalledBuild": 21097159,
     "LatestDate": "2025-12-08T10:58:30.000Z",
-    "LatestBuild": 21097159
+    "LatestBuild": 21097159,
+    "Rating": 92
   },
   "2114740": {
     "Name": "Blasphemous.2",
@@ -351,28 +399,32 @@
     "InstalledBuild": 20202981,
     "LatestDate": "2025-10-03T12:41:18.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 20202981
+    "LatestBuild": 20202981,
+    "Rating": 83
   },
   "2126190": {
     "Name": "Rue.Valley",
     "AppID": 2126190,
     "InstalledBuild": 21242075,
     "LatestDate": "2025-12-18T16:17:11.000Z",
-    "LatestBuild": 21242075
+    "LatestBuild": 21242075,
+    "Rating": 64
   },
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
     "InstalledBuild": 20115804,
     "LatestDate": "2026-01-05T03:37:15.000Z",
-    "LatestBuild": 21381332
+    "LatestBuild": 21381332,
+    "Rating": 94
   },
   "2239150": {
     "Name": "Thronefall",
     "AppID": 2239150,
     "InstalledBuild": 17216593,
     "LatestDate": "2025-02-03T11:39:41.000Z",
-    "LatestBuild": 17216593
+    "LatestBuild": 17216593,
+    "Rating": 96
   },
   "2321470": {
     "Name": "Deep.Rock.Galactic.Survivor",
@@ -380,21 +432,24 @@
     "InstalledBuild": 21189700,
     "LatestDate": "2025-12-15T14:04:56.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 21189700
+    "LatestBuild": 21189700,
+    "Rating": 86
   },
   "2334730": {
     "Name": "Death.Must.Die",
     "AppID": 2334730,
     "InstalledBuild": 21239360,
     "LatestDate": "2025-12-18T11:24:11.000Z",
-    "LatestBuild": 21239360
+    "LatestBuild": 21239360,
+    "Rating": 90
   },
   "2350790": {
     "Name": "Moonlighter.2.The.Endless.Vault",
     "AppID": 2350790,
     "InstalledBuild": 20983817,
     "LatestDate": "2025-12-01T15:50:04.000Z",
-    "LatestBuild": 20983817
+    "LatestBuild": 20983817,
+    "Rating": 87
   },
   "2379780": {
     "Name": "Balatro",
@@ -402,35 +457,40 @@
     "InstalledBuild": 17459173,
     "LatestDate": "2025-02-24T18:21:55.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 17459173
+    "LatestBuild": 17459173,
+    "Rating": 90
   },
   "2444750": {
     "Name": "Shape.of.Dreams",
     "AppID": 2444750,
     "InstalledBuild": 21205645,
     "LatestDate": "2025-12-17T06:01:05.000Z",
-    "LatestBuild": 21205645
+    "LatestBuild": 21205645,
+    "Rating": 89
   },
   "2592160": {
     "Name": "Dispatch",
     "AppID": 2592160,
     "InstalledBuild": 21201955,
     "LatestDate": "2025-12-16T17:22:02.000Z",
-    "LatestBuild": 21201955
+    "LatestBuild": 21201955,
+    "Rating": 87
   },
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
     "InstalledBuild": 21239233,
     "LatestDate": "2025-12-18T13:00:51.000Z",
-    "LatestBuild": 21239233
+    "LatestBuild": 21239233,
+    "Rating": 73
   },
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
     "InstalledBuild": 20804247,
     "LatestDate": "2025-12-02T17:19:57.000Z",
-    "LatestBuild": 21025437
+    "LatestBuild": 21025437,
+    "Rating": 87
   },
   "2756920": {
     "Name": "Keep.Driving",
@@ -438,14 +498,16 @@
     "InstalledBuild": 21074565,
     "LatestDate": "2025-12-05T21:38:57.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 21074565
+    "LatestBuild": 21074565,
+    "Rating": 94
   },
   "2922410": {
     "Name": "Achilles.Survivor",
     "AppID": 2922410,
     "InstalledBuild": 20679717,
     "LatestDate": "2025-11-20T15:08:57.000Z",
-    "LatestBuild": 20679717
+    "LatestBuild": 20679717,
+    "Rating": 82
   },
   "2996040": {
     "Name": "Teenage.Mutant.Ninja.Turtles.Splintered.Fate",
@@ -453,48 +515,55 @@
     "InstalledBuild": 21077936,
     "LatestDate": "2025-12-16T16:00:19.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 21077936
+    "LatestBuild": 21077936,
+    "Rating": 82
   },
   "3167020": {
     "Name": "Escape.from.Duckov",
     "AppID": 3167020,
     "InstalledBuild": 21315576,
     "LatestDate": "2025-12-26T05:59:38.000Z",
-    "LatestBuild": 21315576
+    "LatestBuild": 21315576,
+    "Rating": 84
   },
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
     "InstalledBuild": 21305013,
     "LatestDate": "2025-12-25T11:20:26.000Z",
-    "LatestBuild": 21305013
+    "LatestBuild": 21305013,
+    "Rating": 95
   },
   "3467710": {
     "Name": "Wall.World.2",
     "AppID": 3467710,
     "InstalledBuild": 20888272,
     "LatestDate": "2025-11-21T10:59:42.000Z",
-    "LatestBuild": 20888272
+    "LatestBuild": 20888272,
+    "Rating": 77
   },
   "3483740": {
     "Name": "Cast.n.Chill",
     "AppID": 3483740,
     "InstalledBuild": 21242034,
     "LatestDate": "2025-12-18T23:09:13.000Z",
-    "LatestBuild": 21242034
+    "LatestBuild": 21242034,
+    "Rating": 95
   },
   "3631290": {
     "Name": "Slots.and.Daggers",
     "AppID": 3631290,
     "InstalledBuild": 20648272,
     "LatestDate": "2025-11-03T11:49:07.000Z",
-    "LatestBuild": 20648272
+    "LatestBuild": 20648272,
+    "Rating": 94
   },
   "4038320": {
     "Name": "This.Aint.Even.Poker.Ya.Joker",
     "AppID": 4038320,
     "InstalledBuild": 21177577,
     "LatestDate": "2025-12-15T06:14:28.000Z",
-    "LatestBuild": 21177577
+    "LatestBuild": 21177577,
+    "Rating": 89
   }
 }
