@@ -686,6 +686,18 @@
     "ReviewsNegative": 769,
     "ReviewSummary": "Overwhelmingly Positive"
   },
+  "2308630": {
+    "Name": "Dawnfolk",
+    "AppID": 2308630,
+    "InstalledBuild": 19969051,
+    "LatestDate": "2025-09-13T13:26:50.000Z",
+    "LatestBuild": 19969051,
+    "RatingPercent": 96.23352165725048,
+    "ReviewsTotal": 531,
+    "ReviewsPositive": 511,
+    "ReviewsNegative": 20,
+    "ReviewSummary": "Overwhelmingly Positive"
+  },
   "2321470": {
     "Name": "Deep.Rock.Galactic.Survivor",
     "AppID": 2321470,
