@@ -16,6 +16,7 @@ export interface GameData {
   InstalledBuild?: number;
   LatestBuild?: number;
   LatestDate?: string;
+  Rating?: number;
   Status?: string;
 }
 
@@ -26,4 +27,5 @@ export interface GamesDataMap {
 export interface LatestBuildInfo {
   BuildID: number | null;
   TimeUpdated: number | null;
+  Rating: number | null;
 }

@@ -142,6 +142,7 @@ async function main(params: Params) {
 
     const latestBuild = latestInfo.BuildID;
     const latestTimeUpdated = latestInfo.TimeUpdated;
+    const latestRating = latestInfo.Rating;
     let latestDate = '';
 
     const prevBuild = gamesData[game.AppID]?.LatestBuild;
@@ -161,6 +162,9 @@ async function main(params: Params) {
     gamesData[game.AppID].LatestBuild =
       latestBuild === null ? undefined : latestBuild;
 
+    gamesData[game.AppID].Rating =
+      latestRating === null ? undefined : latestRating;
+
     // Determine status
     let status = '';
     if (latestBuild == null) {
@@ -177,6 +181,7 @@ async function main(params: Params) {
       InstalledBuild: game.InstalledBuild,
       LatestBuild: latestBuild === null ? undefined : latestBuild,
       LatestDate: latestDate,
+      Rating: latestRating === null ? undefined : latestRating,
       Status: status,
     });
   }
