@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', svcsInitSorting);
       pct ?? ''
     }" title="${ratingTooltip}">`;
     if (pctText) {
-      html += `${pctText}${reviewsText ? ' (' + reviewsText : ')'}`;
+      html += `${pctText}${reviewsText ? ' (' + reviewsText + ')' : ''}`;
     }
     html += `</td>`;
     html += `<td class="status-cell" data-key="status" data-sort="${statusText}" title="${statusText}">${statusIcon}</td>`;

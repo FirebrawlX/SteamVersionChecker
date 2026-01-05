@@ -41,6 +41,9 @@ function logMissingBuildIdDebug(appId: number, first: string, retry?: string) {
   const retryLen = retry?.length;
   const hasQuotedRoot = combined.includes(`"${appId}"`);
   const hasBuildIdLiteral = /"buildid"\s+"\d+"/.test(combined);
+  const hasDepotsSection = /"depots"\s*\{/.test(combined);
+  const hasBranchesSection = /"branches"\s*\{/.test(combined);
+  const hasPublicBranch = /"public"\s*\{/.test(combined);
 
   const changeLine = extractMatchingLines(
     combined,
@@ -61,6 +64,17 @@ function logMissingBuildIdDebug(appId: number, first: string, retry?: string) {
   );
   console.log(`Contains quoted root "${appId}": ${hasQuotedRoot}`);
   console.log(`Contains any "buildid" key: ${hasBuildIdLiteral}`);
+  console.log(
+    `Has depots/branches/public sections: depots=${hasDepotsSection} branches=${hasBranchesSection} public=${hasPublicBranch}`
+  );
+  if (!hasDepotsSection) {
+    console.log(
+      'Likely cause: SteamCMD did not include depot/branch data for this app (often an anonymous-access restriction).'
+    );
+    console.log(
+      'SteamDB can still show builds because it uses a logged-in Steam account; SteamCMD anonymous may not have permission to see depots/build IDs.'
+    );
+  }
   if (changeLine.length) {
     console.log('Change number line(s):');
     for (const l of changeLine) console.log(l);
