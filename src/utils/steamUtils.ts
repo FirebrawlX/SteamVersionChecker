@@ -9,13 +9,21 @@ import { LatestBuildInfo } from '../types';
 
 const execFileAsync = promisify(execFile);
 
-function extractLines(content: string, maxLines: number, fromEnd = false): string[] {
+function extractLines(
+  content: string,
+  maxLines: number,
+  fromEnd = false
+): string[] {
   const lines = content.split(/\r?\n/);
   if (!fromEnd) return lines.slice(0, maxLines);
   return lines.slice(Math.max(0, lines.length - maxLines));
 }
 
-function extractMatchingLines(content: string, pattern: RegExp, maxLines: number): string[] {
+function extractMatchingLines(
+  content: string,
+  pattern: RegExp,
+  maxLines: number
+): string[] {
   const lines = content.split(/\r?\n/);
   const matches: string[] = [];
   for (const line of lines) {
@@ -48,7 +56,9 @@ function logMissingBuildIdDebug(appId: number, first: string, retry?: string) {
 
   console.log('--- SteamCMD buildid missing debug ---');
   console.log(`AppID: ${appId}`);
-  console.log(`Output length: ${firstLen}${retry != null ? ` (retry: ${retryLen})` : ''}`);
+  console.log(
+    `Output length: ${firstLen}${retry != null ? ` (retry: ${retryLen})` : ''}`
+  );
   console.log(`Contains quoted root "${appId}": ${hasQuotedRoot}`);
   console.log(`Contains any "buildid" key: ${hasBuildIdLiteral}`);
   if (changeLine.length) {
