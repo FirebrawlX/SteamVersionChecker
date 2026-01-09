@@ -488,7 +488,7 @@
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
-    "InstalledBuild": 21254454,
+    "InstalledBuild": 21396289,
     "LatestDate": "2026-01-08T09:24:29.000Z",
     "LatestBuild": 21420922,
     "Rating": 94,
@@ -843,7 +843,7 @@
   "2756920": {
     "Name": "Keep.Driving",
     "AppID": 2756920,
-    "InstalledBuild": 21074565,
+    "InstalledBuild": 21425122,
     "LatestDate": "2026-01-08T19:43:34.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 21425122,
@@ -945,6 +945,18 @@
     "ReviewsPositive": 5155,
     "ReviewsNegative": 297,
     "ReviewSummary": "Very Positive"
+  },
+  "4035270": {
+    "Name": "Space.Rock.Breaker",
+    "AppID": 4035270,
+    "InstalledBuild": 21315276,
+    "LatestDate": "2025-12-26T05:55:25.000Z",
+    "LatestBuild": 21315276,
+    "RatingPercent": 97.50656167979002,
+    "ReviewsTotal": 762,
+    "ReviewsPositive": 743,
+    "ReviewsNegative": 19,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "4038320": {
     "Name": "This.Aint.Even.Poker.Ya.Joker",
