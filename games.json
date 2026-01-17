@@ -433,6 +433,18 @@
     "ReviewsNegative": 3986,
     "ReviewSummary": "Very Positive"
   },
+  "1578650": {
+    "Name": "Citizen.Sleeper",
+    "AppID": 1578650,
+    "InstalledBuild": 21238792,
+    "LatestDate": "2025-12-18T10:36:25.000Z",
+    "LatestBuild": 21238792,
+    "RatingPercent": 92.72455728611052,
+    "ReviewsTotal": 9374,
+    "ReviewsPositive": 8692,
+    "ReviewsNegative": 682,
+    "ReviewSummary": "Very Positive"
+  },
   "1593030": {
     "Name": "Terra.Nil",
     "AppID": 1593030,
@@ -687,7 +699,7 @@
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
-    "InstalledBuild": 21381332,
+    "InstalledBuild": 21460982,
     "LatestDate": "2026-01-12T06:59:45.000Z",
     "LatestBuild": 21460982,
     "Rating": 94,
@@ -788,6 +800,18 @@
     "ReviewsNegative": 3725,
     "ReviewSummary": "Overwhelmingly Positive"
   },
+  "2442460": {
+    "Name": "Citizen.Sleeper.2.Starward.Vector",
+    "AppID": 2442460,
+    "InstalledBuild": 20765567,
+    "LatestDate": "2025-12-12T13:52:21.000Z",
+    "LatestBuild": 21164079,
+    "RatingPercent": 92.99948901379663,
+    "ReviewsTotal": 1957,
+    "ReviewsPositive": 1820,
+    "ReviewsNegative": 137,
+    "ReviewSummary": "Very Positive"
+  },
   "2444750": {
     "Name": "Shape.of.Dreams",
     "AppID": 2444750,
@@ -817,7 +841,7 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 21239233,
+    "InstalledBuild": 21506567,
     "LatestDate": "2026-01-15T10:01:17.000Z",
     "LatestBuild": 21506567,
     "Rating": 73,
