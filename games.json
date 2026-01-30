@@ -368,6 +368,18 @@
     "ReviewsNegative": 414,
     "ReviewSummary": "Very Positive"
   },
+  "1313140": {
+    "Name": "Cult.of.the.Lamb",
+    "AppID": 1313140,
+    "InstalledBuild": 21706018,
+    "LatestDate": "2026-01-29T20:56:09.000Z",
+    "LatestBuild": 21706018,
+    "RatingPercent": 95.77273274927279,
+    "ReviewsTotal": 116198,
+    "ReviewsPositive": 111286,
+    "ReviewsNegative": 4912,
+    "ReviewSummary": "Overwhelmingly Positive"
+  },
   "1336490": {
     "Name": "Against.the.Storm",
     "AppID": 1336490,
@@ -552,7 +564,7 @@
   "1868140": {
     "Name": "DAVE.THE.DIVER",
     "AppID": 1868140,
-    "InstalledBuild": 21472517,
+    "InstalledBuild": 21569228,
     "LatestDate": "2026-01-21T01:44:10.000Z",
     "Status": "✅ Up-to-date",
     "LatestBuild": 21569228,
@@ -699,7 +711,7 @@
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
-    "InstalledBuild": 21460982,
+    "InstalledBuild": 21547655,
     "LatestDate": "2026-01-18T22:31:49.000Z",
     "LatestBuild": 21547655,
     "Rating": 94,
@@ -763,7 +775,7 @@
   "2334730": {
     "Name": "Death.Must.Die",
     "AppID": 2334730,
-    "InstalledBuild": 21239360,
+    "InstalledBuild": 21650210,
     "LatestDate": "2026-01-26T15:49:03.000Z",
     "LatestBuild": 21650210,
     "Rating": 90,
