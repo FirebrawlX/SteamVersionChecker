@@ -788,14 +788,14 @@
   "2350790": {
     "Name": "Moonlighter.2.The.Endless.Vault",
     "AppID": 2350790,
-    "InstalledBuild": 20983817,
+    "InstalledBuild": 21465756,
     "LatestDate": "2026-01-21T08:49:24.000Z",
     "LatestBuild": 21465756,
     "Rating": 87,
-    "RatingPercent": 87.1563767462821,
-    "ReviewsTotal": 2219,
+    "RatingPercent": 87.11711711711712,
+    "ReviewsTotal": 2220,
     "ReviewsPositive": 1934,
-    "ReviewsNegative": 285,
+    "ReviewsNegative": 286,
     "ReviewSummary": "Very Positive"
   },
   "2379780": {
@@ -933,7 +933,7 @@
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
-    "InstalledBuild": 21305013,
+    "InstalledBuild": 21648660,
     "LatestDate": "2026-01-26T16:49:10.000Z",
     "LatestBuild": 21648660,
     "Rating": 95,
