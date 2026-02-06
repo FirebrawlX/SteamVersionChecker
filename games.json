@@ -371,7 +371,7 @@
   "1313140": {
     "Name": "Cult.of.the.Lamb",
     "AppID": 1313140,
-    "InstalledBuild": 21706018,
+    "InstalledBuild": 21791439,
     "LatestDate": "2026-02-05T10:30:14.000Z",
     "LatestBuild": 21791439,
     "RatingPercent": 95.7804220428507,
@@ -455,6 +455,18 @@
     "ReviewsTotal": 9507,
     "ReviewsPositive": 8815,
     "ReviewsNegative": 692,
+    "ReviewSummary": "Very Positive"
+  },
+  "1588550": {
+    "Name": "Cairn",
+    "AppID": 1588550,
+    "InstalledBuild": 21769539,
+    "LatestDate": "2026-02-04T14:00:24.000Z",
+    "LatestBuild": 21769539,
+    "RatingPercent": 94.35203094777563,
+    "ReviewsTotal": 7755,
+    "ReviewsPositive": 7317,
+    "ReviewsNegative": 438,
     "ReviewSummary": "Very Positive"
   },
   "1593030": {
@@ -671,7 +683,7 @@
   "2103140": {
     "Name": "Magicraft",
     "AppID": 2103140,
-    "InstalledBuild": 21693978,
+    "InstalledBuild": 21745630,
     "LatestDate": "2026-02-02T10:11:17.000Z",
     "LatestBuild": 21745630,
     "Rating": 92,
@@ -933,14 +945,14 @@
   "3405340": {
     "Name": "Megabonk",
     "AppID": 3405340,
-    "InstalledBuild": 21648660,
+    "InstalledBuild": 21750826,
     "LatestDate": "2026-02-04T16:05:58.000Z",
     "LatestBuild": 21750826,
     "Rating": 95,
-    "RatingPercent": 94.93120926864592,
-    "ReviewsTotal": 95289,
-    "ReviewsPositive": 90459,
-    "ReviewsNegative": 4830,
+    "RatingPercent": 94.93037264017295,
+    "ReviewsTotal": 95293,
+    "ReviewsPositive": 90462,
+    "ReviewsNegative": 4831,
     "ReviewSummary": "Very Positive"
   },
   "3467710": {
