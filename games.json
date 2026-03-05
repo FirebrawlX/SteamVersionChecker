@@ -616,14 +616,14 @@
   "1942280": {
     "Name": "Brotato",
     "AppID": 1942280,
-    "InstalledBuild": 20675512,
+    "InstalledBuild": 22162077,
     "LatestDate": "2026-03-02T14:49:16.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 96,
     "LatestBuild": 22162077,
-    "RatingPercent": 96.5993153468879,
-    "ReviewsTotal": 110713,
-    "ReviewsPositive": 106948,
+    "RatingPercent": 96.59940749304526,
+    "ReviewsTotal": 110716,
+    "ReviewsPositive": 106951,
     "ReviewsNegative": 3765,
     "ReviewSummary": "Overwhelmingly Positive"
   },
