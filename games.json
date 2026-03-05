@@ -170,6 +170,18 @@
     "ReviewsNegative": 1082,
     "ReviewSummary": "Overwhelmingly Positive"
   },
+  "686060": {
+    "Name": "Mewgenics",
+    "AppID": 686060,
+    "InstalledBuild": 22188119,
+    "LatestDate": "2026-03-04T02:51:51.000Z",
+    "LatestBuild": 22188119,
+    "RatingPercent": 92.3137027926494,
+    "ReviewsTotal": 34555,
+    "ReviewsPositive": 31899,
+    "ReviewsNegative": 2656,
+    "ReviewSummary": "Very Positive"
+  },
   "690830": {
     "Name": "Foundation",
     "AppID": 690830,
@@ -226,7 +238,7 @@
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
-    "InstalledBuild": 21104187,
+    "InstalledBuild": 22215677,
     "LatestDate": "2026-03-05T16:57:31.000Z",
     "Rating": 85,
     "LatestBuild": 22215677,
@@ -460,12 +472,12 @@
   "1588550": {
     "Name": "Cairn",
     "AppID": 1588550,
-    "InstalledBuild": 21769539,
+    "InstalledBuild": 21916175,
     "LatestDate": "2026-02-19T12:39:09.000Z",
     "LatestBuild": 21916175,
-    "RatingPercent": 94.37104321497385,
-    "ReviewsTotal": 14532,
-    "ReviewsPositive": 13714,
+    "RatingPercent": 94.37297929421476,
+    "ReviewsTotal": 14537,
+    "ReviewsPositive": 13719,
     "ReviewsNegative": 818,
     "ReviewSummary": "Very Positive"
   },
@@ -652,6 +664,18 @@
     "ReviewsPositive": 14852,
     "ReviewsNegative": 923,
     "ReviewSummary": "Very Positive"
+  },
+  "2057760": {
+    "Name": "Esoteric.Ebb",
+    "AppID": 2057760,
+    "InstalledBuild": 22196680,
+    "LatestDate": "2026-03-04T14:58:48.000Z",
+    "LatestBuild": 22196680,
+    "RatingPercent": 96.41693811074919,
+    "ReviewsTotal": 614,
+    "ReviewsPositive": 592,
+    "ReviewsNegative": 22,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "2062430": {
     "Name": "BALL.x.PIT",
