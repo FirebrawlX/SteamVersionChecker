@@ -5,7 +5,12 @@
     "InstalledBuild": 10930509,
     "LatestDate": "2023-04-04T19:48:08.000Z",
     "Rating": 84,
-    "LatestBuild": 10930509
+    "LatestBuild": 10930509,
+    "RatingPercent": 92.9606512890095,
+    "ReviewsTotal": 18425,
+    "ReviewsPositive": 17128,
+    "ReviewsNegative": 1297,
+    "ReviewSummary": "Very Positive"
   },
   "268910": {
     "Name": "Cuphead",
@@ -13,14 +18,24 @@
     "InstalledBuild": 20241530,
     "LatestDate": "2025-10-03T22:10:37.000Z",
     "Rating": 88,
-    "LatestBuild": 20241530
+    "LatestBuild": 20241530,
+    "RatingPercent": 96.244880046811,
+    "ReviewsTotal": 205080,
+    "ReviewsPositive": 197379,
+    "ReviewsNegative": 7701,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "323190": {
     "Name": "Frostpunk",
     "AppID": 323190,
     "InstalledBuild": 20303936,
     "LatestDate": "2025-10-20T09:42:34.000Z",
-    "LatestBuild": 20303936
+    "LatestBuild": 20303936,
+    "RatingPercent": 92.71152040229015,
+    "ReviewsTotal": 132044,
+    "ReviewsPositive": 122420,
+    "ReviewsNegative": 9624,
+    "ReviewSummary": "Very Positive"
   },
   "330020": {
     "Name": "Children.of.Morta",
@@ -28,7 +43,12 @@
     "InstalledBuild": 8334433,
     "LatestDate": "2022-03-08T16:02:23.000Z",
     "Rating": 82,
-    "LatestBuild": 8334433
+    "LatestBuild": 8334433,
+    "RatingPercent": 88.52787805856399,
+    "ReviewsTotal": 22437,
+    "ReviewsPositive": 19863,
+    "ReviewsNegative": 2574,
+    "ReviewSummary": "Very Positive"
   },
   "367520": {
     "Name": "Hollow.Knight",
@@ -37,7 +57,12 @@
     "LatestDate": "2026-02-05T23:18:23.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 87,
-    "LatestBuild": 21656419
+    "LatestBuild": 21656419,
+    "RatingPercent": 96.91671178811096,
+    "ReviewsTotal": 530051,
+    "ReviewsPositive": 513708,
+    "ReviewsNegative": 16343,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "368340": {
     "Name": "CrossCode",
@@ -45,7 +70,12 @@
     "InstalledBuild": 20004663,
     "LatestDate": "2025-09-20T13:15:00.000Z",
     "Rating": 86,
-    "LatestBuild": 20004663
+    "LatestBuild": 20004663,
+    "RatingPercent": 92.85552021808269,
+    "ReviewsTotal": 17608,
+    "ReviewsPositive": 16350,
+    "ReviewsNegative": 1258,
+    "ReviewSummary": "Very Positive"
   },
   "394310": {
     "Name": "Punch.Club",
@@ -53,7 +83,12 @@
     "InstalledBuild": 11412837,
     "LatestDate": "2024-01-26T08:51:08.000Z",
     "Rating": 73,
-    "LatestBuild": 1734185
+    "LatestBuild": 1734185,
+    "RatingPercent": 80.527817403709,
+    "ReviewsTotal": 15422,
+    "ReviewsPositive": 12419,
+    "ReviewsNegative": 3003,
+    "ReviewSummary": "Very Positive"
   },
   "503560": {
     "Name": "911.Operator",
@@ -61,7 +96,12 @@
     "InstalledBuild": 7533741,
     "LatestDate": "2021-10-14T15:35:34.000Z",
     "Rating": 68,
-    "LatestBuild": 7533741
+    "LatestBuild": 7533741,
+    "RatingPercent": 88.64039203419873,
+    "ReviewsTotal": 19182,
+    "ReviewsPositive": 17003,
+    "ReviewsNegative": 2179,
+    "ReviewSummary": "Very Positive"
   },
   "504230": {
     "Name": "Celeste",
@@ -69,7 +109,12 @@
     "InstalledBuild": 17282758,
     "LatestDate": "2025-02-07T17:00:06.000Z",
     "Rating": 88,
-    "LatestBuild": 17282758
+    "LatestBuild": 17282758,
+    "RatingPercent": 97.42176205149174,
+    "ReviewsTotal": 136954,
+    "ReviewsPositive": 133423,
+    "ReviewsNegative": 3531,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "553420": {
     "Name": "Tunic",
@@ -79,9 +124,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 85,
     "LatestBuild": 10650562,
-    "RatingPercent": 91.48848925077617,
-    "ReviewsTotal": 17071,
-    "ReviewsPositive": 15618,
+    "RatingPercent": 91.4889878163074,
+    "ReviewsTotal": 17072,
+    "ReviewsPositive": 15619,
     "ReviewsNegative": 1453,
     "ReviewSummary": "Very Positive"
   },
@@ -93,9 +138,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 89,
     "LatestBuild": 15492902,
-    "RatingPercent": 97.04810126582278,
-    "ReviewsTotal": 177750,
-    "ReviewsPositive": 172503,
+    "RatingPercent": 97.04811787275457,
+    "ReviewsTotal": 177751,
+    "ReviewsPositive": 172504,
     "ReviewsNegative": 5247,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -106,9 +151,9 @@
     "LatestDate": "2026-01-23T14:24:58.000Z",
     "Rating": 97,
     "LatestBuild": 21464562,
-    "RatingPercent": 92.72084065305333,
-    "ReviewsTotal": 124094,
-    "ReviewsPositive": 115061,
+    "RatingPercent": 92.72095796802475,
+    "ReviewsTotal": 124096,
+    "ReviewsPositive": 115063,
     "ReviewsNegative": 9033,
     "ReviewSummary": "Very Positive"
   },
@@ -131,10 +176,10 @@
     "InstalledBuild": 22188119,
     "LatestDate": "2026-03-04T02:51:51.000Z",
     "LatestBuild": 22188119,
-    "RatingPercent": 92.27171619232305,
-    "ReviewsTotal": 35066,
-    "ReviewsPositive": 32356,
-    "ReviewsNegative": 2710,
+    "RatingPercent": 92.27130236534626,
+    "ReviewsTotal": 35090,
+    "ReviewsPositive": 32378,
+    "ReviewsNegative": 2712,
     "ReviewSummary": "Very Positive"
   },
   "690830": {
@@ -170,9 +215,9 @@
     "LatestDate": "2026-01-14T04:25:49.000Z",
     "Rating": 87,
     "LatestBuild": 21487210,
-    "RatingPercent": 98.2495213534951,
-    "ReviewsTotal": 25593,
-    "ReviewsPositive": 25145,
+    "RatingPercent": 98.24958974759708,
+    "ReviewsTotal": 25594,
+    "ReviewsPositive": 25146,
     "ReviewsNegative": 448,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -184,9 +229,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 77,
     "LatestBuild": 20206233,
-    "RatingPercent": 89.82469885417686,
-    "ReviewsTotal": 61266,
-    "ReviewsPositive": 55032,
+    "RatingPercent": 89.82503101129464,
+    "ReviewsTotal": 61268,
+    "ReviewsPositive": 55034,
     "ReviewsNegative": 6234,
     "ReviewSummary": "Very Positive"
   },
@@ -197,9 +242,9 @@
     "LatestDate": "2026-03-06T15:38:57.000Z",
     "Rating": 85,
     "LatestBuild": 22231660,
-    "RatingPercent": 85.8010922236751,
-    "ReviewsTotal": 13001,
-    "ReviewsPositive": 11155,
+    "RatingPercent": 85.80218427934165,
+    "ReviewsTotal": 13002,
+    "ReviewsPositive": 11156,
     "ReviewsNegative": 1846,
     "ReviewSummary": "Very Positive"
   },
@@ -237,10 +282,10 @@
     "Status": "✅ Up-to-date",
     "Rating": 90,
     "LatestBuild": 20764176,
-    "RatingPercent": 89.03309424495149,
-    "ReviewsTotal": 395809,
-    "ReviewsPositive": 352401,
-    "ReviewsNegative": 43408,
+    "RatingPercent": 89.03373477539202,
+    "ReviewsTotal": 395823,
+    "ReviewsPositive": 352416,
+    "ReviewsNegative": 43407,
     "ReviewSummary": "Very Positive"
   },
   "1161590": {
@@ -251,9 +296,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 82,
     "LatestBuild": 20464979,
-    "RatingPercent": 82.5924192793636,
-    "ReviewsTotal": 4274,
-    "ReviewsPositive": 3530,
+    "RatingPercent": 82.59649122807018,
+    "ReviewsTotal": 4275,
+    "ReviewsPositive": 3531,
     "ReviewsNegative": 744,
     "ReviewSummary": "Very Positive"
   },
@@ -290,9 +335,9 @@
     "LatestDate": "2025-10-05T20:23:08.000Z",
     "Rating": 96,
     "LatestBuild": 20243420,
-    "RatingPercent": 96.66051190627786,
-    "ReviewsTotal": 31412,
-    "ReviewsPositive": 30363,
+    "RatingPercent": 96.66040559039827,
+    "ReviewsTotal": 31411,
+    "ReviewsPositive": 30362,
     "ReviewsNegative": 1049,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -316,9 +361,9 @@
     "LatestDate": "2025-11-26T00:59:37.000Z",
     "Rating": 82,
     "LatestBuild": 20139678,
-    "RatingPercent": 82.56437768240343,
-    "ReviewsTotal": 16776,
-    "ReviewsPositive": 13851,
+    "RatingPercent": 82.56541693985814,
+    "ReviewsTotal": 16777,
+    "ReviewsPositive": 13852,
     "ReviewsNegative": 2925,
     "ReviewSummary": "Very Positive"
   },
@@ -340,9 +385,9 @@
     "AppID": 1313140,
     "InstalledBuild": 21791439,
     "LatestDate": "2026-02-26T07:30:01.000Z",
-    "RatingPercent": 95.80739137672715,
-    "ReviewsTotal": 120140,
-    "ReviewsPositive": 115103,
+    "RatingPercent": 95.80756585792167,
+    "ReviewsTotal": 120145,
+    "ReviewsPositive": 115108,
     "ReviewsNegative": 5037,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 22105026
@@ -364,7 +409,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-03-06T21:29:08.986Z",
+    "LatestDate": "2026-03-06T22:28:18.388Z",
     "Status": "✅ Up-to-date",
     "Rating": 84,
     "RatingPercent": 94.42815249266863,
@@ -380,9 +425,9 @@
     "LatestDate": "2025-12-19T13:59:22.000Z",
     "Rating": 84,
     "LatestBuild": 21209292,
-    "RatingPercent": 84.65968462049966,
-    "ReviewsTotal": 84216,
-    "ReviewsPositive": 71297,
+    "RatingPercent": 84.66023106424916,
+    "ReviewsTotal": 84219,
+    "ReviewsPositive": 71300,
     "ReviewsNegative": 12919,
     "ReviewSummary": "Very Positive"
   },
@@ -393,9 +438,9 @@
     "LatestDate": "2022-06-03T07:45:21.000Z",
     "Rating": 86,
     "LatestBuild": 8834157,
-    "RatingPercent": 93.85515895787904,
-    "ReviewsTotal": 43565,
-    "ReviewsPositive": 40888,
+    "RatingPercent": 93.8554410448275,
+    "ReviewsTotal": 43567,
+    "ReviewsPositive": 40890,
     "ReviewsNegative": 2677,
     "ReviewSummary": "Very Positive"
   },
@@ -418,9 +463,9 @@
     "InstalledBuild": 21238792,
     "LatestDate": "2025-12-18T10:36:25.000Z",
     "LatestBuild": 21238792,
-    "RatingPercent": 92.7444467510899,
-    "ReviewsTotal": 9634,
-    "ReviewsPositive": 8935,
+    "RatingPercent": 92.74519979242346,
+    "ReviewsTotal": 9635,
+    "ReviewsPositive": 8936,
     "ReviewsNegative": 699,
     "ReviewSummary": "Very Positive"
   },
@@ -456,9 +501,9 @@
     "InstalledBuild": 21258134,
     "LatestDate": "2026-02-24T14:36:23.000Z",
     "LatestBuild": 22054897,
-    "RatingPercent": 75.03193867773874,
-    "ReviewsTotal": 25048,
-    "ReviewsPositive": 18794,
+    "RatingPercent": 75.0329354465248,
+    "ReviewsTotal": 25049,
+    "ReviewsPositive": 18795,
     "ReviewsNegative": 6254,
     "ReviewSummary": "Mostly Positive"
   },
@@ -469,9 +514,9 @@
     "LatestDate": "2026-03-06T10:17:43.000Z",
     "Rating": 85,
     "LatestBuild": 22194078,
-    "RatingPercent": 92.93602833923734,
-    "ReviewsTotal": 62387,
-    "ReviewsPositive": 57980,
+    "RatingPercent": 92.93636800769353,
+    "ReviewsTotal": 62390,
+    "ReviewsPositive": 57983,
     "ReviewsNegative": 4407,
     "ReviewSummary": "Very Positive"
   },
@@ -508,9 +553,9 @@
     "LatestDate": "2026-02-10T15:05:36.000Z",
     "Rating": 95,
     "LatestBuild": 21868037,
-    "RatingPercent": 95.2497650060427,
-    "ReviewsTotal": 29788,
-    "ReviewsPositive": 28373,
+    "RatingPercent": 95.24992446876364,
+    "ReviewsTotal": 29789,
+    "ReviewsPositive": 28374,
     "ReviewsNegative": 1415,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -548,9 +593,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 90,
     "LatestBuild": 21917203,
-    "RatingPercent": 96.80098179586828,
-    "ReviewsTotal": 146670,
-    "ReviewsPositive": 141978,
+    "RatingPercent": 96.80102541725756,
+    "ReviewsTotal": 146672,
+    "ReviewsPositive": 141980,
     "ReviewsNegative": 4692,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -560,7 +605,12 @@
     "InstalledBuild": 21713036,
     "LatestDate": "2026-02-12T16:00:46.000Z",
     "Rating": 87,
-    "LatestBuild": 21713036
+    "LatestBuild": 21713036,
+    "RatingPercent": 92.74111098489152,
+    "ReviewsTotal": 8803,
+    "ReviewsPositive": 8164,
+    "ReviewsNegative": 639,
+    "ReviewSummary": "Very Positive"
   },
   "1940340": {
     "Name": "Darkest.Dungeon.II",
@@ -568,7 +618,12 @@
     "InstalledBuild": 20612299,
     "LatestDate": "2025-10-30T21:27:33.000Z",
     "Rating": 81,
-    "LatestBuild": 20612299
+    "LatestBuild": 20612299,
+    "RatingPercent": 75.27230498157937,
+    "ReviewsTotal": 24972,
+    "ReviewsPositive": 18797,
+    "ReviewsNegative": 6175,
+    "ReviewSummary": "Mostly Positive"
   },
   "1942280": {
     "Name": "Brotato",
@@ -577,7 +632,12 @@
     "LatestDate": "2026-03-02T14:49:16.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 96,
-    "LatestBuild": 22162077
+    "LatestBuild": 22162077,
+    "RatingPercent": 96.59769990431313,
+    "ReviewsTotal": 110778,
+    "ReviewsPositive": 107009,
+    "ReviewsNegative": 3769,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "1970580": {
     "Name": "Backpack.Hero",
@@ -585,7 +645,12 @@
     "InstalledBuild": 15631088,
     "LatestDate": "2024-09-08T17:06:09.000Z",
     "Rating": 76,
-    "LatestBuild": 15631088
+    "LatestBuild": 15631088,
+    "RatingPercent": 86.98979591836735,
+    "ReviewsTotal": 8232,
+    "ReviewsPositive": 7161,
+    "ReviewsNegative": 1071,
+    "ReviewSummary": "Very Positive"
   },
   "1971650": {
     "Name": "OCTOPATH.TRAVELER.II",
@@ -593,14 +658,24 @@
     "InstalledBuild": 13399590,
     "LatestDate": "2024-06-05T15:54:48.000Z",
     "Rating": 94,
-    "LatestBuild": 13399590
+    "LatestBuild": 13399590,
+    "RatingPercent": 94.14411559667913,
+    "ReviewsTotal": 15779,
+    "ReviewsPositive": 14855,
+    "ReviewsNegative": 924,
+    "ReviewSummary": "Very Positive"
   },
   "2057760": {
     "Name": "Esoteric.Ebb",
     "AppID": 2057760,
     "InstalledBuild": 22196680,
     "LatestDate": "2026-03-04T14:58:48.000Z",
-    "LatestBuild": 22196680
+    "LatestBuild": 22196680,
+    "RatingPercent": 96.05411499436303,
+    "ReviewsTotal": 887,
+    "ReviewsPositive": 852,
+    "ReviewsNegative": 35,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "2062430": {
     "Name": "BALL.x.PIT",
@@ -608,7 +683,12 @@
     "InstalledBuild": 21684508,
     "LatestDate": "2026-01-28T15:13:31.000Z",
     "Rating": 95,
-    "LatestBuild": 21684508
+    "LatestBuild": 21684508,
+    "RatingPercent": 95.57606071058986,
+    "ReviewsTotal": 23192,
+    "ReviewsPositive": 22166,
+    "ReviewsNegative": 1026,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "2066020": {
     "Name": "Soulstone.Survivors",
@@ -617,9 +697,9 @@
     "LatestDate": "2026-03-03T19:46:36.000Z",
     "Status": "⚠️ Update available",
     "Rating": 91,
-    "RatingPercent": 91.41583054626533,
-    "ReviewsTotal": 26013,
-    "ReviewsPositive": 23780,
+    "RatingPercent": 91.41616052894595,
+    "ReviewsTotal": 26014,
+    "ReviewsPositive": 23781,
     "ReviewsNegative": 2233,
     "ReviewSummary": "Very Positive",
     "LatestBuild": 22090199
@@ -630,7 +710,12 @@
     "InstalledBuild": 21745630,
     "LatestDate": "2026-02-02T10:11:17.000Z",
     "Rating": 92,
-    "LatestBuild": 21745630
+    "LatestBuild": 21745630,
+    "RatingPercent": 92.68261885220026,
+    "ReviewsTotal": 15839,
+    "ReviewsPositive": 14680,
+    "ReviewsNegative": 1159,
+    "ReviewSummary": "Very Positive"
   },
   "2114740": {
     "Name": "Blasphemous.2",
@@ -639,7 +724,12 @@
     "LatestDate": "2025-10-03T12:41:18.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 83,
-    "LatestBuild": 20202981
+    "LatestBuild": 20202981,
+    "RatingPercent": 90.51694428489374,
+    "ReviewsTotal": 17410,
+    "ReviewsPositive": 15759,
+    "ReviewsNegative": 1651,
+    "ReviewSummary": "Very Positive"
   },
   "2126190": {
     "Name": "Rue.Valley",
@@ -647,7 +737,12 @@
     "InstalledBuild": 21242075,
     "LatestDate": "2026-01-28T14:19:07.000Z",
     "Rating": 64,
-    "LatestBuild": 21669970
+    "LatestBuild": 21669970,
+    "RatingPercent": 64.40452428476381,
+    "ReviewsTotal": 1503,
+    "ReviewsPositive": 968,
+    "ReviewsNegative": 535,
+    "ReviewSummary": "Mixed"
   },
   "2179850": {
     "Name": "Cobalt.Core",
@@ -707,9 +802,9 @@
     "Status": "✅ Up-to-date",
     "Rating": 86,
     "LatestBuild": 21189700,
-    "RatingPercent": 86.62165379038716,
-    "ReviewsTotal": 46209,
-    "ReviewsPositive": 40027,
+    "RatingPercent": 86.62194330231551,
+    "ReviewsTotal": 46210,
+    "ReviewsPositive": 40028,
     "ReviewsNegative": 6182,
     "ReviewSummary": "Very Positive"
   },
@@ -747,10 +842,10 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 17459173,
     "Rating": 90,
-    "RatingPercent": 97.91363180214302,
-    "ReviewsTotal": 185346,
-    "ReviewsPositive": 181479,
-    "ReviewsNegative": 3867,
+    "RatingPercent": 97.9126315732683,
+    "ReviewsTotal": 185353,
+    "ReviewsPositive": 181484,
+    "ReviewsNegative": 3869,
     "ReviewSummary": "Overwhelmingly Positive"
   },
   "2442460": {
@@ -772,10 +867,10 @@
     "LatestDate": "2025-12-17T06:01:05.000Z",
     "LatestBuild": 21205645,
     "Rating": 89,
-    "RatingPercent": 89.76113106436348,
-    "ReviewsTotal": 17541,
-    "ReviewsPositive": 15745,
-    "ReviewsNegative": 1796,
+    "RatingPercent": 89.75718194254446,
+    "ReviewsTotal": 17544,
+    "ReviewsPositive": 15747,
+    "ReviewsNegative": 1797,
     "ReviewSummary": "Very Positive"
   },
   "2592160": {
@@ -784,9 +879,9 @@
     "InstalledBuild": 21723382,
     "LatestDate": "2026-02-11T17:59:28.000Z",
     "Rating": 87,
-    "RatingPercent": 97.71484078559936,
-    "ReviewsTotal": 164715,
-    "ReviewsPositive": 160951,
+    "RatingPercent": 97.71497951130672,
+    "ReviewsTotal": 164725,
+    "ReviewsPositive": 160961,
     "ReviewsNegative": 3764,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 21822905
@@ -811,9 +906,9 @@
     "LatestDate": "2026-02-12T23:38:03.000Z",
     "LatestBuild": 21910888,
     "Rating": 87,
-    "RatingPercent": 95.57785619761799,
-    "ReviewsTotal": 9068,
-    "ReviewsPositive": 8667,
+    "RatingPercent": 95.57834380857867,
+    "ReviewsTotal": 9069,
+    "ReviewsPositive": 8668,
     "ReviewsNegative": 401,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -825,9 +920,9 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 21425122,
     "Rating": 94,
-    "RatingPercent": 94.25981873111783,
-    "ReviewsTotal": 5627,
-    "ReviewsPositive": 5304,
+    "RatingPercent": 94.26185823414461,
+    "ReviewsTotal": 5629,
+    "ReviewsPositive": 5306,
     "ReviewsNegative": 323,
     "ReviewSummary": "Very Positive"
   },
@@ -852,9 +947,9 @@
     "Status": "✅ Up-to-date",
     "LatestBuild": 22163363,
     "Rating": 82,
-    "RatingPercent": 82.40930869267625,
-    "ReviewsTotal": 2922,
-    "ReviewsPositive": 2408,
+    "RatingPercent": 82.41532671912418,
+    "ReviewsTotal": 2923,
+    "ReviewsPositive": 2409,
     "ReviewsNegative": 514,
     "ReviewSummary": "Very Positive"
   },
@@ -865,9 +960,9 @@
     "LatestDate": "2026-02-13T06:38:09.000Z",
     "LatestBuild": 21913702,
     "Rating": 84,
-    "RatingPercent": 84.38630670748678,
-    "ReviewsTotal": 100604,
-    "ReviewsPositive": 84896,
+    "RatingPercent": 84.3864619054719,
+    "ReviewsTotal": 100605,
+    "ReviewsPositive": 84897,
     "ReviewsNegative": 15708,
     "ReviewSummary": "Very Positive"
   },
@@ -877,9 +972,9 @@
     "InstalledBuild": 21750826,
     "LatestDate": "2026-02-04T16:05:58.000Z",
     "Rating": 95,
-    "RatingPercent": 94.84107001551789,
-    "ReviewsTotal": 97307,
-    "ReviewsPositive": 92287,
+    "RatingPercent": 94.84138809819859,
+    "ReviewsTotal": 97313,
+    "ReviewsPositive": 92293,
     "ReviewsNegative": 5020,
     "ReviewSummary": "Very Positive",
     "LatestBuild": 21750826
