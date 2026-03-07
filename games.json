@@ -383,11 +383,11 @@
   "1313140": {
     "Name": "Cult.of.the.Lamb",
     "AppID": 1313140,
-    "InstalledBuild": 21791439,
+    "InstalledBuild": 22105026,
     "LatestDate": "2026-02-26T07:30:01.000Z",
-    "RatingPercent": 95.80805937611808,
-    "ReviewsTotal": 120183,
-    "ReviewsPositive": 115145,
+    "RatingPercent": 95.808198890063,
+    "ReviewsTotal": 120187,
+    "ReviewsPositive": 115149,
     "ReviewsNegative": 5038,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 22105026
@@ -447,7 +447,7 @@
   "1458140": {
     "Name": "Pacific.Drive",
     "AppID": 1458140,
-    "InstalledBuild": 21140881,
+    "InstalledBuild": 21896301,
     "LatestDate": "2026-02-23T16:58:31.000Z",
     "Rating": 83,
     "LatestBuild": 21896301,
