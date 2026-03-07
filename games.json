@@ -238,13 +238,13 @@
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
-    "InstalledBuild": 22215677,
+    "InstalledBuild": 22231660,
     "LatestDate": "2026-03-06T15:38:57.000Z",
     "Rating": 85,
     "LatestBuild": 22231660,
-    "RatingPercent": 85.77248270561107,
-    "ReviewsTotal": 13010,
-    "ReviewsPositive": 11159,
+    "RatingPercent": 85.77357620474983,
+    "ReviewsTotal": 13011,
+    "ReviewsPositive": 11160,
     "ReviewsNegative": 1851,
     "ReviewSummary": "Very Positive"
   },
@@ -510,7 +510,7 @@
   "1621690": {
     "Name": "Core.Keeper",
     "AppID": 1621690,
-    "InstalledBuild": 21036902,
+    "InstalledBuild": 22194078,
     "LatestDate": "2026-03-06T10:17:43.000Z",
     "Rating": 85,
     "LatestBuild": 22194078,
@@ -747,7 +747,7 @@
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
-    "InstalledBuild": 21547655,
+    "InstalledBuild": 21874666,
     "LatestDate": "2026-02-10T23:30:08.000Z",
     "Rating": 94,
     "LatestBuild": 21874666,
@@ -926,6 +926,18 @@
     "ReviewsNegative": 323,
     "ReviewSummary": "Very Positive"
   },
+  "2868840": {
+    "Name": "Slay.the.Spire.2",
+    "AppID": 2868840,
+    "InstalledBuild": 22221407,
+    "LatestDate": "2026-03-07T02:36:21.000Z",
+    "LatestBuild": 22238966,
+    "RatingPercent": 96.70723354933881,
+    "ReviewsTotal": 18981,
+    "ReviewsPositive": 18356,
+    "ReviewsNegative": 625,
+    "ReviewSummary": "Overwhelmingly Positive"
+  },
   "2922410": {
     "Name": "Achilles.Survivor",
     "AppID": 2922410,
@@ -995,7 +1007,7 @@
   "3483740": {
     "Name": "Cast.n.Chill",
     "AppID": 3483740,
-    "InstalledBuild": 21242034,
+    "InstalledBuild": 22239322,
     "LatestDate": "2026-03-07T01:51:44.000Z",
     "Rating": 95,
     "RatingPercent": 95.28205128205128,
