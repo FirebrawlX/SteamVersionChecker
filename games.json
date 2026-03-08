@@ -498,7 +498,7 @@
   "1601580": {
     "Name": "Frostpunk.2",
     "AppID": 1601580,
-    "InstalledBuild": 21258134,
+    "InstalledBuild": 22054897,
     "LatestDate": "2026-02-24T14:36:23.000Z",
     "LatestBuild": 22054897,
     "RatingPercent": 75.01894619281241,
@@ -536,7 +536,7 @@
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
-    "InstalledBuild": 21396289,
+    "InstalledBuild": 22124269,
     "LatestDate": "2026-02-27T09:18:59.000Z",
     "Rating": 94,
     "LatestBuild": 22124269,
@@ -876,12 +876,12 @@
   "2592160": {
     "Name": "Dispatch",
     "AppID": 2592160,
-    "InstalledBuild": 21723382,
+    "InstalledBuild": 21822905,
     "LatestDate": "2026-02-11T17:59:28.000Z",
     "Rating": 87,
-    "RatingPercent": 97.71398772708531,
-    "ReviewsTotal": 164916,
-    "ReviewsPositive": 161146,
+    "RatingPercent": 97.71404317244725,
+    "ReviewsTotal": 164920,
+    "ReviewsPositive": 161150,
     "ReviewsNegative": 3770,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 21822905
@@ -902,7 +902,7 @@
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
-    "InstalledBuild": 20804247,
+    "InstalledBuild": 21910888,
     "LatestDate": "2026-02-12T23:38:03.000Z",
     "LatestBuild": 21910888,
     "Rating": 87,
@@ -929,7 +929,7 @@
   "2868840": {
     "Name": "Slay.the.Spire.2",
     "AppID": 2868840,
-    "InstalledBuild": 22221407,
+    "InstalledBuild": 22238966,
     "LatestDate": "2026-03-07T02:36:21.000Z",
     "LatestBuild": 22238966,
     "RatingPercent": 96.49122807017544,
