@@ -53,14 +53,14 @@
   "367520": {
     "Name": "Hollow.Knight",
     "AppID": 367520,
-    "InstalledBuild": 20231655,
+    "InstalledBuild": 21656419,
     "LatestDate": "2026-02-05T23:18:23.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 87,
     "LatestBuild": 21656419,
-    "RatingPercent": 96.91780177780788,
-    "ReviewsTotal": 531666,
-    "ReviewsPositive": 515279,
+    "RatingPercent": 96.9178307637618,
+    "ReviewsTotal": 531671,
+    "ReviewsPositive": 515284,
     "ReviewsNegative": 16387,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -734,7 +734,7 @@
   "2126190": {
     "Name": "Rue.Valley",
     "AppID": 2126190,
-    "InstalledBuild": 21242075,
+    "InstalledBuild": 21669970,
     "LatestDate": "2026-01-28T14:19:07.000Z",
     "Rating": 64,
     "LatestBuild": 21669970,
@@ -773,7 +773,7 @@
   "2273430": {
     "Name": "BlazBlue.Entropy.Effect",
     "AppID": 2273430,
-    "InstalledBuild": 20777388,
+    "InstalledBuild": 22357607,
     "LatestDate": "2026-03-16T06:33:05.000Z",
     "RatingPercent": 94.30582398246172,
     "ReviewsTotal": 34667,
