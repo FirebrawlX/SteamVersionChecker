@@ -277,15 +277,15 @@
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
-    "InstalledBuild": 20764176,
+    "InstalledBuild": 22372218,
     "LatestDate": "2026-03-17T03:35:38.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 90,
     "LatestBuild": 22372218,
-    "RatingPercent": 89.07060652875136,
-    "ReviewsTotal": 397442,
-    "ReviewsPositive": 354004,
-    "ReviewsNegative": 43438,
+    "RatingPercent": 89.07094063329517,
+    "ReviewsTotal": 397445,
+    "ReviewsPositive": 354008,
+    "ReviewsNegative": 43437,
     "ReviewSummary": "Very Positive"
   },
   "1161590": {
@@ -383,12 +383,12 @@
   "1313140": {
     "Name": "Cult.of.the.Lamb",
     "AppID": 1313140,
-    "InstalledBuild": 22105026,
+    "InstalledBuild": 22221801,
     "LatestDate": "2026-03-10T06:14:46.000Z",
-    "RatingPercent": 95.82255818579671,
-    "ReviewsTotal": 120648,
-    "ReviewsPositive": 115608,
-    "ReviewsNegative": 5040,
+    "RatingPercent": 95.82162542998051,
+    "ReviewsTotal": 120645,
+    "ReviewsPositive": 115604,
+    "ReviewsNegative": 5041,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 22221801
   },
@@ -747,7 +747,7 @@
   "2179850": {
     "Name": "Cobalt.Core",
     "AppID": 2179850,
-    "InstalledBuild": 21874666,
+    "InstalledBuild": 22309281,
     "LatestDate": "2026-03-12T08:26:21.000Z",
     "Rating": 94,
     "LatestBuild": 22309281,
@@ -1007,7 +1007,7 @@
   "3483740": {
     "Name": "Cast.n.Chill",
     "AppID": 3483740,
-    "InstalledBuild": 22239322,
+    "InstalledBuild": 22258338,
     "LatestDate": "2026-03-09T10:11:29.000Z",
     "Rating": 95,
     "RatingPercent": 95.28546712802768,
