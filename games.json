@@ -510,7 +510,7 @@
   "1621690": {
     "Name": "Core.Keeper",
     "AppID": 1621690,
-    "InstalledBuild": 22194078,
+    "InstalledBuild": 22329481,
     "LatestDate": "2026-03-16T09:58:09.000Z",
     "Rating": 85,
     "LatestBuild": 22329481,
@@ -668,7 +668,7 @@
   "2057760": {
     "Name": "Esoteric.Ebb",
     "AppID": 2057760,
-    "InstalledBuild": 22196680,
+    "InstalledBuild": 22312335,
     "LatestDate": "2026-03-12T13:59:43.000Z",
     "LatestBuild": 22312335,
     "RatingPercent": 96.1501749920458,
@@ -966,9 +966,9 @@
     "ReviewSummary": "Very Positive"
   },
   "3167020": {
-    "Name": "Escape.from.Duckov",
+    "Name": "Escape.From.Duckov",
     "AppID": 3167020,
-    "InstalledBuild": 21315576,
+    "InstalledBuild": 21913702,
     "LatestDate": "2026-02-13T06:38:09.000Z",
     "LatestBuild": 21913702,
     "Rating": 84,
