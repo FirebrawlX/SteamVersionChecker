@@ -246,6 +246,18 @@
     "ReviewsNegative": 6281,
     "ReviewSummary": "Very Positive"
   },
+  "787480": {
+    "Name": "Phoenix.Wright.Ace.Attorney.Trilogy",
+    "AppID": 787480,
+    "InstalledBuild": 20282248,
+    "LatestDate": "2025-11-19T01:00:38.000Z",
+    "LatestBuild": 20282248,
+    "RatingPercent": 97.56338724486191,
+    "ReviewsTotal": 42477,
+    "ReviewsPositive": 41442,
+    "ReviewsNegative": 1035,
+    "ReviewSummary": "Overwhelmingly Positive"
+  },
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
@@ -311,6 +323,18 @@
     "ReviewsTotal": 4296,
     "ReviewsPositive": 3546,
     "ReviewsNegative": 750,
+    "ReviewSummary": "Very Positive"
+  },
+  "1210320": {
+    "Name": "Potion.Craft.Alchemist.Simulator",
+    "AppID": 1210320,
+    "InstalledBuild": 18969694,
+    "LatestDate": "2025-06-26T16:32:29.000Z",
+    "LatestBuild": 18969694,
+    "RatingPercent": 92.82740879326474,
+    "ReviewsTotal": 42760,
+    "ReviewsPositive": 39693,
+    "ReviewsNegative": 3067,
     "ReviewSummary": "Very Positive"
   },
   "1229240": {
@@ -597,9 +621,9 @@
     "ReviewSummary": "Very Positive"
   },
   "1868140": {
-    "Name": "DAVE.THE.DIVER",
+    "Name": "Dave.the.Diver",
     "AppID": 1868140,
-    "InstalledBuild": 21569228,
+    "InstalledBuild": 21917203,
     "LatestDate": "2026-02-19T08:01:05.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 90,
@@ -626,7 +650,7 @@
   "1940340": {
     "Name": "Darkest.Dungeon.II",
     "AppID": 1940340,
-    "InstalledBuild": 20612299,
+    "InstalledBuild": 22388413,
     "LatestDate": "2026-03-18T22:46:25.000Z",
     "Rating": 81,
     "LatestBuild": 22388413,
