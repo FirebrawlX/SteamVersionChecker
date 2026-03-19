@@ -144,6 +144,17 @@
     "ReviewsNegative": 5268,
     "ReviewSummary": "Overwhelmingly Positive"
   },
+  "632360": {
+    "Name": "Risk.of.Rain.2",
+    "AppID": 632360,
+    "InstalledBuild": 21587608,
+    "LatestDate": "2026-03-19T09:27:48.585Z",
+    "RatingPercent": 93.75371473189833,
+    "ReviewsTotal": 343228,
+    "ReviewsPositive": 321789,
+    "ReviewsNegative": 21439,
+    "ReviewSummary": "Very Positive"
+  },
   "632470": {
     "Name": "Disco.Elysium",
     "AppID": 632470,
@@ -173,12 +184,12 @@
   "686060": {
     "Name": "Mewgenics",
     "AppID": 686060,
-    "InstalledBuild": 22188119,
+    "InstalledBuild": 22384947,
     "LatestDate": "2026-03-18T00:04:58.000Z",
     "LatestBuild": 22384947,
-    "RatingPercent": 92.11856442559244,
-    "ReviewsTotal": 39371,
-    "ReviewsPositive": 36268,
+    "RatingPercent": 92.11916493117286,
+    "ReviewsTotal": 39374,
+    "ReviewsPositive": 36271,
     "ReviewsNegative": 3103,
     "ReviewSummary": "Very Positive"
   },
@@ -238,7 +249,7 @@
   "867210": {
     "Name": "Songs.of.Conquest",
     "AppID": 867210,
-    "InstalledBuild": 22231660,
+    "InstalledBuild": 22401468,
     "LatestDate": "2026-03-18T18:46:13.000Z",
     "Rating": 85,
     "LatestBuild": 22401468,
@@ -329,9 +340,9 @@
     "ReviewSummary": "Very Positive"
   },
   "1262350": {
-    "Name": "Signalis",
+    "Name": "SIGNALIS",
     "AppID": 1262350,
-    "InstalledBuild": 15862770,
+    "InstalledBuild": 20243420,
     "LatestDate": "2025-10-05T20:23:08.000Z",
     "Rating": 96,
     "LatestBuild": 20243420,
@@ -421,14 +432,14 @@
   "1363080": {
     "Name": "Manor.Lords",
     "AppID": 1363080,
-    "InstalledBuild": 21209292,
+    "InstalledBuild": 22368857,
     "LatestDate": "2026-03-18T15:04:10.000Z",
     "Rating": 84,
     "LatestBuild": 22368857,
-    "RatingPercent": 84.62753418198963,
-    "ReviewsTotal": 84840,
-    "ReviewsPositive": 71798,
-    "ReviewsNegative": 13042,
+    "RatingPercent": 84.62671789915373,
+    "ReviewsTotal": 84842,
+    "ReviewsPositive": 71799,
+    "ReviewsNegative": 13043,
     "ReviewSummary": "Very Positive"
   },
   "1369630": {
@@ -602,7 +613,7 @@
   "1904480": {
     "Name": "Absolum",
     "AppID": 1904480,
-    "InstalledBuild": 21713036,
+    "InstalledBuild": 22393147,
     "LatestDate": "2026-03-18T14:02:49.000Z",
     "Rating": 87,
     "LatestBuild": 22393147,
