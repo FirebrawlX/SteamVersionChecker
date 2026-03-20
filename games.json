@@ -196,7 +196,7 @@
   "690830": {
     "Name": "Foundation",
     "AppID": 690830,
-    "InstalledBuild": 21621209,
+    "InstalledBuild": 22062501,
     "LatestDate": "2026-02-24T15:06:13.000Z",
     "Rating": 84,
     "LatestBuild": 22062501,
@@ -859,13 +859,13 @@
   "2350790": {
     "Name": "Moonlighter.2.The.Endless.Vault",
     "AppID": 2350790,
-    "InstalledBuild": 21465756,
+    "InstalledBuild": 22315431,
     "LatestDate": "2026-03-13T13:12:39.000Z",
     "LatestBuild": 22315431,
     "Rating": 87,
-    "RatingPercent": 86.48760330578511,
-    "ReviewsTotal": 2420,
-    "ReviewsPositive": 2093,
+    "RatingPercent": 86.49318463444857,
+    "ReviewsTotal": 2421,
+    "ReviewsPositive": 2094,
     "ReviewsNegative": 327,
     "ReviewSummary": "Very Positive"
   },
