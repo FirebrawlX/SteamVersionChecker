@@ -12,6 +12,18 @@
     "ReviewsNegative": 1297,
     "ReviewSummary": "Very Positive"
   },
+  "261570": {
+    "Name": "Ori.and.the.Blind.Forest",
+    "AppID": 261570,
+    "InstalledBuild": 814852,
+    "LatestDate": "2026-03-21T18:51:18.283Z",
+    "LatestBuild": 814852,
+    "RatingPercent": 94.01627168996016,
+    "ReviewsTotal": 59244,
+    "ReviewsPositive": 55699,
+    "ReviewsNegative": 3545,
+    "ReviewSummary": "Very Positive"
+  },
   "268910": {
     "Name": "Cuphead",
     "AppID": 268910,
@@ -222,7 +234,7 @@
   "774181": {
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
-    "InstalledBuild": 21254178,
+    "InstalledBuild": 22372042,
     "LatestDate": "2026-03-17T00:28:03.000Z",
     "Rating": 87,
     "LatestBuild": 22372042,
@@ -310,6 +322,18 @@
     "ReviewsPositive": 354850,
     "ReviewsNegative": 43431,
     "ReviewSummary": "Very Positive"
+  },
+  "1057090": {
+    "Name": "Ori.and.the.Will.of.the.Wisps",
+    "AppID": 1057090,
+    "InstalledBuild": 5845748,
+    "LatestDate": "2020-11-19T23:05:46.000Z",
+    "LatestBuild": 5845748,
+    "RatingPercent": 96.54304237448159,
+    "ReviewsTotal": 142987,
+    "ReviewsPositive": 138044,
+    "ReviewsNegative": 4943,
+    "ReviewSummary": "Overwhelmingly Positive"
   },
   "1161590": {
     "Name": "Punch.Club.2.Fast.Forward",
@@ -405,7 +429,7 @@
   "1280930": {
     "Name": "Astral.Ascent",
     "AppID": 1280930,
-    "InstalledBuild": 21949048,
+    "InstalledBuild": 22399636,
     "LatestDate": "2026-03-18T15:43:22.000Z",
     "Rating": 86,
     "LatestBuild": 22399636,
@@ -820,7 +844,7 @@
   "2308630": {
     "Name": "Dawnfolk",
     "AppID": 2308630,
-    "InstalledBuild": 19969051,
+    "InstalledBuild": 22395882,
     "LatestDate": "2026-03-18T11:02:43.000Z",
     "LatestBuild": 22395882,
     "RatingPercent": 95.53158705701078,
@@ -886,7 +910,7 @@
   "2442460": {
     "Name": "Citizen.Sleeper.2.Starward.Vector",
     "AppID": 2442460,
-    "InstalledBuild": 20765567,
+    "InstalledBuild": 21164079,
     "LatestDate": "2025-12-12T13:52:21.000Z",
     "RatingPercent": 92.54571026722925,
     "ReviewsTotal": 2133,
@@ -1068,11 +1092,11 @@
   "4035270": {
     "Name": "Space.Rock.Breaker",
     "AppID": 4035270,
-    "InstalledBuild": 21315276,
+    "InstalledBuild": 21809434,
     "LatestDate": "2026-02-06T02:56:57.000Z",
-    "RatingPercent": 96.86599423631124,
-    "ReviewsTotal": 2776,
-    "ReviewsPositive": 2689,
+    "RatingPercent": 96.86712279438242,
+    "ReviewsTotal": 2777,
+    "ReviewsPositive": 2690,
     "ReviewsNegative": 87,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 21809434
