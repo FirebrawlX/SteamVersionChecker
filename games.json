@@ -727,7 +727,7 @@
   "2057760": {
     "Name": "Esoteric.Ebb",
     "AppID": 2057760,
-    "InstalledBuild": 22312335,
+    "InstalledBuild": 22416378,
     "LatestDate": "2026-03-19T14:32:43.000Z",
     "LatestBuild": 22416378,
     "RatingPercent": 96.36212163287976,
@@ -935,7 +935,7 @@
   "2592160": {
     "Name": "Dispatch",
     "AppID": 2592160,
-    "InstalledBuild": 21822905,
+    "InstalledBuild": 22419966,
     "LatestDate": "2026-03-19T20:43:29.000Z",
     "Rating": 87,
     "RatingPercent": 97.7116952454246,
@@ -948,13 +948,13 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 21684216,
+    "InstalledBuild": 22431599,
     "LatestDate": "2026-03-20T11:41:44.000Z",
     "LatestBuild": 22431599,
     "Rating": 73,
-    "RatingPercent": 73.76503711287434,
-    "ReviewsTotal": 3907,
-    "ReviewsPositive": 2882,
+    "RatingPercent": 73.77175025588537,
+    "ReviewsTotal": 3908,
+    "ReviewsPositive": 2883,
     "ReviewsNegative": 1025,
     "ReviewSummary": "Mostly Positive"
   },
