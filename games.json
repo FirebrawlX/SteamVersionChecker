@@ -312,15 +312,15 @@
   "1030300": {
     "Name": "Hollow.Knight.Silksong",
     "AppID": 1030300,
-    "InstalledBuild": 22428725,
+    "InstalledBuild": 22479045,
     "LatestDate": "2026-03-25T05:37:55.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 90,
     "LatestBuild": 22479045,
-    "RatingPercent": 89.12688264600125,
-    "ReviewsTotal": 399637,
-    "ReviewsPositive": 356184,
-    "ReviewsNegative": 43453,
+    "RatingPercent": 89.12729611177977,
+    "ReviewsTotal": 399643,
+    "ReviewsPositive": 356191,
+    "ReviewsNegative": 43452,
     "ReviewSummary": "Very Positive"
   },
   "1057090": {
@@ -948,7 +948,7 @@
   "2680550": {
     "Name": "Hollywood.Animal",
     "AppID": 2680550,
-    "InstalledBuild": 22431599,
+    "InstalledBuild": 22463415,
     "LatestDate": "2026-03-24T10:30:21.000Z",
     "LatestBuild": 22463415,
     "Rating": 73,
