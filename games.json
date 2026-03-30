@@ -65,14 +65,14 @@
   "367520": {
     "Name": "Hollow.Knight",
     "AppID": 367520,
-    "InstalledBuild": 21656419,
+    "InstalledBuild": 22529139,
     "LatestDate": "2026-03-27T07:37:27.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 87,
     "LatestBuild": 22529139,
-    "RatingPercent": 96.91403311112026,
-    "ReviewsTotal": 534322,
-    "ReviewsPositive": 517833,
+    "RatingPercent": 96.91403888659107,
+    "ReviewsTotal": 534323,
+    "ReviewsPositive": 517834,
     "ReviewsNegative": 16489,
     "ReviewSummary": "Overwhelmingly Positive"
   },
@@ -766,7 +766,7 @@
   "2103140": {
     "Name": "Magicraft",
     "AppID": 2103140,
-    "InstalledBuild": 21745630,
+    "InstalledBuild": 22426655,
     "LatestDate": "2026-03-20T03:21:39.000Z",
     "Rating": 92,
     "LatestBuild": 22426655,
@@ -961,7 +961,7 @@
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
-    "InstalledBuild": 21910888,
+    "InstalledBuild": 22420164,
     "LatestDate": "2026-03-19T17:59:47.000Z",
     "LatestBuild": 22420164,
     "Rating": 87,
