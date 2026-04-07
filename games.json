@@ -1089,6 +1089,18 @@
     "ReviewSummary": "Very Positive",
     "LatestBuild": 20648272
   },
+  "3784030": {
+    "Name": "RACCOIN.Coin.Pusher.Roguelike",
+    "AppID": 3784030,
+    "InstalledBuild": 22636816,
+    "LatestDate": "2026-04-03T15:20:10.000Z",
+    "LatestBuild": 22636816,
+    "RatingPercent": 85.14808362369338,
+    "ReviewsTotal": 2296,
+    "ReviewsPositive": 1955,
+    "ReviewsNegative": 341,
+    "ReviewSummary": "Very Positive"
+  },
   "4035270": {
     "Name": "Space.Rock.Breaker",
     "AppID": 4035270,
