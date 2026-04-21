@@ -582,7 +582,7 @@
   "1637320": {
     "Name": "Dome.Keeper",
     "AppID": 1637320,
-    "InstalledBuild": 17779621,
+    "InstalledBuild": 22806461,
     "LatestDate": "2026-04-16T11:57:49.000Z",
     "Rating": 92,
     "LatestBuild": 22806461,
@@ -727,12 +727,12 @@
   "2057760": {
     "Name": "Esoteric.Ebb",
     "AppID": 2057760,
-    "InstalledBuild": 22416378,
+    "InstalledBuild": 22657387,
     "LatestDate": "2026-04-08T10:58:20.000Z",
     "LatestBuild": 22657387,
-    "RatingPercent": 96.25113739763421,
-    "ReviewsTotal": 5495,
-    "ReviewsPositive": 5289,
+    "RatingPercent": 96.25250136438058,
+    "ReviewsTotal": 5497,
+    "ReviewsPositive": 5291,
     "ReviewsNegative": 206,
     "ReviewSummary": "Overwhelmingly Positive"
   },
