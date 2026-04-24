@@ -595,13 +595,13 @@
   "1649950": {
     "Name": "News.Tower",
     "AppID": 1649950,
-    "InstalledBuild": 22124269,
+    "InstalledBuild": 22794594,
     "LatestDate": "2026-04-21T13:05:32.000Z",
     "Rating": 94,
     "LatestBuild": 22794594,
-    "RatingPercent": 94.31924882629107,
-    "ReviewsTotal": 4260,
-    "ReviewsPositive": 4018,
+    "RatingPercent": 94.3205820229993,
+    "ReviewsTotal": 4261,
+    "ReviewsPositive": 4019,
     "ReviewsNegative": 242,
     "ReviewSummary": "Very Positive"
   },
@@ -961,7 +961,7 @@
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
-    "InstalledBuild": 22420164,
+    "InstalledBuild": 22787024,
     "LatestDate": "2026-04-14T19:51:00.000Z",
     "LatestBuild": 22787024,
     "Rating": 87,
