@@ -208,7 +208,7 @@
   "690830": {
     "Name": "Foundation",
     "AppID": 690830,
-    "InstalledBuild": 22062501,
+    "InstalledBuild": 22799197,
     "LatestDate": "2026-04-15T14:23:25.000Z",
     "Rating": 84,
     "LatestBuild": 22799197,
@@ -442,11 +442,11 @@
   "1313140": {
     "Name": "Cult.of.the.Lamb",
     "AppID": 1313140,
-    "InstalledBuild": 22221801,
+    "InstalledBuild": 22885603,
     "LatestDate": "2026-04-21T12:12:48.000Z",
-    "RatingPercent": 95.84350884048061,
-    "ReviewsTotal": 122844,
-    "ReviewsPositive": 117738,
+    "RatingPercent": 95.84357651042768,
+    "ReviewsTotal": 122846,
+    "ReviewsPositive": 117740,
     "ReviewsNegative": 5106,
     "ReviewSummary": "Overwhelmingly Positive",
     "LatestBuild": 22885603
@@ -988,13 +988,13 @@
   "2868840": {
     "Name": "Slay.the.Spire.2",
     "AppID": 2868840,
-    "InstalledBuild": 22340209,
+    "InstalledBuild": 22823976,
     "LatestDate": "2026-04-17T00:54:12.000Z",
     "LatestBuild": 22823976,
-    "RatingPercent": 63.76592256274436,
-    "ReviewsTotal": 150651,
-    "ReviewsPositive": 96064,
-    "ReviewsNegative": 54587,
+    "RatingPercent": 63.70493607036568,
+    "ReviewsTotal": 150869,
+    "ReviewsPositive": 96111,
+    "ReviewsNegative": 54758,
     "ReviewSummary": "Mixed"
   },
   "2922410": {
