@@ -766,13 +766,13 @@
   "2103140": {
     "Name": "Magicraft",
     "AppID": 2103140,
-    "InstalledBuild": 22426655,
+    "InstalledBuild": 22934122,
     "LatestDate": "2026-04-24T03:35:37.000Z",
     "Rating": 92,
     "LatestBuild": 22934122,
-    "RatingPercent": 92.75872721655854,
-    "ReviewsTotal": 16185,
-    "ReviewsPositive": 15013,
+    "RatingPercent": 92.75962191882374,
+    "ReviewsTotal": 16187,
+    "ReviewsPositive": 15015,
     "ReviewsNegative": 1172,
     "ReviewSummary": "Very Positive"
   },
@@ -1102,15 +1102,15 @@
     "LatestBuild": 20648272
   },
   "3784030": {
-    "Name": "RACCOIN.Coin.Pusher.Roguelike",
+    "Name": "Raccoin.Coin.Pusher.Roguelike",
     "AppID": 3784030,
-    "InstalledBuild": 22636816,
+    "InstalledBuild": 22921065,
     "LatestDate": "2026-04-24T14:34:28.000Z",
     "LatestBuild": 22921065,
-    "RatingPercent": 84.61761297798378,
-    "ReviewsTotal": 3452,
+    "RatingPercent": 84.56861609727852,
+    "ReviewsTotal": 3454,
     "ReviewsPositive": 2921,
-    "ReviewsNegative": 531,
+    "ReviewsNegative": 533,
     "ReviewSummary": "Very Positive"
   },
   "4035270": {
