@@ -234,7 +234,7 @@
   "774181": {
     "Name": "Rhythm.Doctor",
     "AppID": 774181,
-    "InstalledBuild": 22372042,
+    "InstalledBuild": 22930398,
     "LatestDate": "2026-04-23T21:59:46.000Z",
     "Rating": 87,
     "LatestBuild": 22930398,
@@ -582,14 +582,14 @@
   "1637320": {
     "Name": "Dome.Keeper",
     "AppID": 1637320,
-    "InstalledBuild": 22806461,
+    "InstalledBuild": 22893852,
     "LatestDate": "2026-04-23T11:58:42.000Z",
     "Rating": 92,
     "LatestBuild": 22893852,
-    "RatingPercent": 92.24465616823814,
-    "ReviewsTotal": 20257,
-    "ReviewsPositive": 18686,
-    "ReviewsNegative": 1571,
+    "RatingPercent": 92.25035786563997,
+    "ReviewsTotal": 20259,
+    "ReviewsPositive": 18689,
+    "ReviewsNegative": 1570,
     "ReviewSummary": "Very Positive"
   },
   "1649950": {
@@ -832,7 +832,7 @@
   "2273430": {
     "Name": "BlazBlue.Entropy.Effect",
     "AppID": 2273430,
-    "InstalledBuild": 22357607,
+    "InstalledBuild": 22933109,
     "LatestDate": "2026-04-24T01:55:07.000Z",
     "RatingPercent": 94.2924987125937,
     "ReviewsTotal": 34954,
@@ -906,6 +906,18 @@
     "ReviewsPositive": 185456,
     "ReviewsNegative": 3969,
     "ReviewSummary": "Overwhelmingly Positive"
+  },
+  "2423760": {
+    "Name": "Above.the.Snow",
+    "AppID": 2423760,
+    "InstalledBuild": 22945075,
+    "LatestDate": "2026-04-24T16:54:41.000Z",
+    "LatestBuild": 22945075,
+    "RatingPercent": 85.41666666666666,
+    "ReviewsTotal": 144,
+    "ReviewsPositive": 123,
+    "ReviewsNegative": 21,
+    "ReviewSummary": "Very Positive"
   },
   "2442460": {
     "Name": "Citizen.Sleeper.2.Starward.Vector",
