@@ -970,6 +970,18 @@
     "ReviewsNegative": 1049,
     "ReviewSummary": "Mostly Positive"
   },
+  "2738490": {
+    "Name": "Sol.Cesto",
+    "AppID": 2738490,
+    "InstalledBuild": 22906773,
+    "LatestDate": "2026-04-22T15:59:18.000Z",
+    "LatestBuild": 22906773,
+    "RatingPercent": 91.62971175166297,
+    "ReviewsTotal": 3608,
+    "ReviewsPositive": 3306,
+    "ReviewsNegative": 302,
+    "ReviewSummary": "Very Positive"
+  },
   "2742830": {
     "Name": "Monster.Train.2",
     "AppID": 2742830,
