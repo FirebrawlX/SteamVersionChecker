@@ -58,9 +58,8 @@
     "Name": "Punch.Club",
     "AppID": 394310,
     "InstalledBuild": 11412837,
-    "LatestDate": "2024-01-26T08:51:08.000Z",
-    "Rating": 73,
-    "LatestBuild": 1734185
+    "LatestDate": "2026-10-26T09:45:45.375Z",
+    "Rating": 73
   },
   "503560": {
     "Name": "911.Operator",
@@ -100,7 +99,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-10-26T03:19:39.475Z"
+    "LatestDate": "2026-10-26T09:44:02.401Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -288,7 +287,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-10-26T03:20:11.052Z",
+    "LatestDate": "2026-10-26T09:45:01.253Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -398,10 +397,10 @@
     "Name": "Dave.the.Diver",
     "AppID": 1868140,
     "InstalledBuild": 21917203,
-    "LatestDate": "2026-09-15T07:00:19.000Z",
+    "LatestDate": "2026-10-26T06:30:02.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 90,
-    "LatestBuild": 25315876
+    "LatestBuild": 26209260
   },
   "1904480": {
     "Name": "Absolum",
