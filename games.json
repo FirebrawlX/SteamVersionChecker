@@ -58,8 +58,9 @@
     "Name": "Punch.Club",
     "AppID": 394310,
     "InstalledBuild": 11412837,
-    "LatestDate": "2026-10-26T09:45:45.375Z",
-    "Rating": 73
+    "LatestDate": "2024-01-26T08:51:08.000Z",
+    "Rating": 73,
+    "LatestBuild": 1734185
   },
   "503560": {
     "Name": "911.Operator",
@@ -99,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-10-26T09:44:02.401Z"
+    "LatestDate": "2026-10-26T16:30:31.447Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -287,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-10-26T09:45:01.253Z",
+    "LatestDate": "2026-10-26T16:31:05.627Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
