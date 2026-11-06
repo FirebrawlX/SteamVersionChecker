@@ -100,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-11-06T07:40:14.946Z"
+    "LatestDate": "2026-11-06T15:40:11.146Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -129,9 +129,9 @@
     "Name": "Foundation",
     "AppID": 690830,
     "InstalledBuild": 22799197,
-    "LatestDate": "2026-10-23T14:03:08.000Z",
+    "LatestDate": "2026-11-06T15:02:41.000Z",
     "Rating": 84,
-    "LatestBuild": 26138506
+    "LatestBuild": 26465464
   },
   "692850": {
     "Name": "Bloodstained.Ritual.of.the.Night",
@@ -288,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-11-06T07:40:47.993Z",
+    "LatestDate": "2026-11-06T15:40:43.285Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -520,8 +520,8 @@
     "Name": "Dawnfolk",
     "AppID": 2308630,
     "InstalledBuild": 22614940,
-    "LatestDate": "2026-11-05T07:54:32.000Z",
-    "LatestBuild": 26452561
+    "LatestDate": "2026-11-06T10:14:47.000Z",
+    "LatestBuild": 26478844
   },
   "2321470": {
     "Name": "Deep.Rock.Galactic.Survivor",
