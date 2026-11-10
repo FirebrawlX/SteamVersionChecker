@@ -100,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-11-10T12:07:25.336Z"
+    "LatestDate": "2026-11-10T20:13:43.245Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -288,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-11-10T12:07:57.670Z",
+    "LatestDate": "2026-11-10T20:14:07.743Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -606,8 +606,8 @@
     "Name": "Monster.Train.2",
     "AppID": 2742830,
     "InstalledBuild": 22787024,
-    "LatestDate": "2026-04-14T19:51:00.000Z",
-    "LatestBuild": 22787024,
+    "LatestDate": "2026-11-10T17:45:22.000Z",
+    "LatestBuild": 26572199,
     "Rating": 87
   },
   "2756920": {
@@ -638,9 +638,9 @@
     "Name": "Teenage.Mutant.Ninja.Turtles.Splintered.Fate",
     "AppID": 2996040,
     "InstalledBuild": 22402054,
-    "LatestDate": "2026-10-05T16:10:20.000Z",
+    "LatestDate": "2026-11-10T15:59:01.000Z",
     "Status": "✅ Up-to-date",
-    "LatestBuild": 25730637,
+    "LatestBuild": 26551643,
     "Rating": 82
   },
   "3167020": {
@@ -687,8 +687,8 @@
     "Name": "Raccoin.Coin.Pusher.Roguelike",
     "AppID": 3784030,
     "InstalledBuild": 22921065,
-    "LatestDate": "2026-10-01T16:42:39.000Z",
-    "LatestBuild": 25320904
+    "LatestDate": "2026-11-10T14:06:09.000Z",
+    "LatestBuild": 26400198
   },
   "4035270": {
     "Name": "Space.Rock.Breaker",
