@@ -100,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-11-11T07:41:42.061Z"
+    "LatestDate": "2026-11-11T15:52:24.632Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -288,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-11-11T07:42:12.207Z",
+    "LatestDate": "2026-11-11T15:52:55.490Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -505,9 +505,9 @@
     "Name": "Thronefall",
     "AppID": 2239150,
     "InstalledBuild": 17216593,
-    "LatestDate": "2026-09-24T12:38:48.000Z",
+    "LatestDate": "2026-11-11T13:53:37.000Z",
     "Rating": 96,
-    "LatestBuild": 25306299
+    "LatestBuild": 26487600
   },
   "2273430": {
     "Name": "BlazBlue.Entropy.Effect",
