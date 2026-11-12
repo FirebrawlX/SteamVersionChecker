@@ -100,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-11-12T12:12:01.864Z"
+    "LatestDate": "2026-11-12T20:39:20.349Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -288,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-11-12T12:12:18.421Z",
+    "LatestDate": "2026-11-12T20:39:50.366Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -423,10 +423,10 @@
     "Name": "Brotato",
     "AppID": 1942280,
     "InstalledBuild": 22709237,
-    "LatestDate": "2026-11-03T13:47:35.000Z",
+    "LatestDate": "2026-11-12T14:56:34.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 96,
-    "LatestBuild": 26406319
+    "LatestBuild": 26615634
   },
   "1970580": {
     "Name": "Backpack.Hero",
@@ -455,9 +455,9 @@
     "Name": "BALL.x.PIT",
     "AppID": 2062430,
     "InstalledBuild": 21901494,
-    "LatestDate": "2026-08-06T16:12:35.000Z",
+    "LatestDate": "2026-11-12T17:03:01.000Z",
     "Rating": 95,
-    "LatestBuild": 23150541
+    "LatestBuild": 25889270
   },
   "2066020": {
     "Name": "Soulstone.Survivors",
@@ -599,8 +599,8 @@
     "Name": "Sol.Cesto",
     "AppID": 2738490,
     "InstalledBuild": 22906773,
-    "LatestDate": "2026-08-20T13:33:41.000Z",
-    "LatestBuild": 24836881
+    "LatestDate": "2026-11-12T15:59:27.000Z",
+    "LatestBuild": 26621742
   },
   "2742830": {
     "Name": "Monster.Train.2",
