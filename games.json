@@ -100,7 +100,7 @@
     "Name": "Risk.of.Rain.2",
     "AppID": 632360,
     "InstalledBuild": 21587608,
-    "LatestDate": "2026-11-19T11:11:41.331Z"
+    "LatestDate": "2026-11-19T19:58:21.483Z"
   },
   "632470": {
     "Name": "Disco.Elysium",
@@ -288,7 +288,7 @@
     "Name": "TMNT.Shredders.Revenge",
     "AppID": 1361510,
     "InstalledBuild": 15664053,
-    "LatestDate": "2026-11-19T11:12:04.085Z",
+    "LatestDate": "2026-11-19T19:58:46.902Z",
     "Status": "✅ Up-to-date",
     "Rating": 84
   },
@@ -327,8 +327,8 @@
     "Name": "Cairn",
     "AppID": 1588550,
     "InstalledBuild": 22486811,
-    "LatestDate": "2026-11-13T10:00:13.000Z",
-    "LatestBuild": 26622392
+    "LatestDate": "2026-11-19T12:59:38.000Z",
+    "LatestBuild": 26753169
   },
   "1593030": {
     "Name": "Terra.Nil",
@@ -505,9 +505,9 @@
     "Name": "Thronefall",
     "AppID": 2239150,
     "InstalledBuild": 17216593,
-    "LatestDate": "2026-11-11T13:53:37.000Z",
+    "LatestDate": "2026-11-19T14:11:09.000Z",
     "Rating": 96,
-    "LatestBuild": 26487600
+    "LatestBuild": 26731534
   },
   "2273430": {
     "Name": "BlazBlue.Entropy.Effect",
@@ -527,10 +527,10 @@
     "Name": "Deep.Rock.Galactic.Survivor",
     "AppID": 2321470,
     "InstalledBuild": 21189700,
-    "LatestDate": "2026-11-17T11:58:28.000Z",
+    "LatestDate": "2026-11-19T13:43:31.000Z",
     "Status": "✅ Up-to-date",
     "Rating": 86,
-    "LatestBuild": 26646856
+    "LatestBuild": 26783088
   },
   "2334730": {
     "Name": "Death.Must.Die",
